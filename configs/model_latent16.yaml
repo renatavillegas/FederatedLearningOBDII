@@ -1,0 +1,20 @@
+# Input dimension is read from data/processed/feature_columns.json.
+architecture:
+  encoder_dims: [32]
+  latent_dim: 16
+  activation: relu
+
+# The optimizer state is kept by each client across federated rounds.
+training:
+  loss: mse
+  optimizer: adam
+  learning_rate: 0.001
+  batch_size: 32
+  device: cpu
+
+# Anomaly score: per-record mean squared reconstruction error; anomaly (label 1) is the positive class.
+evaluation:
+  anomaly_score: reconstruction_mse
+
+outputs:
+  model_report_dir: results/model

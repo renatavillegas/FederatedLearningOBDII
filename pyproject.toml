@@ -1,0 +1,42 @@
+[project]
+name = "federated-obd-seminar"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "flwr",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "PyYAML",
+    "scikit-learn",
+    "scipy",
+    "torch",
+    "umap-learn",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.flwr.app]
+publisher = "mo809"
+fab-include = ["src/**/*.py"]
+
+[tool.flwr.app.components]
+serverapp = "src.federated.server:app"
+clientapp = "src.federated.client:app"
+
+# project-root must be the absolute path of this directory: the Flower App bundle is installed
+# elsewhere, so data and configs are read from project-root. seed = -1 uses the seed in configs/data.yaml.
+[tool.flwr.app.config]
+project-root = ""
+scenario = "iid"
+method = "fedavg"
+proximal-mu = 0.0
+normal-only-real = false
+seed = -1
+edge-client-id = ""
+max-rounds = 0
+data-config = "configs/data.yaml"
+model-config = "configs/model.yaml"
+experiments-config = "configs/experiments.yaml"

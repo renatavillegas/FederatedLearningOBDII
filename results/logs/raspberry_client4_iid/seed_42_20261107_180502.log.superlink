@@ -1,0 +1,223 @@
+[93mWARNING [0m:   Option `--insecure` was set. Starting insecure HTTP server with unencrypted communication (TLS disabled). Proceed only if you understand the risks.
+[93mWARNING [0m:   SuperNode authentication is disabled. The SuperLink will accept connections from any SuperNode.
+[92mINFO [0m:      Starting Flower SuperLink
+[92mINFO [0m:      Starting the SuperLink Runtime HTTP API on 192.168.1.104:8000.
+[92mINFO [0m:      Starting the SuperLink Control HTTP API on 192.168.1.104:8000.
+[92mINFO [0m:      Starting the SuperLink Fleet HTTP API on 192.168.1.104:8000.
+2026-11-07T21:05:04.831Z INFO [uvicorn.error] Started server process [2250352]
+2026-11-07T21:05:04.831Z INFO [uvicorn.error] Waiting for application startup.
+[92mINFO [0m:      FastAPI lifespan: startup
+[92mINFO [0m:      SuperLinkLifespan: start
+2026-11-07T21:05:04.833Z INFO [uvicorn.error] Application startup complete.
+2026-11-07T21:05:04.834Z INFO [uvicorn.error] Uvicorn running on http://192.168.1.104:8000 (Press CTRL+C to quit)
+[92mINFO [0m:      Starting Flower SuperExec
+2026-11-07T21:05:08.331Z INFO [uvicorn.access] 192.168.1.104:40234 - "POST /v1/fleet/register-node HTTP/1.1" 200
+2026-11-07T21:05:08.335Z INFO [uvicorn.access] 192.168.1.104:40248 - "POST /v1/fleet/register-node HTTP/1.1" 200
+2026-11-07T21:05:08.340Z INFO [uvicorn.access] 192.168.1.104:40220 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=17203656219898583776
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=380354413464454027
+2026-11-07T21:05:08.360Z INFO [uvicorn.access] 192.168.1.104:40248 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-07T21:05:08.363Z INFO [uvicorn.access] 192.168.1.104:40234 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=1042359178381371621
+2026-11-07T21:05:08.366Z INFO [uvicorn.access] 192.168.1.104:40220 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-07T21:05:08.564Z INFO [uvicorn.access] 192.168.1.104:40284 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=15289663661131263311
+2026-11-07T21:05:08.583Z INFO [uvicorn.access] 192.168.1.104:40284 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-07T21:05:08.788Z INFO [uvicorn.access] 192.168.1.104:40306 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=15390260772962933631
+2026-11-07T21:05:08.814Z INFO [uvicorn.access] 192.168.1.104:40306 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-07T21:05:09.694Z INFO [uvicorn.access] 192.168.1.102:46830 - "POST /v1/fleet/pull-messages HTTP/1.1" 401
+2026-11-07T21:05:10.614Z INFO [uvicorn.access] 192.168.1.102:46830 - "POST /v1/fleet/deactivate-node HTTP/1.1" 401
+2026-11-07T21:05:10.638Z INFO [uvicorn.access] 192.168.1.102:46830 - "POST /v1/fleet/unregister-node HTTP/1.1" 401
+[92mINFO [0m:      ControlServicer.StartRun
+[92mINFO [0m:      Created run 16568130174084390299 in federation @none/default
+2026-11-07T21:05:11.133Z INFO [uvicorn.access] 192.168.1.104:40338 - "POST /v1/control/start-run HTTP/1.1" 200
+[92mINFO [0m:      ControlServicer.StreamLogs
+2026-11-07T21:05:11.144Z INFO [uvicorn.access] 192.168.1.104:40338 - "POST /v1/control/stream-logs HTTP/1.1" 200
+[92mINFO [0m:      Started task 10562847466547939344 of run 16568130174084390299
+2026-11-07T21:05:12.771Z INFO [uvicorn.access] 192.168.1.104:40368 - "POST /v1/runtime/pull-task-input HTTP/1.1" 200
+2026-11-07T21:06:03.044Z INFO [uvicorn.access] 192.168.1.102:59446 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=9875237262040930048
+2026-11-07T21:06:03.063Z INFO [uvicorn.access] 192.168.1.102:59446 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16568130174084390299
+2026-11-07T21:06:05.818Z INFO [uvicorn.access] 192.168.1.104:40248 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16568130174084390299
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16568130174084390299
+2026-11-07T21:06:05.825Z INFO [uvicorn.access] 192.168.1.104:40234 - "POST /v1/fleet/get-run HTTP/1.1" 200
+2026-11-07T21:06:05.825Z INFO [uvicorn.access] 192.168.1.104:40220 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0b245a7584ec45ef42c7a161df7f6543dd606ef2bf13b365cdb60bc02ffd3437
+2026-11-07T21:06:05.838Z INFO [uvicorn.access] 192.168.1.104:40248 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0b245a7584ec45ef42c7a161df7f6543dd606ef2bf13b365cdb60bc02ffd3437
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0b245a7584ec45ef42c7a161df7f6543dd606ef2bf13b365cdb60bc02ffd3437
+2026-11-07T21:06:05.851Z INFO [uvicorn.access] 192.168.1.104:40220 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+2026-11-07T21:06:05.853Z INFO [uvicorn.access] 192.168.1.104:40234 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16568130174084390299
+2026-11-07T21:06:05.914Z INFO [uvicorn.access] 192.168.1.104:40284 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0b245a7584ec45ef42c7a161df7f6543dd606ef2bf13b365cdb60bc02ffd3437
+2026-11-07T21:06:05.959Z INFO [uvicorn.access] 192.168.1.104:40284 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16568130174084390299
+2026-11-07T21:06:06.192Z INFO [uvicorn.access] 192.168.1.104:40306 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0b245a7584ec45ef42c7a161df7f6543dd606ef2bf13b365cdb60bc02ffd3437
+2026-11-07T21:06:06.245Z INFO [uvicorn.access] 192.168.1.104:40306 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16568130174084390299
+2026-11-07T21:06:06.286Z INFO [uvicorn.access] 192.168.1.102:59446 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0b245a7584ec45ef42c7a161df7f6543dd606ef2bf13b365cdb60bc02ffd3437
+2026-11-07T21:06:06.388Z INFO [uvicorn.access] 192.168.1.102:59446 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=9875237262040930048
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=15390260772962933631
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=17203656219898583776
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=380354413464454027
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=1042359178381371621
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=15289663661131263311
+[92mINFO [0m:      Finished task 10562847466547939344 of run 16568130174084390299
+2026-11-07T21:06:22.698Z INFO [uvicorn.access] 192.168.1.104:40354 - "POST /v1/runtime/push-task-output HTTP/1.1" 200
+[92mINFO [0m:      All logs for run ID `16568130174084390299` returned
+2026-11-07T21:06:23.297Z INFO [uvicorn.error] Shutting down
+[93mWARNING [0m:   Connection attempt failed, retrying in 0.32 seconds
+2026-11-07T21:06:23.398Z INFO [uvicorn.error] Waiting for application shutdown.
+[92mINFO [0m:      SuperLinkLifespan: stop
+[92mINFO [0m:      SuperExec terminated gracefully.
+[93mWARNING [0m:   SuperExec subprocess did not terminate within 1 second.
+[92mINFO [0m:      FastAPI lifespan: shutdown
+2026-11-07T21:06:24.399Z INFO [uvicorn.error] Application shutdown complete.
+2026-11-07T21:06:24.400Z INFO [uvicorn.error] Finished server process [2250352]
+Traceback (most recent call last):
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/retry/retry_invoker.py", line 266, in invoke
+    ret = target(*args, **kwargs)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/protobuf/client.py", line 187, in send
+    http_response = self._send(context)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/protobuf/client.py", line 331, in _send
+    return call_next(context)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/protobuf/client.py", line 99, in call
+    return interceptor.intercept(context, call_next)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/runtime/tracing.py", line 35, in intercept
+    return call_next(context)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/protobuf/client.py", line 99, in call
+    return interceptor.intercept(context, call_next)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/interceptors/http/runtime_version.py", line 46, in intercept
+    response = call_next(context)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/protobuf/client.py", line 325, in send
+    return self._client.send(current_context.request)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/renata/Documents/Estudo/MO809/project/venv/bin/flower-superexec", line 8, in <module>
+    sys.exit(flower_superexec())
+             ~~~~~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/cli/flower_superexec.py", line 106, in flower_superexec
+    run_superexec(
+    ~~~~~~~~~~~~~^
+        runtime_api_address=args.runtime_api_address,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        executor_config=executor_config,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/superexec/run_superexec.py", line 256, in run_superexec
+    combined_res = client.AcquireTask(
+        AcquireTaskRequest(
+    ...<2 lines>...
+        )
+    )
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/runtime/runtime_http_client.py", line 77, in AcquireTask
+    return self._unary_unary(
+           ~~~~~~~~~~~~~~~~~^
+        path="/v1/runtime/acquire-task",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        response_type=AcquireTaskResponse,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/protobuf/client.py", line 192, in _unary_unary
+    self._retry_invoker.invoke(send)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/retry/retry_invoker.py", line 301, in invoke
+    self.wait_function(state.actual_wait)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/retry/http_retry.py", line 124, in _wait
+    system_healthy.wait(wait_time)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 670, in wait
+    signaled = self._cond.wait(timeout)
+  File "/usr/lib/python3.14/threading.py", line 373, in wait
+    gotit = waiter.acquire(True, timeout)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/signal_handler.py", line 103, in graceful_exit_handler
+    flwr_exit(
+    ~~~~~~~~~^
+        code=SIGNAL_TO_EXIT_CODE[signalnum],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message=exit_message,
+        ^^^^^^^^^^^^^^^^^^^^^
+        event_type=event_type,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/exit.py", line 119, in flwr_exit
+    event_future.result(timeout=TELEMETRY_TIMEOUT_SECONDS)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 445, in result
+    self._condition.wait(timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 373, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

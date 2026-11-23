@@ -1,0 +1,27 @@
+n_clients: 6
+
+scenarios:
+  quantity_skew_strong:
+    # Strong quantity skew while preserving the original real-vehicle groups.
+    anomaly_fraction: [0.50, 0.50, 0.50, 0.50, 0.50, 0.50]
+    normal_count_weights: [1, 2, 4, 8, 16, 32]
+
+federated:
+  local_epochs: 5
+  max_rounds: 200
+  patience: 10
+  min_delta: 0.0
+  fraction_train: 1.0
+  round_timeout_seconds: 3600
+  fedprox_mu_grid: [0.001, 0.01, 0.1, 1.0]
+  fedprox_selection_seed: 42
+
+baselines:
+  max_epochs: 1000
+  patience: 50
+  min_delta: 0.0
+
+outputs:
+  runs_dir: results/runs/sensors_only_quantity_skew_strong
+  metrics_dir: results/metrics/sensors_only_quantity_skew_strong
+  figures_dir: results/figures/sensors_only_quantity_skew_strong

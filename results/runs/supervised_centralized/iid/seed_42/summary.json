@@ -1,0 +1,26 @@
+{
+  "scenario": "iid",
+  "method": "supervised_mlp_centralized",
+  "architecture": "105-32-8-1",
+  "seed": 42,
+  "scaler": "normal_real_train_global",
+  "best_epoch": 137,
+  "best_val_bce": 0.164088174700737,
+  "epochs_run": 167,
+  "stopped_early": true,
+  "total_seconds": 279.70707435603254,
+  "n_train": 8430,
+  "n_anomaly_train": 4215,
+  "n_features": 105,
+  "pretrained_ae": "results/runs/sensors_only_client_holdout_raspberry_client4/iid/fedavg_normal_only/seed_42/model.pt",
+  "test": {
+    "bce_loss": 0.1350143849849701,
+    "accuracy": 0.9591397849462365,
+    "precision": 0.9447916666666667,
+    "recall": 0.975268817204301,
+    "f1": 0.9597883597883599,
+    "false_positive_rate": 0.05698924731182796,
+    "n_samples": 1860,
+    "n_anomaly": 930
+  }
+}

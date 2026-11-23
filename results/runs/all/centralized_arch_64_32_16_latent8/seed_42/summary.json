@@ -1,0 +1,26 @@
+{
+  "scenario": "all",
+  "method": "centralized_arch_64_32_16_latent8",
+  "seed": 42,
+  "n_train": 8594,
+  "n_validation": 1952,
+  "training_population": "all_training_records",
+  "validation_population": "all_validation_records",
+  "normal_label_used_for_training_selection": false,
+  "scaler": "global_train",
+  "n_features": 118,
+  "stopping": {
+    "max_steps": 1000,
+    "patience": 50,
+    "min_delta": 0.0
+  },
+  "best_epoch": 184,
+  "best_validation_loss": 0.1677880585193634,
+  "epochs_run": 234,
+  "stopped_early": true,
+  "training_seconds": 779.2733238283545,
+  "total_seconds": 780.9750111600151,
+  "n_parameters": 20830,
+  "parameter_bytes": 83320,
+  "serialized_state_dict_bytes": 88755
+}

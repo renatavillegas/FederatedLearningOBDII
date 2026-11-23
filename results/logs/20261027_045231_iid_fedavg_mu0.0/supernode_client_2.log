@@ -1,0 +1,16 @@
+[92mINFO [0m:      Starting Flower SuperNode
+usage: flower-supernode [-h] [-V] [--insecure] [--root-certificates ROOT_CERT]
+                        [--superlink SUPERLINK] [--max-retries MAX_RETRIES]
+                        [--max-wait-time MAX_WAIT_TIME]
+                        [--auth-supernode-private-key AUTH_SUPERNODE_PRIVATE_KEY]
+                        [--auth-supernode-public-key AUTH_SUPERNODE_PUBLIC_KEY]
+                        [--node-config NODE_CONFIG]
+                        [--isolation {subprocess,process}] [--host HOST]
+                        [--port PORT] [--ssl-certfile SSL_CERTFILE]
+                        [--ssl-keyfile SSL_KEYFILE]
+                        [--ssl-ca-certfile SSL_CA_CERTFILE]
+                        [--trusted-entities YAML_FILE]
+                        [--superexec-auth-secret-file SUPEREXEC_AUTH_SECRET_FILE]
+                        [--allow-runtime-dependency-installation]
+                        [--health-server-address HEALTH_SERVER_ADDRESS]
+flower-supernode: error: argument --clientappio-api-address: this option is no longer supported; use `--host` and `--port` instead

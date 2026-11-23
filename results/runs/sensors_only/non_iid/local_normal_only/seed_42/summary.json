@@ -1,0 +1,82 @@
+{
+  "scenario": "non_iid",
+  "method": "local_normal_only",
+  "seed": 42,
+  "initial_weights_seed": 42,
+  "training_population": "normal_real_only",
+  "validation_population": "normal_real_only",
+  "normal_label_used_for_training_selection": true,
+  "scaler": "normal_real_train_global",
+  "n_features": 105,
+  "stopping": {
+    "max_steps": 1000,
+    "patience": 50,
+    "min_delta": 0.0
+  },
+  "n_validation": 976,
+  "clients": {
+    "client_1": {
+      "n_train": 1140,
+      "best_epoch": 98,
+      "best_validation_loss": 0.17883996665477753,
+      "epochs_run": 148,
+      "stopped_early": true,
+      "training_seconds": 43.05416789569426,
+      "total_seconds": 43.589434874011204,
+      "n_vehicles": 7
+    },
+    "client_2": {
+      "n_train": 969,
+      "best_epoch": 428,
+      "best_validation_loss": 0.16853980720043182,
+      "epochs_run": 478,
+      "stopped_early": true,
+      "training_seconds": 105.71630535309669,
+      "total_seconds": 107.29832291603088,
+      "n_vehicles": 6
+    },
+    "client_3": {
+      "n_train": 777,
+      "best_epoch": 299,
+      "best_validation_loss": 0.23211921751499176,
+      "epochs_run": 349,
+      "stopped_early": true,
+      "training_seconds": 45.9949962728424,
+      "total_seconds": 46.92945717507973,
+      "n_vehicles": 5
+    },
+    "client_4": {
+      "n_train": 510,
+      "best_epoch": 331,
+      "best_validation_loss": 0.2752799391746521,
+      "epochs_run": 381,
+      "stopped_early": true,
+      "training_seconds": 32.77071278670337,
+      "total_seconds": 33.852637853007764,
+      "n_vehicles": 4
+    },
+    "client_5": {
+      "n_train": 384,
+      "best_epoch": 520,
+      "best_validation_loss": 0.4324986934661865,
+      "epochs_run": 570,
+      "stopped_early": true,
+      "training_seconds": 60.01983098813798,
+      "total_seconds": 62.043072110041976,
+      "n_vehicles": 3
+    },
+    "client_6": {
+      "n_train": 262,
+      "best_epoch": 330,
+      "best_validation_loss": 0.4561537504196167,
+      "epochs_run": 380,
+      "stopped_early": true,
+      "training_seconds": 34.50509862974286,
+      "total_seconds": 35.93294335401151,
+      "n_vehicles": 2
+    }
+  },
+  "n_parameters": 7929,
+  "parameter_bytes": 31716,
+  "serialized_state_dict_bytes": 34957
+}

@@ -1,0 +1,1397 @@
+[92mINFO [0m:      Starting Flower SuperNode
+[93mWARNING [0m:   Option `--insecure` was set. Starting insecure channel to 127.0.0.1:8000.
+INFO:     Started server process [2066752]
+INFO:     Waiting for application startup.
+[92mINFO [0m:      FastAPI lifespan: startup
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:9104 (Press CTRL+C to quit)
+[92mINFO [0m:      SuperNode ID: 11580846103886377892
+[92mINFO [0m:      Starting Flower SuperExec
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: dcd8f1bc846cdce1a353096c99a1bb748899deba4fd53b640c2b5437041e5ae1)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 9aaf443d69f43d3ab527b95aa6d4d1fab34c0b4a2fa9b3e22895d24b0f08ffb9)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 9a0c60396aef24a57ed3848690253b9d7cced6a3b8fbc1490db890d406a341e3)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 770f9d7d84cda3a1aa536b718bf8def6ffe54b2356fb325b90b1b20a52e59729)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 62a757e3347d633e6f3723d7b5b15e96bc24d776ecd2ef42bbaa5b42b63c0c0e)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: b2bae416f554c2e01f58d3efef8f60323b9212019c3d6b6054b7d796d31d3b49)
+[92mINFO [0m:      
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 575c1a5f40f65da849795462786b2472d79e29dd48fcfab8d814adf5af478d89)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: bf302e76cc512aab1734caa1c700e1c9bde5d853bf29f0f97b03b0bcd642b7b5)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 8e79f10092b2a8463c9f9aa1ce9405cb3eae523b9871c6b92db513da9c1b4d22)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: b56f160000a6a76e4436c9eb29f9222c12c93e508f5cd02d241d60f6ddb0b66e)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 9a7e1c0c8760cdeabeca2c4192b1b8f4551c053b237a00eda4f04ca7f6b87db6)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: e97578e0f87d9dabc24317d542290ca09c6cc211a21157a70dedc07b38f5b749)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: a52c2203ecad015c57b383823b491c83510c2dbc7fedb5f8246830663c059afd)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: a36bcaf22beecf68935c147164e1ef4e7e66cd39fb7ac45f7a3bd9c94955c61a)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 8483b01f19b4027decacd2f1451c97dfd59b1916709fa1b088954bda51c63718)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 001b641a5de6419634f06647706b9ec0ea49201b27338d3772c7cfb35b438000)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: fba71a0722c78fc7ce603bcce1241039e83d8d47fd1b7c8925970896e9f65cfd)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 42f0b7c32d5e49d2aa4a18b6820f1292df41843237f1fd1256b755651d515276)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 1afa2936a1680793dd8871f7340b4514b78b57e5cd8c851c66fddb5d15f137f9)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: b9de04b848c664d6cfeb6bc738c319f46c14ac36dba3ab4a4686613b99d9396a)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 040d4cc3c20f7af77603376d5814c19c85a5451035490771b2efea1b927d12e3)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: eeaa92bad185c62f51b10f5390fab13e1e0d51ab3952cf7a2d3b51f26807560f)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: e16f558ed7f63126fc82c4a61bd8cbfda4c6f3e44ae9f1daf3bf0d3218368f41)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 137c1fa64a6f5b0ab79d0ebebe81f3abed56812285a9f62951191f480455566d)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 4dbb054bb402151fdcf4748f5e65cbf8a2e58e188ae2051555d44a673077fb7f)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: b6a8842df4ece52751d79c2130c21d5ad1d9d2e8b6cef88c0de79b6bb287ceca)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 1368985a5374be23fb2f35a5805f0d056242650997198b32af3673b75342f997)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 1404d89a8e76c2d8190136f19080138d0cd9100ec25066c518e77c15aca73240)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 5c7bc5f0a9b9b55f4c309639fc51b26c473e557ddf8dfa39a1c85d6f4b555d9a)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: cec17927e78aa6e519cebb39723c83e026dfd68b9813bd0471669fe786b4538c)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 6eeaaf79e2cc5f12c00d1be8f679d84be49949d00cf1a3eff773e99d5202fbd8)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 6ade8f669031efda0eddbebbb4b97a2135691121ba68569e3c825fd1cad5bc14)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 56b9d286dc82d63ce8bd8a1b2b7b986a942055e24cd0edf65188f1575cfcf030)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: fb8f4b7cb3be8d543e38fe10a05182d34806584019f6bdddd53a1d909ca632bb)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 6bf4fd74576b771d1435422d6a02fa0c847b83b68bba81848f3c6b69448e19e9)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: d83909e98eb28286e87ddd8b93f319abecd42d5d45b0a9dd8f5d39b66895c40d)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 1bb516e751e73a9e1316422dbc7331c09f35093ef1a3d6a96280410396fb0494)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 325bcf8e9e66a4cb441230a8fb7deed0c71fc8d04e6e84e95ff8d7342fa2e197)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: f8d4a64658efbbfed5fb2be04eb5826d8bf74c5e02218c16ea622fb52513bf64)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: f9e15371d4ceab38aa017cc4cc18949582e17b3d808871e6d341e3232c430f7c)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 059e14705ea8d2d41e04d6077d78c24a12b36fafaeb03faaa8434190c864a859)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 672caf27551a967542bbdf580cc748d0d4711aba3231121b48265dcd07a996ca)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: c4b7875e9c6f67e124f2661a87ec9342751d81b04aaf5c2f7e1e5897e8bbe334)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: a159d1223bb626b0d0b0707d1de9badf0ab23eb83f425390f5b46f60ac056c22)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 84367ff360f1df1829c28bd485cfcbaeedd718934cffad8661b1cd5320a1bf6f)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 4bc11f34559a73c81604927315ef3653149760967c6ce4b3e3b7b6020b9c2e9c)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 8d7b04fe1306e8d5f17507890b65d9a1cf79089d09aa634e12539df9a07ea6e6)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 834075a605a092dc511f2bf6a5df7c7da08c78e6c2c7dee4f2ccfc07d80d2802)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: cf09b455cf3c70bfc36b3277697a8593dd01f70e083d28fdc2d9d2234be482bd)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 4c4d11cb723de8574e760e77360dcbfa189aac42560046cb57ac69a0541cd04d)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 16984cad8e9fc2179fab4f51afd0443539e6d75f25cb7af813661efb67ec7329)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 12f13b1c78729745b5800998260db57ba65bd7d8985e0ca045a04dcef177d1e6)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 157a8389a47f5033bdaedb9e92de568d050f733233b16d3952a6ef5a24ef8709)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 7555a9c454ba2b947b99500acb18e3c0b236f699576db3a8b401502ac6ab4665)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 50ab09ec1673c0c027bc89e550b90924697168dc242e75e08b762d1cb44b049c)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: c604919fdbd69caa0147b8ab51d5523c04aa41cb5336b494dbff55de5c76e0ad)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: fb9932936fab628c216fc780d8d203bcdcec4b3a9ecd930254905ef19fdbffd6)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 1f16954fcdd30d2b14386fcd581b93696def62a0bd11d03a8606241fd30530a5)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 63d0670321eefec77655678933850eeeb3b5f6564b2b8e177d140338fdeeba9d)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 80362c70559acb3b2b3f4b53c0f7f96e4e833208c883b9bd66f57079710c0e01)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: ab6aeefd1654d729e10128472243968e67953277b66f06b093c9c76b962acfef)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 4f553b4f815a47555caa9ca8fc44066861a01c0cbb9a30247073e6491feb823d)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 4ecf01e880ed754bb60b8c8f0d9ac793dc1596e2be70d39637bc5b3e67a3c7b6)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 7baf195b1d60b6a680136b97910f04d88715a7c1179633b9f2cc3d2f38c500af)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 90d3d6759654dd498f0494086f3cbd0afd0958b80c2fc7362ef4fb7c00203416)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 44b75248217ac1396ec0d2a70339691567e5e3c684901b4c6dd8077947adb0d5)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 1feeb9749180a7b27fdb9cbc273d75a5d2fe5e565b5398c4996b06fdc319267b)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 754c0d71bf93e592d0e7de65a8f13c2086d4f297d55f163e117e15d333443a86)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 37f71518f8de644d6e2e152aba959b7c9ca8e33143ede455fb0149f3f209128e)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 153e29dd976b5c83b7c184c5c00bf5f5b231509bebbfa4f9fc0b538bd4fa450c)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 9abe6a9389973a23336df2aa9bd4534dc8be68f7d800f1ebc36a77419b9f6078)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 086196c82d2219aead60661252774bdeac4b6dfa54554eab6f25f589fdf348c4)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 9abec05637b8464de1a2d38b8754e17fe31cc4b422f7492d96bd79de4a1c1f13)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 2faf11b36f90912ad24081ea259c6af99c13635e7f19b19a30f58abcdd8dd805)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: b5c6344b8fb371042ebdbc6b58c85ef2163e8b06ee8ae7e5f71ab3719897e424)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 7a4f7bd2078905d1219cd78eb0a695cf6e1597edffd3f4207e1aca4c3c735921)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 07b6be99cf5dff991853b73f4f8c5307de69dfb05ba8190b83e981fd8d672da6)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 32d60510b65045d77e51a0e9b5e1ffe1e3ae7745fd838ef53ac16065c8226ab3)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 8e4c8e2d8bd3e18a957f9cfd1d0029147de8efcde85a0c0088b4ca793b37c59f)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 8aacd6f1dab6ec9b019371f35dc8eccc67a4fe830661a052dca3648544b4feba)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 6a40a5a30efb404896ce076fa1b14e6b75d345bed88103e86a543297b67b1ff8)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 813e7e2cd3e3ec2dc29a8954afd27bb677d2545251836ee81265b02de0275f8d)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: f40d7cd6b89581c135a909e990e468eeaffac33c0d2dbdc089ca4cd0d9158ea4)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: f5c33a2f66265f91d11af696213d2db158091aba35eb76abcd7a6b1692146754)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 9e7c8f40a30e64c51144548accc7586826be0382536375da629376662084667e)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: c0d444da354943e44acf0f9f739ed3785999cba86179ef8f40a4681058f4a604)
+[92mINFO [0m:      
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 7f2afcef8196d7d9a6e584733ca78a955a0dce8a01105f0e43dce13dbba1ee33)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: cfe0cee2381e7c5a0f4f8b06e13df246967a4bc402db421c61feddbef4434c10)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: bf33d6b437b0b66318f71f4abea9e62ef489c4433c1d80aea96a48bb9dd0cce5)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: b9c36aa7e185f772db97b21b7680f41e675c3fe61bc9505c6a4b007712945fb0)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: a4d1736d5fa39aa2ed89d837ee5ec7ea18ed83412c4a09bbfab8aca3884b1f9d)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 2256c10a7e9cb7078fc0b329a16122eee3e9cb70e27bc943d9e942e141a7dd34)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 2271dcd47bf8c5693d2adb52a3c12ed7d3fc7143307ce865baae21d5b10361e4)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 65f10a313824773c0e92bad2a9c27b5abfb06779c5427db73365e40f516c1cb5)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: a363da032954efd0c64c16a55464ca860f42de48da222296d9eb7ab0f75006f9)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 62c4f54a74594ef09e280d5b35880e71ecd088f1973a64cd5388ecd2fd38fa9e)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 563105c79946c07bb8d53c90a6b6437542f9aade921b9be6133e201f021c5dea)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: d17b6c265bf0bdd2e3325e3cc3dbc14ff206011e460ec73a85674d7cfd346039)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 1763f32635fed71fad1d35a945dfe59484063062fba684faa6c47edcb4ecc539)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 4a874d3ef407e83dca4a04e3265b02b76800b69e743bde401ee3a3bbb821970b)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 24782c4349e62781884d933752f1de9fba2d5a92cd4ccf48bd510c5c18b55cbe)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 1b9001de047f10e48c81d842bf03993c5a8672a9b27aafee847ab5135abb1d78)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 39e8c56450174120b1f06c61217111031b6e62e34cbbda23064e5947f07ede01)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 74283a13305e1d72e6c6e3833f367aadede456807193cda577f1840c9e271a45)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 701f3a97a51e3bb69f075ef2c321ab5513f6356616cd8cd339b72f85c9a6d0bb)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: abdc08734116a8144549743ad17e428b168b724096ac560f9c6ce6c9d3142e94)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: e6136cb979d881b00a7e5ad3ccfb89cdb98d5772c9ab1230374159ddd50637cd)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 1b7c03eb773be9071af9d0ac44b326e87d4d6e924ee7b2efd711a3f96238357b)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: f1f773b248d531a37cfc7557812aaba0953302db656245bbc3281774396a8f07)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 147d15877b1e760a5a0fc2c0f6e9a914f18ce3744ad153f3aab68d8ebae8b374)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 44c6ed5f392cf1d5a1af38836f6019b96e22d61cd0ef53658f9e8a07535ad397)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 67a9052d0f5172bddee23ebf41b15c2a6e77312fe55435f5fb6294796327cc70)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: b918a9ae2acb590d0e70796a69bb82679fb92a93bee04eccde3b64b00b595c48)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: f6f97c5526adb986f045108b87703b83dee83385967d785d1f35c8e9306410a1)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: a158aff377fd051c5f06d08dd379ad0953c8d2aa9fad48a861170748e2ff748a)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 6c8c82f83c69babbd7d28523f2dcbc458a3c8741726d55bdd65814fd3058a974)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: c860d85c321c8d3bb88199691f3fb3036654a9529835dbee4536e9895f3279d8)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 2472e7483ae69d0ffd4b2e2b09af978b3ded3803e8198b03d4a87631813be991)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 44d62159562c34d3e4e92ce11376ac68c3761ee2104d138c7538d881004766ef)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 7bdf145d27b5299cb52899d86c8b7af194171f6431447ffb170204c156a4fe8b)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 5540599b4cf21f10d949d30658c614fd0be67a5fc5e01832fa3b855dddcb8141)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 4f5792404f86a46b62cc346ebeb72cf89c20ce1df3e3056e8ad3b2318f8f651e)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 387a818e158fa403e22bc04d0d5e13b3ed5eeb111bbf6504f203f5e5e146b582)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: aaf2d3afa963c24c13049270aea61f184b2744437a466f905fd9464f32b03aa7)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 293e98a71a168cc827e67f41fd9bf7d6aa1d4f540540368fd37599e2cc03fb3c)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: aeb1fd6ec6ebaa4b0effe4eaecb131f410f7f9ea4ecf46a580d07a5260517825)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 1c4b1d3e6b5e00cad8f07907f3ab774fccbf96d35740dc735e2adbd3ec65128e)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 527be196ec3dcff46d23f8f472b31f895bddff08a968f1b847bfe93ade610eb0)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: a8c58eadb5d7d78a3c761d560c6f054c54b83cd3b73164a6cf4010d79ea3a9cc)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 4eba84c056a6e97506a5b016a8dea92fbcd7e2d8095cb325592597d40d02fd6f)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 9602a664b2b65e9ce29e1e287fe8495d9800f7f29c12bb78b878e7936ec85392)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 0f13dbf00191d91560935297b8e437d18fcc65510c288d7c7bd4e8202fefc93f)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: f6d66501fdffb1192fb8da10249b27c58e83a7cb53b05e54dd3c62f559f8c918)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 567d25d142d7d868c74d2675a36a4edb29eb8705accaf537192491ba653abda1)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 847365611293f34b5e0580764e8cd333e0787097b3fe07f539920932c6c2546b)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: b3b934bd83f8be70bf24321e6b85aec39c943306c445f19fa4b405704b98cc2c)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 1adc8ee3ca624155d721686174f2019eade5e4d3ce3a91b9f972538ec3fa501b)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 4f4614b84df2cb66f766bcfb5713eda45489c4a94ce4fc8200746f5bc57fd997)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: bdd3d74765bb718d01cb8c43a10a9ae5ec7bccc315de3f132ccb6f44ed00e94c)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 5973b822e59baee0f64c756cc06b1d4899d4decdcdbc481ca4ede0c7fe79ae64)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 5f2877040c3d4e55ad9e5061c1438e8df672055e3d5aa1a9aee3faba7df55468)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 814f41a974f0bd5d548701586b2fa79eda81194c7bc53e7de6f54d6712befc08)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 74d113b631b9f42719d9b59617f3a4786fcc1d7f2d4a2b12cd647f06bfaabef4)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 373a8ff2bf622a916b2267de9dc61770891caacaf6b865a0b6d80f6c80fa4b18)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: d6377fcf90370b8df0be04b76a0de0fc1a585c728810db666a97bf12f12b6404)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: a92a3f9c83133a48ab78df32eb43067b2d088bce674de719af8d03724deb7a2c)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: b692c5191072b43a26eb47ae0aaceb0bb8a1b5a7745f7a6029e34d19a7542ecc)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 912a63cf6f21be2229ac7a445a8138638f9f38278c1f8b95066d71bf83f427c9)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: cbf8b3f55d97abc95d0a59c4f831a9d3f185305e523495c4b9687e12d599530f)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 994dca2563567639d53a922d2c3b4904550a830c9640839296467f0b9d1a29c7)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: d170200cdfba9bf25d6e6ae703fbaf0782d426b6421989d5e4219c2419388c8f)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 7f6b836aec5b4df57ae704e7a9cb8a8b36527a1ea5fdc8adbf4a01a3fb82771c)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 4d7dd2c87ac0ec641488e857eadd55e5cb5de9df4f63c34a00e25b11c57b5bd3)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: fab44763a5336a48ef6741b021c886dab0dc401262913de6e1446eea18e5f406)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 1d2e413c1e9eac82d11841efa7be8a986f75caf0adbfdf75b14ab7d385f7f9e7)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 3ba3c49aaf9084d6bf156501941f21812881408f78b8d6aeafe722db2cdbb942)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 2d17cf3e5195d31ffc9c0d09457eaf3034ec080b0c4291895765a59d252e7151)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: d695f206a24beb6c269a77cb8686f23ed84cac927de058069e02992d3c261b13)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: ebbf3118a388c6472851844cf4a4ddc182118dd738a5d5304c00424a9bcb5648)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 1ea4483bdd21087f0b8f1680790c1b1c954ca6ce59b05014dac4befada06628c)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: b4ad8edbd2fd78bb8f7774b5a96aa63574a58666b4f6caa5ff2e266f84bfd88f)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 002f1fcea808266589c0eab2e845786cc9da1dead817df254a8a5b5e0ffbcf34)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 674a70f4e180706ba402b46e278a754bb6aa730ddb6808fbc806a2dfc8df63f3)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: f66fdd152119564aee7f3acdfb4bb84abaac7be52a59d16a407932a5597ebb2b)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: e2b181d1e7b3499e1fece55320fbd3cdf45d58174e7867d2a732f05f6ced9b13)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 44cf805b68d767fa1be7da225ac9a4ee9314420aaab291735c9623c0f7e0538d)
+[92mINFO [0m:      
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 14d5b8cf6726363df30c0e6914520ac1b37903a9a052e6f5a71127f67768f602)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: c5586ad4591863b06d3009780ec99bd979766f602d1ac7a859f8641e0d6bc0f7)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: a445c1798408140bcc70f2d37e5b737dfafce3bf0057456cbfb8ad636aa4fbd1)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 26fb28678c0c8ba8548e5f21a1d98281bd56010bf8ed867b6b02e90bf0a9321f)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: fef65c5bffe6ea6af21a528a28e51a2e34ed941d4a4d865ca20843c373741bc0)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 149709c1fd40298c57187d148a378728ef49da429951a2c8a34a434f2f95b566)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 307c6bf62eac1eb86061f68d906c23aceae58c8a71f6aae13dc6da960c1850a2)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 730b33e03e1b90118c3388d83449d93c794604524f41ac25181bcf7f49bddc25)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 3fc33833dd225b77bd721ad11ade2b8c16c3eda5faa2ee17f0703a6abed44da2)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 4094d25fae94d447459104159bbf329f3b9962aa7c2f7f2efe8f73a487ccfd00)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: dd16297f83d7bf6778ee76236ce38870cd6e3d4c30bee8ef5e5e140f660b5875)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 6da90e525939ba36bbb6873e7f96bd5b689a9e4487c60535fa2aaa05f01ac3d0)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: a176fbfba4a47426aebe0e2687438ef1fc55716636e6adb5fbeee060db861272)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 01646cb5f398ea58fe26ec0c763d61d8e91674f92eee489e91c9f21126991659)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 21187628c69fa80c4db35688abbc8707c91475bebdb3bf3c1b860378d61c5a15)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 7c2e16f09a5b2d70954434b289da5b8515e20f65b78ecfe58ba5b1cd7fa6120f)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: f428ee37c7ac1f07046cb515e5488f47db246503aee2f3036efa8100bdb49a6e)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: e986d2a649a35c0d3cdcc9bbc2d93de4341aadec5d5d8b038dca4254b3671f1f)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 692caf8ce8677b8da891c24a8d23ecafcade878cf8bbc2a8e5125830329a8ba3)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 95cc1614caaadeac5f078199ab780a0c677c2a9d89a8b0db4463a1e8468192aa)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 676fd0e1f6969294136332feba4d5b16c1b5d8eea9a272405b427e6c02f5efad)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: d6cf73dffcf249034a86417f3fa5eb90731a2f5ffb4bee3b9eb7011574d6dcf1)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 0e5bbc1e528ae342f4581f7804bc393d28e87dcb90f1b33e04b147d26d5b9a9c)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 644911ffef36acbfbfd61959b576aff0a1864ea1750c33a0c95b081abb520d1f)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: aaa41c60687fa0326fddca4f3115f0d8e448b822b00887294947106bdc441dc5)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 51648791ef76c9e605b8aea7ae6cb8a9f3b883bea40f1ba28657851bb92f4de3)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: ca12a9a0c15d6a9e5c15caaf638a2cc6453c024d89d8aa72896a3c3d403f7e03)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: aa64cee51e19e1a54e7dcf4d187b57f54e645629ea564ffbe60d6653156288a6)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 9e1751d57713383ef0700bfa0c27842f0ca9f6cb60cf0b1389bc19201ce94644)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 35d575b715c9fb128e63a19b073b77ff31d42f7d8f9f6de13e5bad9e3985a218)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 663ba8da7002e687f0a938e476cc08ac7995140fcaaf020ab1d722a0cbb767fd)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: ee23e56509d34d0d8ea7f7fad6891b27820e4209aff48d5d5315fa2c890dd203)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: dccfe3b26b56e7d4f011375877f7b90974a40c30d147f47c90c98941ef454342)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: fff8adcdbe3d1d884e0022ee4b66509aca88312a55876f5e697cf78414a25850)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: e6870441bf5abfaf5f7874528659e0ec50d2d9c0237bb991e43a0b6062f3069a)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 7cc341b239599c1bcdb6f98d5faf94d2969c87a3c38acab49dc567d4a814505f)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 394cfd727fcd38baae6ce643c13d37024d2e9cc4969e61375022b3babf7b0a15)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 9dd14529adc51a4db098e2f1f0c6075e3e1b06d83e0c03fdd1d623cc6c9b4373)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: d9d14f94997b10a28fc66704703940a140a83a591395be498fc3cfbf2aabbda8)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 9cf7a76737b5d7dc73259cffa1e936d51c84e77e0eaad49ddf42d8da77a6a550)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 21508c4c86e38a3a37c504251f49338dc083ba38f1de4759b7d0ef4531d85459)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 7670a8dbaeb115a343ab70525a0507131eea09d8fe71b38d356ba1400ddc80ec)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 44d9bfafe288dcc83ce8edceb6d9a525f2ad6f61cffb663154de4174259ce082)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: d6002155e904d4dd9a0b054c8f91c45ba04370154e2ed647ed323ee254e6e7e9)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: b9519a869b20f661e4550a80ba3aa3f2e8b63ed8193b25f49a192248f61968d3)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 109c9ec1e8efb10208a0d712b15b4e69525f41d0d1cd0e7d0df5ca985c91c8ad)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 89ef44b23cc0ef1d1132dd51bd6a6b5079e8fac04013233b25ed1248cfead287)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 96e1da3e5db0ef3accb72d321ffa10440d80423766256d40c5daf84d9929115d)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: b6d43e7b66701842e126a0e68b446ad5f235e88137cb1e6d822a105dff56eeed)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 745121b106c59fc42d14cd60500e6c6f1c257bc0c38d147c74a5b4b7fff4d6d1)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: a3910b704306cbfa95587a8f98a2d09a70072d20f749bba86fe63074bb96a749)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 9f168562abd437f462c291e02de6cd752ffc8279a0446a6ac70d48b3fc428399)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 3b7597248c74626e73e7fab7bd6e2d3f5217bbae85a41a21b8d8a57ede64b0d0)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 482a7d6c787b9499b541beece51c032751da69cd9e84a05a4d31665cb18b3c22)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 44e99d9c36f048e47a7465bfd36fb8465c7423bfa55142626ff30b7a33060dd9)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 8c26d8d463c65ac15ecb62ea62c004b6b8c98baa2b81f2ce825660bd68994427)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 3fd360eba8a114619b8fa4fc3b0692dc9e155099462e86cd8af4118a90a2e170)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: ce31af79d58e5122c7f4a93a7ac8478be192865c62d15217529aa4d26b7899d3)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: a1a443551c78e7b258bf5cd0c10b43d7c0a22c80e96dbc36e56422c4907fdb5d)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 39dfeb27586f34d70d27e47a327e29f4bf8827dfa7b59c8e0ff1a31c563505a2)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 2f31d29a75bfeb81eab9c59f7ff0b3bef498885528197695e04e68ee9770483a)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: ffa605057de8ba629fe56190f73cd48b152c7e3d9392c0b5fc3bea6f3b0e903b)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 4de0d6042f74c691bfefe549e3c0730e876d3c6dcda09ca060e2a43e64bce23d)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 8b0bf98aeffdc3f45680bb9635a4cc3b8d853682d44ba85365ae512977adaa9e)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: c994dab305bc2534b1ce299edda44360b0ea5634db15aa891d93c1fb61c69bd1)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: fc7caba53a0d516ed408c4091c9ae40738e03afe4edefa37b04a1417a898d800)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: f0e7597ca0938ae1c539c8c29adf55c151e01846bdb7deef152d1678a7529eba)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 2f31151c26b7ea05aee5c501a89cecb3f0dfd55dc309e92be0691e2199eea4b7)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: c07a05a1f69fd834f761d49facf4767258d03713c18c8a4d7193157a289783f4)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 24743c8bac6db8d9a3830b5834abc034ec447caa8b30f9753f23a81225043453)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 5458bb67cce89b3b69692f8ee95d6eceda08356c861bfe51111e7171d3e0e77a)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: ae1fb88528a5af78e3aefa098945b87c8da1e1e4c2a493a8fa6cf60bca9b8dbd)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 5c257c1829c920ac0eea11c72543fdaf1c5b11bc9c1fa4e82211bce04d84f4ba)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 061574b08e04184f44f64b9a1da6bf340613b39e51981b814062d3c77acc6fda)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 638749aff431fb1719b21fe6f83b9da84259332b5025531750db7fde63ab98bd)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: c23590e8d5cadb00b106e20509d818698e7d899d2a0ae62a33317884908a9705)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 8b945c94010f06ade178ecc978ff68e5204c6f75e662ed927d7ffb242587fd7f)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: e34a7170299b32fd55f225ddc20a663498f7022e30ee4f4a89d7adcd2b8b99be)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 2adbce6e0a92d033db28802579ea3c82cdefab3478978189a7e5277bbe9bec6d)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: e103b73f4d3b215a37a78c37407086cadf2e276e1323d48feb56e455e323c016)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 84b6d0007972a8eb8e8ee715e6b493241291d0ff7131ed444b5e2f9a90e1359c)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 5766e8e57474fc04152ea8b19b60d4db6770f31d3a6d35bedeff5e3fc150f41f)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 9cc4d0682a9a507dd4680a6ae7e2cb767f6fcbeda24339b51798e05a7ac2f945)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 199f1e9b53206eef4b75a934d08adb5243263307abc0648c28eb1cc6eab8a077)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 4870532944af74b0e96957343553beae6d69702eef744ecbb56a130333f1c2a5)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 532b0eafeecce709b46b386932f4b0407136c8f6b1cb020607eda28563dcb286)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 382e272db904928e2e6433d81fe52eeafe0a6f1367ed9d08d233bdf2e94e5df3)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 1990c54e6cf45dcc2c7e1d056402e179142225013b97264de26e86935362893f)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 8f603bf6b9592252583a003ca81bec711fa0aa4e12b20a5862b11350e10fde47)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 4025f7f1d90337ef61b60edfa1d38906fbaef872b32295a22d6b87373f25a076)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: a435e4925ecbeae273f7c35899a1bee442b8e4e0b6e0db84da1465de9e68ac23)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: d4d9756783cfd85ff1e7acb1d85c74d0f709f1d7044f9dc0c0f8ef0b1934537e)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 4fc45ddf83ae593a4acb4d5510e3697f04a72f9beeea401fee2975577e7100ce)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 131ad9240aeb0fc4ed018e2d08b1ece773400bbbfd58cfa550b5d8cdacda5bae)
+[92mINFO [0m:      
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 6b052995900a2872a6c1d0170c7ded72000eb29ab6188333f49c9b6b60d291a2)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: bbe7348e976a375ffa214fa794ebfa1bf7565e0b09b96e8d86901820afd1b33b)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: b6ad3976c42cc613f4cd563ccb8b9634f8935f948d5bf20be0c791283bb5ebc9)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 418e3be58ec130608abd724842c62a625bd3124184dc6329271d8bcd7f546c26)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 38443fbadf8db7b3cfa37bb534e9114834509200542b5eac873fec7f71a7d2eb)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 5166781326a458fab0e5f6ea0dd8f40c72b1dc7ced02a05ed3fd845a8cd32e93)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 420078aacfb07b8cbfc4017fedc6acfe6da848d85c1e9d240c67817e7f37be29)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 8929ccda7d784b3b385b9b3a94aea2bc3e86eeb0dba99183cbbebd274ae0c201)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 5cdaaf119c2550a797463cecdff77b5c6cbf1d88fd41c216a760ebd5d277558e)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: 252ac85d556281d88f6845f11c2182490f707d44ab3369296b22e51d8090507e)
+[92mINFO [0m:      
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: b29cf7b3e70030a6cdf20f138feff229adce6f48acef573a0677559773e46086)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: dbca361c8faf19b5ead4ecd50afec0c7fca7ba894722f58b5ee1788efc76ad9d)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 749eb596b99cfa4b654a98cbc7d536c94ff9b03b0139c4961c2b032e002abf84)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: f64b1bee279531b4f5a45b9488cdd4b80b2bc9e27100edfac33b712ac5cd3aa9)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Receiving: train message (ID: 0a62d6f61cc68909ccfd2e6f59051a7064dedbd10621082528a23b4342362512)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 1206760354651978029]
+[92mINFO [0m:      Sending: train message (ID: c483cb60d9a8cc15146e668ccb9625992e2e9c8c9f0f0ef9416146d48a59b243)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      SuperNode terminated gracefully.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+[92mINFO [0m:      FastAPI lifespan: shutdown
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2066752]
+[93mWARNING [0m:   Connection attempt failed, retrying in 0.64 seconds
+[92mINFO [0m:      SuperExec terminated gracefully.

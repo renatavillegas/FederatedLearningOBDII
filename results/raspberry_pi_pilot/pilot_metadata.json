@@ -1,0 +1,12 @@
+{
+  "source_run": "results/runs/sensors_only_client_holdout/quantity_skew/fedavg_normal_only/seed_42",
+  "scenario": "quantity_skew",
+  "client": "client_1",
+  "n_records": 128,
+  "n_features": 105,
+  "score": "mean of the largest ceil(5% of 105) squared feature errors",
+  "preprocessing": "shared training scaler applied on the project machine",
+  "model_file": "obd_model_state.pt",
+  "model_config_file": "obd_model_config.json",
+  "inputs_file": "obd_inputs.npz"
+}

@@ -1,0 +1,34 @@
+{
+  "scenario": "iid",
+  "method": "fedavg",
+  "proximal_mu": null,
+  "seed": 42,
+  "n_clients": 6,
+  "local_epochs": 5,
+  "max_rounds": 100,
+  "patience": 10,
+  "min_delta": 0.0,
+  "fraction_train": 1.0,
+  "scaler": "client",
+  "validation_weights": {
+    "client_5": 1412.0,
+    "client_1": 1451.0,
+    "client_3": 1412.0,
+    "client_2": 1497.0,
+    "client_4": 1412.0,
+    "client_6": 1410.0
+  },
+  "best_round": 99,
+  "best_validation_loss": 0.21635526995902177,
+  "rounds_run": 100,
+  "stopped_early": false,
+  "total_seconds": 3196.9275130690075,
+  "communication": {
+    "parameter_bytes_down": 19809600,
+    "parameter_bytes_up": 19809600,
+    "scaler_bytes_up": 16992
+  },
+  "n_parameters": 8254,
+  "parameter_bytes": 33016,
+  "serialized_state_dict_bytes": 36301
+}

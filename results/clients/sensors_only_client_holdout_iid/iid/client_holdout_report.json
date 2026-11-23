@@ -1,0 +1,152 @@
+{
+  "scenario": "iid",
+  "client_train_summary": [
+    {
+      "client": "client_1",
+      "target_anomaly_fraction": 0.5,
+      "n_records": 1276,
+      "n_anomaly": 638,
+      "n_normal": 638,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 5,
+      "n_normal_real": 602,
+      "n_SPLIT_CAT_1": 399,
+      "n_SPLIT_GRAY_0": 36,
+      "n_SPLIT_GRAY_1": 239,
+      "n_SPLIT_REAL_0": 602
+    },
+    {
+      "client": "client_2",
+      "target_anomaly_fraction": 0.5,
+      "n_records": 1602,
+      "n_anomaly": 801,
+      "n_normal": 801,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 5,
+      "n_normal_real": 765,
+      "n_SPLIT_CAT_1": 501,
+      "n_SPLIT_GRAY_0": 36,
+      "n_SPLIT_GRAY_1": 300,
+      "n_SPLIT_REAL_0": 765
+    },
+    {
+      "client": "client_3",
+      "target_anomaly_fraction": 0.5,
+      "n_records": 1564,
+      "n_anomaly": 782,
+      "n_normal": 782,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 5,
+      "n_normal_real": 746,
+      "n_SPLIT_CAT_1": 490,
+      "n_SPLIT_GRAY_0": 36,
+      "n_SPLIT_GRAY_1": 292,
+      "n_SPLIT_REAL_0": 746
+    },
+    {
+      "client": "client_4",
+      "target_anomaly_fraction": 0.5,
+      "n_records": 1302,
+      "n_anomaly": 651,
+      "n_normal": 651,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 4,
+      "n_normal_real": 616,
+      "n_SPLIT_CAT_1": 407,
+      "n_SPLIT_GRAY_0": 35,
+      "n_SPLIT_GRAY_1": 244,
+      "n_SPLIT_REAL_0": 616
+    },
+    {
+      "client": "client_5",
+      "target_anomaly_fraction": 0.5,
+      "n_records": 1332,
+      "n_anomaly": 666,
+      "n_normal": 666,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 4,
+      "n_normal_real": 631,
+      "n_SPLIT_CAT_1": 417,
+      "n_SPLIT_GRAY_0": 35,
+      "n_SPLIT_GRAY_1": 249,
+      "n_SPLIT_REAL_0": 631
+    },
+    {
+      "client": "client_6",
+      "target_anomaly_fraction": 0.5,
+      "n_records": 1354,
+      "n_anomaly": 677,
+      "n_normal": 677,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 4,
+      "n_normal_real": 642,
+      "n_SPLIT_CAT_1": 424,
+      "n_SPLIT_GRAY_0": 35,
+      "n_SPLIT_GRAY_1": 253,
+      "n_SPLIT_REAL_0": 642
+    }
+  ],
+  "client_test_summary": [
+    {
+      "client": "client_1",
+      "n_normal": 178,
+      "n_anomaly": 178,
+      "n_test_vehicles": 1,
+      "n_test": 356
+    },
+    {
+      "client": "client_2",
+      "n_normal": 100,
+      "n_anomaly": 100,
+      "n_test_vehicles": 1,
+      "n_test": 200
+    },
+    {
+      "client": "client_3",
+      "n_normal": 168,
+      "n_anomaly": 168,
+      "n_test_vehicles": 1,
+      "n_test": 336
+    },
+    {
+      "client": "client_4",
+      "n_normal": 190,
+      "n_anomaly": 190,
+      "n_test_vehicles": 1,
+      "n_test": 380
+    },
+    {
+      "client": "client_5",
+      "n_normal": 137,
+      "n_anomaly": 137,
+      "n_test_vehicles": 1,
+      "n_test": 274
+    },
+    {
+      "client": "client_6",
+      "n_normal": 157,
+      "n_anomaly": 157,
+      "n_test_vehicles": 1,
+      "n_test": 314
+    }
+  ],
+  "test_source_groups_per_client": {
+    "client_1": 1,
+    "client_2": 1,
+    "client_3": 1,
+    "client_4": 1,
+    "client_5": 1,
+    "client_6": 1
+  },
+  "partition_checks": {
+    "every_row_assigned_once": true,
+    "groups_in_single_partition": true,
+    "all_classes": true,
+    "all_categories": true
+  },
+  "split_ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  }
+}

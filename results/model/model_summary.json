@@ -1,0 +1,28 @@
+{
+  "architecture": {
+    "input_dim": 118,
+    "encoder_dims": [
+      32
+    ],
+    "latent_dim": 8,
+    "activation": "relu"
+  },
+  "layer_dims": [
+    118,
+    32,
+    8,
+    32,
+    118
+  ],
+  "n_parameters": 8254,
+  "parameter_bytes": 33016,
+  "serialized_state_dict_bytes": 36301,
+  "training": {
+    "loss": "mse",
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "device": "cpu"
+  },
+  "modules": "Autoencoder(\n  (encoder): Sequential(\n    (0): Linear(in_features=118, out_features=32, bias=True)\n    (1): ReLU()\n    (2): Linear(in_features=32, out_features=8, bias=True)\n    (3): ReLU()\n  )\n  (decoder): Sequential(\n    (0): Linear(in_features=8, out_features=32, bias=True)\n    (1): ReLU()\n    (2): Linear(in_features=32, out_features=118, bias=True)\n  )\n)"
+}
