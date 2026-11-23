@@ -1,0 +1,116 @@
+{
+  "seed": 42,
+  "n_clients": 6,
+  "scenarios": {
+    "iid": {
+      "anomaly_fraction_target": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "reference_scenario": null,
+      "required_band": [
+        0.45,
+        0.55
+      ],
+      "checks": {
+        "rows_only_from_train": true,
+        "every_train_row_assigned_once": true,
+        "vehicles_in_single_client": true,
+        "every_client_has_records": true,
+        "anomaly_fraction_in_required_band": true
+      },
+      "anomaly_fraction_achieved": {
+        "client_1": 0.5052,
+        "client_2": 0.505,
+        "client_3": 0.505,
+        "client_4": 0.505,
+        "client_5": 0.505,
+        "client_6": 0.505
+      },
+      "max_abs_deviation_from_target": 0.005168849069607129,
+      "ks_statistic": {
+        "client_1": {
+          "median": 0.052968012398501546,
+          "max": 0.20488674562911274
+        },
+        "client_2": {
+          "median": 0.0752130667354412,
+          "max": 0.19344973400373006
+        },
+        "client_3": {
+          "median": 0.04187840057065967,
+          "max": 0.12343037272858537
+        },
+        "client_4": {
+          "median": 0.029124674240741083,
+          "max": 0.16706662069392908
+        },
+        "client_5": {
+          "median": 0.027626824433147512,
+          "max": 0.13893891976812345
+        },
+        "client_6": {
+          "median": 0.11029862496843422,
+          "max": 0.22685347025881486
+        }
+      }
+    },
+    "non_iid": {
+      "anomaly_fraction_target": [
+        0.2,
+        0.3,
+        0.4,
+        0.6,
+        0.7,
+        0.8
+      ],
+      "reference_scenario": "iid",
+      "required_band": null,
+      "checks": {
+        "rows_only_from_train": true,
+        "every_train_row_assigned_once": true,
+        "vehicles_in_single_client": true,
+        "every_client_has_records": true
+      },
+      "anomaly_fraction_achieved": {
+        "client_1": 0.2082,
+        "client_2": 0.3113,
+        "client_3": 0.4128,
+        "client_4": 0.6124,
+        "client_5": 0.7107,
+        "client_6": 0.8082
+      },
+      "max_abs_deviation_from_target": 0.01275402943237558,
+      "ks_statistic": {
+        "client_1": {
+          "median": 0.06242432598722908,
+          "max": 0.21351643867495956
+        },
+        "client_2": {
+          "median": 0.06408976230143626,
+          "max": 0.2098582562607209
+        },
+        "client_3": {
+          "median": 0.044664356531071814,
+          "max": 0.1618796967098996
+        },
+        "client_4": {
+          "median": 0.03970115013785286,
+          "max": 0.09725732573473822
+        },
+        "client_5": {
+          "median": 0.06659188845823744,
+          "max": 0.20729442319305424
+        },
+        "client_6": {
+          "median": 0.0459821170164858,
+          "max": 0.17590996517340218
+        }
+      }
+    }
+  }
+}

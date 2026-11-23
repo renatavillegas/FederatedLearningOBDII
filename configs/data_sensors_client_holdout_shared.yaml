@@ -1,0 +1,61 @@
+raw_path: data/raw/Vehicle_Record.csv
+seed: 42
+
+columns:
+  source: source
+  label: anomaly_label
+  metadata:
+    - source
+    - anomaly_label
+    - failure_type
+    - severity_score
+    - severity_stage
+    - is_gray
+    - TTF_years
+    - TTF_km
+
+labels:
+  normal: 0
+  anomaly: 1
+
+categories:
+  - name: SPLIT_REAL
+    family: live_real
+    source_pattern: "live\\d+"
+    assignment_unit: source
+  - name: SPLIT_CAT
+    family: synthetic_cat
+    source_pattern: "synthetic_cat"
+    assignment_unit: record
+  - name: SPLIT_GRAY
+    family: synthetic_gray
+    source_pattern: "synthetic_gray"
+    assignment_unit: record
+
+preprocessing:
+  feature_columns_path: data/processed/sensors_only/feature_columns.json
+  exclude_feature_prefixes:
+    - "TIME_RUN_WITH_MIL_ON ()"
+    - "TIME_SINCE_TROUBLE_CODES_CLEARED ()"
+    - "DISTANCE_TRAVELED_WITH_MIL_ON ()"
+  scaler: zscore
+  quantile_range: [25, 75]
+  zero_scale: 1.0
+  dtype: float32
+
+split:
+  ratios:
+    train: 0.70
+    validation: 0.15
+    test: 0.15
+  required_conditions:
+    - all_classes
+    - all_categories
+
+outputs:
+  audit_dir: results/audit/sensors_only_client_holdout_shared
+  splits_dir: data/splits/sensors_only_client_holdout_shared
+  manifests_dir: data/manifests/sensors_only_client_holdout_shared
+  split_report_dir: results/splits/sensors_only_client_holdout_shared
+  client_report_dir: results/clients/sensors_only_client_holdout_shared
+  scalers_dir: data/processed/sensors_only_client_holdout_shared/scalers

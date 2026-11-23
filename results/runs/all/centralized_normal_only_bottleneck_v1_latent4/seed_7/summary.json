@@ -1,0 +1,26 @@
+{
+  "scenario": "all",
+  "method": "centralized_normal_only_bottleneck_v1_latent4",
+  "seed": 7,
+  "n_train": 4042,
+  "n_validation": 976,
+  "training_population": "normal_real_only",
+  "validation_population": "normal_real_only",
+  "normal_label_used_for_training_selection": true,
+  "scaler": "normal_real_train_global",
+  "n_features": 118,
+  "stopping": {
+    "max_steps": 1000,
+    "patience": 50,
+    "min_delta": 0.0
+  },
+  "best_epoch": 12,
+  "best_validation_loss": 0.3648007810115814,
+  "epochs_run": 62,
+  "stopped_early": true,
+  "training_seconds": 71.76596836501267,
+  "total_seconds": 72.02985627902672,
+  "n_parameters": 7994,
+  "parameter_bytes": 31976,
+  "serialized_state_dict_bytes": 35277
+}

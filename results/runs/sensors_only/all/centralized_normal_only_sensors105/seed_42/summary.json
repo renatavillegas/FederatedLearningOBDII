@@ -1,0 +1,26 @@
+{
+  "scenario": "all",
+  "method": "centralized_normal_only_sensors105",
+  "seed": 42,
+  "n_train": 4042,
+  "n_validation": 976,
+  "training_population": "normal_real_only",
+  "validation_population": "normal_real_only",
+  "normal_label_used_for_training_selection": true,
+  "scaler": "normal_real_train_global",
+  "n_features": 105,
+  "stopping": {
+    "max_steps": 1000,
+    "patience": 50,
+    "min_delta": 0.0
+  },
+  "best_epoch": 90,
+  "best_validation_loss": 0.1655106544494629,
+  "epochs_run": 140,
+  "stopped_early": true,
+  "training_seconds": 90.06340529001318,
+  "total_seconds": 90.490529631963,
+  "n_parameters": 7929,
+  "parameter_bytes": 31716,
+  "serialized_state_dict_bytes": 34957
+}

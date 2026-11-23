@@ -1,0 +1,116 @@
+[93mWARNING [0m:   Option `--insecure` was set. Starting insecure HTTP server with unencrypted communication (TLS disabled). Proceed only if you understand the risks.
+[93mWARNING [0m:   SuperNode authentication is disabled. The SuperLink will accept connections from any SuperNode.
+[92mINFO [0m:      Starting Flower SuperLink
+[92mINFO [0m:      Starting the SuperLink Runtime HTTP API on 192.168.1.104:8000.
+[92mINFO [0m:      Starting the SuperLink Control HTTP API on 192.168.1.104:8000.
+[92mINFO [0m:      Starting the SuperLink Fleet HTTP API on 192.168.1.104:8000.
+2026-11-09T23:20:41.902Z INFO [uvicorn.error] Started server process [2366936]
+2026-11-09T23:20:41.902Z INFO [uvicorn.error] Waiting for application startup.
+[92mINFO [0m:      FastAPI lifespan: startup
+[92mINFO [0m:      SuperLinkLifespan: start
+2026-11-09T23:20:41.904Z INFO [uvicorn.error] Application startup complete.
+2026-11-09T23:20:41.906Z INFO [uvicorn.error] Uvicorn running on http://192.168.1.104:8000 (Press CTRL+C to quit)
+╭────────────────── Update available ───────────────────╮
+│ A newer Flower version is available: 1.42.0 -> 1.43.0 │
+│ Upgrade: python -m pip install -U flwr                │
+╰───────────────────────────────────────────────────────╯
+[92mINFO [0m:      Starting Flower SuperExec
+2026-11-09T23:20:45.521Z INFO [uvicorn.access] 192.168.1.104:45604 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=312408214016433635
+2026-11-09T23:20:45.542Z INFO [uvicorn.access] 192.168.1.104:45604 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-09T23:20:45.604Z INFO [uvicorn.access] 192.168.1.104:45626 - "POST /v1/fleet/register-node HTTP/1.1" 200
+2026-11-09T23:20:45.623Z INFO [uvicorn.access] 192.168.1.104:45642 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=14365919458683743500
+2026-11-09T23:20:45.632Z INFO [uvicorn.access] 192.168.1.104:45626 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=3517950492972595391
+2026-11-09T23:20:45.660Z INFO [uvicorn.access] 192.168.1.104:45642 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-09T23:20:45.904Z INFO [uvicorn.access] 192.168.1.104:45678 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=2979443059410198362
+2026-11-09T23:20:45.929Z INFO [uvicorn.access] 192.168.1.104:45678 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-09T23:20:46.269Z INFO [uvicorn.access] 192.168.1.104:45684 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=5804378915625305029
+2026-11-09T23:20:46.288Z INFO [uvicorn.access] 192.168.1.104:45684 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+[92mINFO [0m:      ControlServicer.StartRun
+[92mINFO [0m:      Created run 5134285997901514886 in federation @none/default
+2026-11-09T23:20:48.861Z INFO [uvicorn.access] 192.168.1.104:45698 - "POST /v1/control/start-run HTTP/1.1" 200
+[92mINFO [0m:      ControlServicer.StreamLogs
+2026-11-09T23:20:48.871Z INFO [uvicorn.access] 192.168.1.104:45698 - "POST /v1/control/stream-logs HTTP/1.1" 200
+[92mINFO [0m:      Started task 13190222452859716904 of run 5134285997901514886
+2026-11-09T23:20:51.149Z INFO [uvicorn.access] 192.168.1.104:45722 - "POST /v1/runtime/pull-task-input HTTP/1.1" 200
+2026-11-09T23:23:55.131Z INFO [uvicorn.access] 192.168.1.102:38970 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=6940885363221967462
+2026-11-09T23:23:55.166Z INFO [uvicorn.access] 192.168.1.102:38970 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=5134285997901514886
+2026-11-09T23:23:55.792Z INFO [uvicorn.access] 192.168.1.104:45678 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=9e84811aee300e8a258a6fdc5e0e74fd6343402dbbb30b23dc49b75e3fed45d5
+2026-11-09T23:23:55.809Z INFO [uvicorn.access] 192.168.1.104:45678 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=5134285997901514886
+2026-11-09T23:23:56.162Z INFO [uvicorn.access] 192.168.1.104:45684 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=9e84811aee300e8a258a6fdc5e0e74fd6343402dbbb30b23dc49b75e3fed45d5
+2026-11-09T23:23:56.172Z INFO [uvicorn.access] 192.168.1.104:45684 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=5134285997901514886
+2026-11-09T23:23:58.367Z INFO [uvicorn.access] 192.168.1.102:38970 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=5134285997901514886
+2026-11-09T23:23:58.386Z INFO [uvicorn.access] 192.168.1.104:45604 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=9e84811aee300e8a258a6fdc5e0e74fd6343402dbbb30b23dc49b75e3fed45d5
+2026-11-09T23:23:58.395Z INFO [uvicorn.access] 192.168.1.102:38970 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=9e84811aee300e8a258a6fdc5e0e74fd6343402dbbb30b23dc49b75e3fed45d5
+2026-11-09T23:23:58.404Z INFO [uvicorn.access] 192.168.1.104:45604 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=5134285997901514886
+2026-11-09T23:23:58.504Z INFO [uvicorn.access] 192.168.1.104:45626 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=9e84811aee300e8a258a6fdc5e0e74fd6343402dbbb30b23dc49b75e3fed45d5
+2026-11-09T23:23:58.537Z INFO [uvicorn.access] 192.168.1.104:45626 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=5134285997901514886
+2026-11-09T23:23:58.597Z INFO [uvicorn.access] 192.168.1.104:45642 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=9e84811aee300e8a258a6fdc5e0e74fd6343402dbbb30b23dc49b75e3fed45d5
+2026-11-09T23:23:58.650Z INFO [uvicorn.access] 192.168.1.104:45642 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=6940885363221967462
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=2979443059410198362
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=5804378915625305029
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=14365919458683743500
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=312408214016433635
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=3517950492972595391
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=6940885363221967462
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=312408214016433635
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=14365919458683743500
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=2979443059410198362
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=5804378915625305029
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=3517950492972595391
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=6940885363221967462
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=14365919458683743500
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=312408214016433635
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=2979443059410198362
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=5804378915625305029
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=3517950492972595391
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=6940885363221967462
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=312408214016433635
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=14365919458683743500
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=2979443059410198362
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=5804378915625305029
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=3517950492972595391
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=6940885363221967462
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=14365919458683743500
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=2979443059410198362
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=312408214016433635
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=3517950492972595391
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=5804378915625305029
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=6940885363221967462
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=14365919458683743500
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=2979443059410198362
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=312408214016433635
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=3517950492972595391
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=5804378915625305029
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=6940885363221967462
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=14365919458683743500
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=3517950492972595391
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=5804378915625305029
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=2979443059410198362
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=312408214016433635
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=6940885363221967462
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=14365919458683743500
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=312408214016433635
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=2979443059410198362
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=5804378915625305029
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=3517950492972595391
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=6940885363221967462
+[92mINFO [0m:      SuperExec terminated gracefully.

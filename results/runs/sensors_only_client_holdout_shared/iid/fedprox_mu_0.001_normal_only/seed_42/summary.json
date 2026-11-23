@@ -1,0 +1,58 @@
+{
+  "scenario": "iid",
+  "method": "fedprox_mu_0.001_normal_only",
+  "proximal_mu": 0.001,
+  "seed": 42,
+  "n_clients": 6,
+  "local_epochs": 5,
+  "max_rounds": 200,
+  "patience": 10,
+  "min_delta": 0.0,
+  "fraction_train": 1.0,
+  "training_population": "normal_real_only",
+  "validation_population": "normal_real_only",
+  "normal_label_used_for_training_selection": true,
+  "scaler": "normal_real_train_global",
+  "validation_weights": {
+    "global": 1.0
+  },
+  "best_round": 195,
+  "best_validation_loss": 0.22712697088718414,
+  "rounds_run": 200,
+  "stopped_early": false,
+  "total_seconds": 1788.3395042960765,
+  "communication": {
+    "parameter_bytes_down": 35563200,
+    "parameter_bytes_up": 35563200,
+    "scaler_bytes_up": 0
+  },
+  "n_parameters": 7409,
+  "parameter_bytes": 29636,
+  "serialized_state_dict_bytes": 32909,
+  "clients": {
+    "client_1": {
+      "n_train": 672,
+      "n_vehicles": 5
+    },
+    "client_2": {
+      "n_train": 754,
+      "n_vehicles": 5
+    },
+    "client_3": {
+      "n_train": 595,
+      "n_vehicles": 4
+    },
+    "client_4": {
+      "n_train": 752,
+      "n_vehicles": 5
+    },
+    "client_5": {
+      "n_train": 629,
+      "n_vehicles": 4
+    },
+    "client_6": {
+      "n_train": 640,
+      "n_vehicles": 4
+    }
+  }
+}

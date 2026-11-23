@@ -1,0 +1,26 @@
+{
+  "scenario": "all",
+  "method": "centralized_normal_only_sensors105_client_iid_latent8",
+  "seed": 42,
+  "n_train": 4002,
+  "n_validation": 1007,
+  "training_population": "normal_real_only",
+  "validation_population": "normal_real_only",
+  "normal_label_used_for_training_selection": true,
+  "scaler": "normal_real_train_global",
+  "n_features": 105,
+  "stopping": {
+    "max_steps": 1000,
+    "patience": 50,
+    "min_delta": 0.0
+  },
+  "best_epoch": 415,
+  "best_validation_loss": 0.18810243904590607,
+  "epochs_run": 465,
+  "stopped_early": true,
+  "training_seconds": 73.38246417487971,
+  "total_seconds": 73.62592825002503,
+  "n_parameters": 7409,
+  "parameter_bytes": 29636,
+  "serialized_state_dict_bytes": 32909
+}

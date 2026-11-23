@@ -1,0 +1,164 @@
+[92mINFO [0m:      Starting Flower SuperNode
+[93mWARNING [0m:   Option `--insecure` was set. Starting insecure channel to 127.0.0.1:8000.
+INFO:     Started server process [874243]
+INFO:     Waiting for application startup.
+[92mINFO [0m:      FastAPI lifespan: startup
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:9104 (Press CTRL+C to quit)
+[92mINFO [0m:      SuperNode ID: 5349533415615470012
+[92mINFO [0m:      Starting Flower SuperExec
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 17247425887196168883]
+[92mINFO [0m:      Receiving: train message (ID: 064692d85ac9e7584041b366553468352b5603ccb8bf9a3b3809c99291cd6a35)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 17247425887196168883]
+[92mINFO [0m:      Sending: train message (ID: a2b1470e6a298f3efbeb1743f7273ce08a4eff33ada220afbe0044dde0427a67)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 17247425887196168883]
+[92mINFO [0m:      Receiving: train message (ID: ad69a55b4bd122e5b95ffe3fcf8b4805d7e9668db27f1a44638e30e62b3d011f)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      Task stopped.
+[92mINFO [0m:      SuperNode terminated gracefully.
+INFO:     Shutting down
+[92mINFO [0m:      SuperExec terminated gracefully.
+INFO:     Waiting for application shutdown.
+[92mINFO [0m:      FastAPI lifespan: shutdown
+INFO:     Application shutdown complete.
+INFO:     Finished server process [874243]
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/renata/Documents/Estudo/MO809/project/venv/bin/flwr-clientapp", line 8, in <module>
+    sys.exit(flwr_clientapp())
+             ~~~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supernode/cli/flwr_clientapp.py", line 42, in flwr_clientapp
+    run_clientapp(
+    ~~~~~~~~~~~~~^
+        runtime_api_address=args.runtime_api_address,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        runtime_dependency_install=args.runtime_dependency_install,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supernode/runtime/run_clientapp.py", line 188, in run_clientapp
+    client_app: ClientApp = load_client_app_fn(
+                            ~~~~~~~~~~~~~~~~~~^
+        run.fab_id, run.fab_version, fab.hash_str
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/clientapp/utils.py", line 101, in _load
+    client_app = load_app(client_app_ref, LoadClientAppError, runtime_app_dir)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/object_ref.py", line 159, in load_app
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/renata/Documents/Estudo/MO809/project/federated-obd-seminar/.flwr/apps/mo809.federated-obd-seminar.0.1.0.5d5dbdb4/src/federated/client.py", line 8, in <module>
+    from src.experiments.common import (
+    ...<3 lines>...
+    )
+  File "/home/renata/Documents/Estudo/MO809/project/federated-obd-seminar/.flwr/apps/mo809.federated-obd-seminar.0.1.0.5d5dbdb4/src/experiments/common.py", line 10, in <module>
+    import torch
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/torch/__init__.py", line 3312, in <module>
+    from torch import (
+    ...<4 lines>...
+    )
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/torch/export/__init__.py", line 11, in <module>
+    from torch.fx.passes.infra.pass_base import PassResult
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/torch/fx/passes/__init__.py", line 1, in <module>
+    from . import (
+    ...<13 lines>...
+    )
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/torch/fx/passes/runtime_assert.py", line 23, in <module>
+    from torch.fx.experimental.proxy_tensor import py_sym_types
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/torch/fx/experimental/proxy_tensor.py", line 1226, in <module>
+    @torch.library.register_fake("coor::current_device")
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/torch/library.py", line 1271, in register
+    use_lib._register_fake(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        op_name, func, _stacklevel=stacklevel + 1, allow_override=allow_override
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/torch/library.py", line 333, in _register_fake
+    source = torch._library.utils.get_source(_stacklevel + 1)
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/torch/_library/utils.py", line 45, in get_source
+    frame = inspect.getframeinfo(sys._getframe(stacklevel))
+  File "/usr/lib/python3.14/inspect.py", line 1598, in getframeinfo
+    lines, lnum = findsource(frame)
+                  ~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.14/inspect.py", line 970, in findsource
+    module = getmodule(object, file)
+  File "/usr/lib/python3.14/inspect.py", line 927, in getmodule
+    os.path.realpath(f)] = module.__name__
+    ~~~~~~~~~~~~~~~~^^^
+  File "<frozen posixpath>", line 388, in realpath
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/signal_handler.py", line 103, in graceful_exit_handler
+    flwr_exit(
+    ~~~~~~~~~^
+        code=SIGNAL_TO_EXIT_CODE[signalnum],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message=exit_message,
+        ^^^^^^^^^^^^^^^^^^^^^
+        event_type=event_type,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/exit.py", line 119, in flwr_exit
+    event_future.result(timeout=TELEMETRY_TIMEOUT_SECONDS)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 445, in result
+    self._condition.wait(timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 373, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+  File "/home/renata/Documents/Estudo/MO809/project/venv/bin/flower-superexec", line 8, in <module>
+    sys.exit(flower_superexec())
+             ~~~~~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/cli/flower_superexec.py", line 106, in flower_superexec
+    run_superexec(
+    ~~~~~~~~~~~~~^
+        runtime_api_address=args.runtime_api_address,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        executor_config=executor_config,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/superexec/run_superexec.py", line 277, in run_superexec
+    time.sleep(task_poll_interval)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/signal_handler.py", line 103, in graceful_exit_handler
+    flwr_exit(
+    ~~~~~~~~~^
+        code=SIGNAL_TO_EXIT_CODE[signalnum],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message=exit_message,
+        ^^^^^^^^^^^^^^^^^^^^^
+        event_type=event_type,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/exit.py", line 119, in flwr_exit
+    event_future.result(timeout=TELEMETRY_TIMEOUT_SECONDS)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 445, in result
+    self._condition.wait(timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 373, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

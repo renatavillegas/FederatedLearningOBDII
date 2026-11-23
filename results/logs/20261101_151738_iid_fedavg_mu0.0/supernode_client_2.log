@@ -1,0 +1,109 @@
+[92mINFO [0m:      Starting Flower SuperNode
+[93mWARNING [0m:   Option `--insecure` was set. Starting insecure channel to 127.0.0.1:8000.
+INFO:     Started server process [874241]
+INFO:     Waiting for application startup.
+[92mINFO [0m:      FastAPI lifespan: startup
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:9102 (Press CTRL+C to quit)
+[92mINFO [0m:      SuperNode ID: 12128409508315411457
+[92mINFO [0m:      Starting Flower SuperExec
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 17247425887196168883]
+[92mINFO [0m:      Receiving: train message (ID: a4b6f95635037022dd1ef41786c5647fb1f67f95c37f390f7583fa35ab1f3eab)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 17247425887196168883]
+[92mINFO [0m:      Sending: train message (ID: 48a945bc166332597ce9fbfcef83e87413d7ad95a2c6b6c631344475909e7d5e)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 17247425887196168883]
+[92mINFO [0m:      Receiving: train message (ID: a905b28ddbd15e3721b3e29bae668f88a4f686514cca139147df781ec39623da)
+[92mINFO [0m:      Received successfully
+Traceback (most recent call last):
+  File "/home/renata/Documents/Estudo/MO809/project/venv/bin/flwr-clientapp", line 5, in <module>
+    from flwr.supernode.cli import flwr_clientapp
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supernode/cli/__init__.py", line 18, in <module>
+    from .flower_supernode import flower_supernode
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supernode/cli/flower_supernode.py", line 41, in <module>
+    from flwr.common.config import parse_config_args
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/common/config.py", line 37, in <module>
+    from flwr.supercore.fab_format_version import normalize_and_validate_fab_format
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/fab_format_version.py", line 21, in <module>
+    from packaging.requirements import InvalidRequirement, Requirement
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/packaging/requirements.py", line 8, in <module>
+    from ._parser import parse_requirement as _parse_requirement
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/packaging/_parser.py", line 12, in <module>
+    from ._tokenizer import DEFAULT_RULES, Tokenizer
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/packaging/_tokenizer.py", line 8, in <module>
+    from .specifiers import Specifier
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/packaging/specifiers.py", line 18, in <module>
+    from .utils import canonicalize_version
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/packaging/utils.py", line 37, in <module>
+    _validate_regex = re.compile(
+        r"^([A-Z0-9]|[A-Z0-9][A-Z0-9._-]*[A-Z0-9])$", re.IGNORECASE
+    )
+  File "/usr/lib/python3.14/re/__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python3.14/re/__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "/usr/lib/python3.14/re/_compiler.py", line 766, in compile
+    code = _code(p, flags)
+  File "/usr/lib/python3.14/re/_compiler.py", line 599, in _code
+    _compile(code, p.data, flags)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/_compiler.py", line 133, in _compile
+    _compile(code, p, _combine_flags(flags, add_flags, del_flags))
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/_compiler.py", line 88, in _compile
+    charset, hascased = _optimize_charset(av, iscased, tolower, fixes)
+                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/_compiler.py", line 386, in _optimize_charset
+    mapping[i // 256] = comps[chunk]
+    ~~~~~~~^^^^^^^^^^
+KeyboardInterrupt
+[92mINFO [0m:      SuperNode terminated gracefully.
+INFO:     Shutting down
+[92mINFO [0m:      SuperExec terminated gracefully.
+INFO:     Waiting for application shutdown.
+[92mINFO [0m:      FastAPI lifespan: shutdown
+INFO:     Application shutdown complete.
+INFO:     Finished server process [874241]
+Traceback (most recent call last):
+  File "/home/renata/Documents/Estudo/MO809/project/venv/bin/flower-superexec", line 8, in <module>
+    sys.exit(flower_superexec())
+             ~~~~~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/cli/flower_superexec.py", line 106, in flower_superexec
+    run_superexec(
+    ~~~~~~~~~~~~~^
+        runtime_api_address=args.runtime_api_address,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        executor_config=executor_config,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/superexec/run_superexec.py", line 277, in run_superexec
+    time.sleep(task_poll_interval)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/signal_handler.py", line 103, in graceful_exit_handler
+    flwr_exit(
+    ~~~~~~~~~^
+        code=SIGNAL_TO_EXIT_CODE[signalnum],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message=exit_message,
+        ^^^^^^^^^^^^^^^^^^^^^
+        event_type=event_type,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/exit.py", line 119, in flwr_exit
+    event_future.result(timeout=TELEMETRY_TIMEOUT_SECONDS)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 445, in result
+    self._condition.wait(timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 373, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

@@ -1,0 +1,43 @@
+[93mWARNING [0m:   Option `--insecure` was set. Starting insecure HTTP server with unencrypted communication (TLS disabled). Proceed only if you understand the risks.
+[93mWARNING [0m:   SuperNode authentication is disabled. The SuperLink will accept connections from any SuperNode.
+[92mINFO [0m:      Starting Flower SuperLink
+[92mINFO [0m:      Starting the SuperLink Runtime HTTP API on 192.168.1.104:8000.
+[92mINFO [0m:      Starting the SuperLink Control HTTP API on 192.168.1.104:8000.
+[92mINFO [0m:      Starting the SuperLink Fleet HTTP API on 192.168.1.104:8000.
+2026-11-07T17:13:41.308Z INFO [uvicorn.error] Started server process [2235088]
+2026-11-07T17:13:41.308Z INFO [uvicorn.error] Waiting for application startup.
+[92mINFO [0m:      FastAPI lifespan: startup
+[92mINFO [0m:      SuperLinkLifespan: start
+2026-11-07T17:13:41.310Z INFO [uvicorn.error] Application startup complete.
+2026-11-07T17:13:41.311Z INFO [uvicorn.error] Uvicorn running on http://192.168.1.104:8000 (Press CTRL+C to quit)
+[92mINFO [0m:      Starting Flower SuperExec
+2026-11-07T17:13:45.028Z INFO [uvicorn.access] 192.168.1.104:50198 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=5886005072025672232
+2026-11-07T17:13:45.052Z INFO [uvicorn.access] 192.168.1.104:50198 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-07T17:13:45.056Z INFO [uvicorn.access] 192.168.1.104:50210 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=10806217419098769704
+2026-11-07T17:13:45.091Z INFO [uvicorn.access] 192.168.1.104:50222 - "POST /v1/fleet/register-node HTTP/1.1" 200
+2026-11-07T17:13:45.092Z INFO [uvicorn.access] 192.168.1.104:50210 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=13868640311061090188
+2026-11-07T17:13:45.124Z INFO [uvicorn.access] 192.168.1.104:50222 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-07T17:13:45.228Z INFO [uvicorn.access] 192.168.1.104:50252 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=15062558463481881222
+2026-11-07T17:13:45.241Z INFO [uvicorn.access] 192.168.1.104:50252 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-07T17:13:45.563Z INFO [uvicorn.access] 192.168.1.104:50274 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=9865114893213930399
+2026-11-07T17:13:45.582Z INFO [uvicorn.access] 192.168.1.104:50274 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+[92mINFO [0m:      ControlServicer.StartRun
+[92mINFO [0m:      Created run 3185557359091198557 in federation @none/default
+2026-11-07T17:13:48.005Z INFO [uvicorn.access] 192.168.1.104:50296 - "POST /v1/control/start-run HTTP/1.1" 200
+[92mINFO [0m:      ControlServicer.StreamLogs
+2026-11-07T17:13:48.015Z INFO [uvicorn.access] 192.168.1.104:50296 - "POST /v1/control/stream-logs HTTP/1.1" 200
+[92mINFO [0m:      Started task 18266981105792224342 of run 3185557359091198557
+2026-11-07T17:13:49.436Z INFO [uvicorn.access] 192.168.1.104:50306 - "POST /v1/runtime/pull-task-input HTTP/1.1" 200
+2026-11-07T17:19:30.922Z INFO [uvicorn.error] Shutting down
+2026-11-07T17:19:31.023Z INFO [uvicorn.error] Waiting for application shutdown.
+[92mINFO [0m:      SuperLinkLifespan: stop
+[92mINFO [0m:      SuperExec terminated gracefully.
+[93mWARNING [0m:   SuperExec subprocess did not terminate within 1 second.
+[92mINFO [0m:      FastAPI lifespan: shutdown
+2026-11-07T17:19:32.026Z INFO [uvicorn.error] Application shutdown complete.
+2026-11-07T17:19:32.026Z INFO [uvicorn.error] Finished server process [2235088]

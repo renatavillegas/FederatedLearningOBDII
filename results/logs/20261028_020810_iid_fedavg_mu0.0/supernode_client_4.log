@@ -1,0 +1,183 @@
+[92mINFO [0m:      Starting Flower SuperNode
+[93mWARNING [0m:   Option `--insecure` was set. Starting insecure channel to 127.0.0.1:8000.
+INFO:     Started server process [323939]
+INFO:     Waiting for application startup.
+[92mINFO [0m:      FastAPI lifespan: startup
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:9104 (Press CTRL+C to quit)
+[92mINFO [0m:      SuperNode ID: 14783540282986466608
+[92mINFO [0m:      Starting Flower SuperExec
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 63562134240073786]
+[92mINFO [0m:      Receiving: train message (ID: c8aa6a879712cd4857aa9aea6a1d72a167aab080e0b0b3352de26153f930e046)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 63562134240073786]
+[92mINFO [0m:      Sending: train message (ID: 2357f37d775ed3f0885f7931d35a12a7735895e1486d153ccfde887ecd7d1abb)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 63562134240073786]
+[92mINFO [0m:      Receiving: train message (ID: 3acec1c11deab9c09be5451ea9c58082d109750641e9dcdab7bb391fcb54f36a)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 63562134240073786]
+[92mINFO [0m:      Sending: train message (ID: e32a365d8a65368f417974982dbbfcd23276b7f2e15bb567bf8bdcb67202e115)
+[92mINFO [0m:      
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 63562134240073786]
+[92mINFO [0m:      Receiving: train message (ID: 639e3310481c1f114750fd68f7428bb02f6a0c8d7367404cf73f51a39204a077)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 63562134240073786]
+[92mINFO [0m:      Sending: train message (ID: 17427991b0d1d94135b6525222eb629c0f5bcba92e181965edcdacd36dbe82c1)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 63562134240073786]
+[92mINFO [0m:      Receiving: train message (ID: 0b17fead5bb8a229363fe2fffdd8d7f27082c5f101e298f0ff4effe7f8bba3db)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      SuperNode terminated gracefully.
+[92mINFO [0m:      SuperExec terminated gracefully.
+[92mINFO [0m:      Task stopped.
+[91mERROR [0m:     [/v1/runtime/push-object][ApiError:1008] Runtime task-token authentication failed.
+INFO:     Shutting down
+Traceback (most recent call last):
+  File "/home/renata/Documents/Estudo/MO809/project/venv/bin/flwr-clientapp", line 8, in <module>
+    sys.exit(flwr_clientapp())
+             ~~~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supernode/cli/flwr_clientapp.py", line 42, in flwr_clientapp
+    run_clientapp(
+    ~~~~~~~~~~~~~^
+        runtime_api_address=args.runtime_api_address,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        runtime_dependency_install=args.runtime_dependency_install,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supernode/runtime/run_clientapp.py", line 226, in run_clientapp
+    push_message(client, reply_message, context)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supernode/runtime/run_clientapp.py", line 297, in push_message
+    push_objects(
+    ~~~~~~~~~~~~^
+        all_objects,
+        ^^^^^^^^^^^^
+    ...<6 lines>...
+        object_ids_to_push=object_ids_to_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/inflatable/inflatable_utils.py", line 148, in push_objects
+    push_object_contents_from_iterable(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        iter_dict_items(),
+        ^^^^^^^^^^^^^^^^^^
+        push_object_fn,
+        ^^^^^^^^^^^^^^^
+        max_concurrent_pushes=max_concurrent_pushes,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/inflatable/inflatable_utils.py", line 194, in push_object_contents_from_iterable
+    futures = [executor.submit(push, args) for args in object_contents]
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/thread.py", line 215, in submit
+    self._adjust_thread_count()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/concurrent/futures/thread.py", line 237, in _adjust_thread_count
+    t.start()
+    ~~~~~~~^^
+  File "/usr/lib/python3.14/threading.py", line 1011, in start
+    self._started.wait()  # Will set ident and native_id
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/threading.py", line 670, in wait
+    signaled = self._cond.wait(timeout)
+  File "/usr/lib/python3.14/threading.py", line 369, in wait
+    waiter.acquire()
+    ~~~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/signal_handler.py", line 103, in graceful_exit_handler
+    flwr_exit(
+    ~~~~~~~~~^
+        code=SIGNAL_TO_EXIT_CODE[signalnum],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message=exit_message,
+        ^^^^^^^^^^^^^^^^^^^^^
+        event_type=event_type,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/exit.py", line 114, in flwr_exit
+    trigger_exit_handlers(run_before_force_exit=False)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/exit_handler.py", line 90, in trigger_exit_handlers
+    exit_handler()
+    ~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supernode/runtime/run_clientapp.py", line 134, in on_exit
+    heartbeat_sender.stop()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/heartbeat.py", line 87, in stop
+    self._thread.join()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/threading.py", line 1133, in join
+    self._os_thread_handle.join(timeout)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyboardInterrupt
+INFO:     Waiting for application shutdown.
+[92mINFO [0m:      FastAPI lifespan: shutdown
+INFO:     Application shutdown complete.
+INFO:     Finished server process [323939]
+Exception ignored on threading shutdown:
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/threading.py", line 1577, in _shutdown
+    atexit_call()
+  File "/usr/lib/python3.14/threading.py", line 1548, in <lambda>
+    _threading_atexits.append(lambda: func(*arg, **kwargs))
+  File "/usr/lib/python3.14/concurrent/futures/thread.py", line 31, in _python_exit
+    t.join()
+  File "/usr/lib/python3.14/threading.py", line 1133, in join
+    self._os_thread_handle.join(timeout)
+KeyboardInterrupt: 
+Traceback (most recent call last):
+  File "/home/renata/Documents/Estudo/MO809/project/venv/bin/flower-superexec", line 8, in <module>
+    sys.exit(flower_superexec())
+             ~~~~~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/cli/flower_superexec.py", line 106, in flower_superexec
+    run_superexec(
+    ~~~~~~~~~~~~~^
+        runtime_api_address=args.runtime_api_address,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        executor_config=executor_config,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/superexec/run_superexec.py", line 277, in run_superexec
+    time.sleep(task_poll_interval)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/signal_handler.py", line 103, in graceful_exit_handler
+    flwr_exit(
+    ~~~~~~~~~^
+        code=SIGNAL_TO_EXIT_CODE[signalnum],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message=exit_message,
+        ^^^^^^^^^^^^^^^^^^^^^
+        event_type=event_type,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/exit.py", line 119, in flwr_exit
+    event_future.result(timeout=TELEMETRY_TIMEOUT_SECONDS)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 445, in result
+    self._condition.wait(timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 373, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

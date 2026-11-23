@@ -1,0 +1,99 @@
+{
+  "scenario": "iid",
+  "method": "local_normal_only",
+  "seed": 42,
+  "score_aggregation": "top_5_percent",
+  "threshold_rule": "max_f1_on_validation",
+  "views": [
+    "client_1",
+    "client_2",
+    "client_3",
+    "client_4",
+    "client_5",
+    "client_6"
+  ],
+  "test": {
+    "test_accuracy": {
+      "mean": 0.5238223660553758,
+      "std": 0.03116478633376823,
+      "n_views": 6
+    },
+    "test_precision": {
+      "mean": 0.5196068568827948,
+      "std": 0.03015206120633034,
+      "n_views": 6
+    },
+    "test_recall": {
+      "mean": 0.9283154121863798,
+      "std": 0.13703479752638362,
+      "n_views": 6
+    },
+    "test_f1": {
+      "mean": 0.6587959212734716,
+      "std": 0.024816559273095607,
+      "n_views": 6
+    },
+    "test_false_positive_rate": {
+      "mean": 0.8832972582972584,
+      "std": 0.19891784378316393,
+      "n_views": 6
+    },
+    "test_pr_auc": {
+      "mean": 0.6632841571785922,
+      "std": 0.02293646786512367,
+      "n_views": 6
+    },
+    "test_roc_auc": {
+      "mean": 0.6561709646387066,
+      "std": 0.021939009726199787,
+      "n_views": 6
+    },
+    "test_mean_score": {
+      "mean": 4.790106639606037,
+      "std": 0.29863825171172753,
+      "n_views": 6
+    }
+  },
+  "validation": {
+    "validation_accuracy": {
+      "mean": 0.5226263661202185,
+      "std": 0.08605053734173938,
+      "n_views": 6
+    },
+    "validation_precision": {
+      "mean": 0.5231340237540889,
+      "std": 0.09610924300375977,
+      "n_views": 6
+    },
+    "validation_recall": {
+      "mean": 0.9326164874551971,
+      "std": 0.13970450768958365,
+      "n_views": 6
+    },
+    "validation_f1": {
+      "mean": 0.6521347273262816,
+      "std": 0.010178069440197031,
+      "n_views": 6
+    },
+    "validation_false_positive_rate": {
+      "mean": 0.8504566210045662,
+      "std": 0.2913263936702738,
+      "n_views": 6
+    },
+    "validation_pr_auc": {
+      "mean": 0.6238788846087773,
+      "std": 0.05478496410259732,
+      "n_views": 6
+    },
+    "validation_roc_auc": {
+      "mean": 0.601189950129411,
+      "std": 0.06934554123129605,
+      "n_views": 6
+    },
+    "validation_mean_score": {
+      "mean": 4.771249619359924,
+      "std": 0.591791522793481,
+      "n_views": 6
+    }
+  }
+}

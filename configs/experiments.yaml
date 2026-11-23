@@ -1,0 +1,38 @@
+n_clients: 6
+
+# anomaly_fraction: target fraction of anomalies per client (client_1 ... client_6).
+# reference_scenario: reuse the client sizes of another scenario to derive the target number of normal records.
+# required_band: every client must have an anomaly fraction inside this interval, otherwise the build fails.
+scenarios:
+  iid:
+    anomaly_fraction: [0.50, 0.50, 0.50, 0.50, 0.50, 0.50]
+    required_band: [0.45, 0.55]
+  non_iid:
+    anomaly_fraction: [0.20, 0.30, 0.40, 0.60, 0.70, 0.80]
+    reference_scenario: iid
+
+# Model selection: the round/epoch with the lowest validation reconstruction MSE is kept.
+# Training stops when the validation loss does not decrease by more than min_delta for `patience` rounds/epochs.
+federated:
+  local_epochs: 5
+  max_rounds: 200
+  patience: 10
+  min_delta: 0.0
+  fraction_train: 1.0
+  round_timeout_seconds: 3600
+  # Validation loss of the global model: computed with each client's scaler, averaged with weights = client training size.
+  fedprox_mu_grid: [0.001, 0.01, 0.1, 1.0]
+  # The grid runs with this seed only; the mu with the lowest validation loss per scenario is used for the comparison.
+  fedprox_selection_seed: 42
+
+# Epoch budget equivalent to the federated budget: max_rounds * local_epochs, patience * local_epochs.
+# The centralized baseline does not depend on the scenario and is trained once.
+baselines:
+  max_epochs: 1000
+  patience: 50
+  min_delta: 0.0
+
+outputs:
+  runs_dir: results/runs
+  metrics_dir: results/metrics
+  figures_dir: results/figures

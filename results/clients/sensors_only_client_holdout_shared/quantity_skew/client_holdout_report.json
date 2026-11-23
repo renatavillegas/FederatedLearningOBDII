@@ -1,0 +1,189 @@
+{
+  "scenario": "quantity_skew",
+  "client_train_summary": [
+    {
+      "client": "client_1",
+      "target_anomaly_fraction": 0.5,
+      "target_normal_count_weight": 1.0,
+      "n_records": 656,
+      "n_anomaly": 328,
+      "n_normal": 328,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 3,
+      "n_normal_real": 312,
+      "n_SPLIT_CAT_1": 202,
+      "n_SPLIT_GRAY_0": 16,
+      "n_SPLIT_GRAY_1": 126,
+      "n_SPLIT_REAL_0": 312
+    },
+    {
+      "client": "client_2",
+      "target_anomaly_fraction": 0.5,
+      "target_normal_count_weight": 1.0,
+      "n_records": 500,
+      "n_anomaly": 250,
+      "n_normal": 250,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 2,
+      "n_normal_real": 238,
+      "n_SPLIT_CAT_1": 157,
+      "n_SPLIT_GRAY_0": 12,
+      "n_SPLIT_GRAY_1": 93,
+      "n_SPLIT_REAL_0": 238
+    },
+    {
+      "client": "client_3",
+      "target_anomaly_fraction": 0.5,
+      "target_normal_count_weight": 2.0,
+      "n_records": 1218,
+      "n_anomaly": 609,
+      "n_normal": 609,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 4,
+      "n_normal_real": 579,
+      "n_SPLIT_CAT_1": 374,
+      "n_SPLIT_GRAY_0": 30,
+      "n_SPLIT_GRAY_1": 235,
+      "n_SPLIT_REAL_0": 579
+    },
+    {
+      "client": "client_4",
+      "target_anomaly_fraction": 0.5,
+      "target_normal_count_weight": 2.0,
+      "n_records": 1232,
+      "n_anomaly": 616,
+      "n_normal": 616,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 4,
+      "n_normal_real": 586,
+      "n_SPLIT_CAT_1": 400,
+      "n_SPLIT_GRAY_0": 30,
+      "n_SPLIT_GRAY_1": 216,
+      "n_SPLIT_REAL_0": 586
+    },
+    {
+      "client": "client_5",
+      "target_anomaly_fraction": 0.5,
+      "target_normal_count_weight": 4.0,
+      "n_records": 2448,
+      "n_anomaly": 1224,
+      "n_normal": 1224,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 7,
+      "n_normal_real": 1164,
+      "n_SPLIT_CAT_1": 754,
+      "n_SPLIT_GRAY_0": 60,
+      "n_SPLIT_GRAY_1": 470,
+      "n_SPLIT_REAL_0": 1164
+    },
+    {
+      "client": "client_6",
+      "target_anomaly_fraction": 0.5,
+      "target_normal_count_weight": 4.0,
+      "n_records": 2446,
+      "n_anomaly": 1223,
+      "n_normal": 1223,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 7,
+      "n_normal_real": 1163,
+      "n_SPLIT_CAT_1": 779,
+      "n_SPLIT_GRAY_0": 60,
+      "n_SPLIT_GRAY_1": 444,
+      "n_SPLIT_REAL_0": 1163
+    }
+  ],
+  "client_validation_summary": [
+    {
+      "client": "client_1",
+      "n_normal": 170,
+      "n_anomaly": 170,
+      "n_test_vehicles": 1,
+      "n_test": 340
+    },
+    {
+      "client": "client_2",
+      "n_normal": 161,
+      "n_anomaly": 161,
+      "n_test_vehicles": 1,
+      "n_test": 322
+    },
+    {
+      "client": "client_3",
+      "n_normal": 196,
+      "n_anomaly": 196,
+      "n_test_vehicles": 1,
+      "n_test": 392
+    },
+    {
+      "client": "client_4",
+      "n_normal": 168,
+      "n_anomaly": 168,
+      "n_test_vehicles": 1,
+      "n_test": 336
+    },
+    {
+      "client": "client_5",
+      "n_normal": 158,
+      "n_anomaly": 158,
+      "n_test_vehicles": 1,
+      "n_test": 316
+    },
+    {
+      "client": "client_6",
+      "n_normal": 173,
+      "n_anomaly": 173,
+      "n_test_vehicles": 1,
+      "n_test": 346
+    }
+  ],
+  "client_test_summary": [
+    {
+      "client": "client_1",
+      "n_normal": 164,
+      "n_anomaly": 164,
+      "n_test_vehicles": 1,
+      "n_test": 328
+    },
+    {
+      "client": "client_2",
+      "n_normal": 186,
+      "n_anomaly": 186,
+      "n_test_vehicles": 1,
+      "n_test": 372
+    },
+    {
+      "client": "client_3",
+      "n_normal": 63,
+      "n_anomaly": 63,
+      "n_test_vehicles": 1,
+      "n_test": 126
+    },
+    {
+      "client": "client_4",
+      "n_normal": 171,
+      "n_anomaly": 171,
+      "n_test_vehicles": 1,
+      "n_test": 342
+    },
+    {
+      "client": "client_5",
+      "n_normal": 170,
+      "n_anomaly": 170,
+      "n_test_vehicles": 1,
+      "n_test": 340
+    },
+    {
+      "client": "client_6",
+      "n_normal": 170,
+      "n_anomaly": 170,
+      "n_test_vehicles": 1,
+      "n_test": 340
+    }
+  ],
+  "partition_checks": {
+    "every_row_assigned_once": true,
+    "groups_in_single_partition": true,
+    "all_classes": true,
+    "all_categories": true
+  }
+}

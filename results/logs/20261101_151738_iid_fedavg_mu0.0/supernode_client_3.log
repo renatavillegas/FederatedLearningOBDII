@@ -1,0 +1,127 @@
+[92mINFO [0m:      Starting Flower SuperNode
+[93mWARNING [0m:   Option `--insecure` was set. Starting insecure channel to 127.0.0.1:8000.
+INFO:     Started server process [874242]
+INFO:     Waiting for application startup.
+[92mINFO [0m:      FastAPI lifespan: startup
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:9103 (Press CTRL+C to quit)
+[92mINFO [0m:      SuperNode ID: 10398774689482271110
+[92mINFO [0m:      Starting Flower SuperExec
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 17247425887196168883]
+[92mINFO [0m:      Receiving: train message (ID: f1e3f78f6d173a5aaad1b022eb689280385769344a5e7ed15cc65a785beae57d)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 17247425887196168883]
+[92mINFO [0m:      Sending: train message (ID: 929a070c6316377d1e3f7a493b5fb014c68cb5cde094cc961dd6ddc57fa62366)
+[92mINFO [0m:      
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 17247425887196168883]
+[92mINFO [0m:      Receiving: train message (ID: b66caca35eefe74fa6f95dba025f115ecebb2fa438650b85b413810cfbc412ec)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      SuperNode terminated gracefully.
+Traceback (most recent call last):
+  File "/home/renata/Documents/Estudo/MO809/project/venv/bin/flwr-clientapp", line 5, in <module>
+    from flwr.supernode.cli import flwr_clientapp
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supernode/cli/__init__.py", line 18, in <module>
+    from .flower_supernode import flower_supernode
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supernode/cli/flower_supernode.py", line 57, in <module>
+    from flwr.supercore.object_store import ObjectStoreFactory
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/object_store/__init__.py", line 18, in <module>
+    from .object_store_factory import ObjectStoreFactory
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/object_store/object_store_factory.py", line 26, in <module>
+    from .sql_object_store import SqlObjectStore
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/object_store/sql_object_store.py", line 32, in <module>
+    from flwr.supercore.sql_mixin import SqlMixin
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/sql_mixin.py", line 40, in <module>
+    from flwr.supercore.state.alembic.utils import run_migrations
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/state/alembic/utils.py", line 22, in <module>
+    from alembic import command
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/alembic/__init__.py", line 1, in <module>
+    from . import context
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/alembic/context.py", line 1, in <module>
+    from .runtime.environment import EnvironmentContext
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/alembic/runtime/environment.py", line 20, in <module>
+    from .migration import _ProxyTransaction
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/alembic/runtime/migration.py", line 26, in <module>
+    from .. import ddl
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/alembic/ddl/__init__.py", line 1, in <module>
+    from . import mssql
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/alembic/ddl/mssql.py", line 16, in <module>
+    from .base import AddColumn
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/alembic/ddl/base.py", line 23, in <module>
+    from ..util.sqla_compat import _columns_for_constraint  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/alembic/util/__init__.py", line 29, in <module>
+    from .pyfiles import coerce_resource_to_filename as coerce_resource_to_filename
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/alembic/util/pyfiles.py", line 16, in <module>
+    from mako import exceptions
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/mako/exceptions.py", line 287, in <module>
+    _install_highlighting()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/mako/exceptions.py", line 282, in _install_highlighting
+    _install_pygments()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/mako/exceptions.py", line 266, in _install_pygments
+    from mako.ext.pygmentplugin import syntax_highlight  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/mako/ext/pygmentplugin.py", line 16, in <module>
+    from pygments.lexers.web import CssLexer
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/pygments/lexers/web.py", line 12, in <module>
+    from pygments.lexers.html import HtmlLexer, DtdLexer, XmlLexer, XsltLexer, \
+        HamlLexer, ScamlLexer, JadeLexer
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/pygments/lexers/html.py", line 19, in <module>
+    from pygments.lexers.javascript import JavascriptLexer
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/pygments/lexers/javascript.py", line 425, in <module>
+    class DartLexer(RegexLexer):
+    ...<99 lines>...
+        }
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/pygments/lexers/javascript.py", line 475, in DartLexer
+    include('string_literal'),
+    ~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[92mINFO [0m:      SuperExec terminated gracefully.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+[92mINFO [0m:      FastAPI lifespan: shutdown
+INFO:     Application shutdown complete.
+INFO:     Finished server process [874242]
+Traceback (most recent call last):
+  File "/home/renata/Documents/Estudo/MO809/project/venv/bin/flower-superexec", line 8, in <module>
+    sys.exit(flower_superexec())
+             ~~~~~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/cli/flower_superexec.py", line 106, in flower_superexec
+    run_superexec(
+    ~~~~~~~~~~~~~^
+        runtime_api_address=args.runtime_api_address,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        executor_config=executor_config,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/superexec/run_superexec.py", line 277, in run_superexec
+    time.sleep(task_poll_interval)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/signal_handler.py", line 103, in graceful_exit_handler
+    flwr_exit(
+    ~~~~~~~~~^
+        code=SIGNAL_TO_EXIT_CODE[signalnum],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message=exit_message,
+        ^^^^^^^^^^^^^^^^^^^^^
+        event_type=event_type,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/exit.py", line 119, in flwr_exit
+    event_future.result(timeout=TELEMETRY_TIMEOUT_SECONDS)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 445, in result
+    self._condition.wait(timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 373, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

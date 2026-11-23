@@ -1,0 +1,90 @@
+{
+  "seed": 42,
+  "split_report": {
+    "checks": {
+      "every_row_assigned_once": true,
+      "groups_in_single_partition": true,
+      "all_classes": true,
+      "all_categories": true
+    },
+    "required_conditions": [
+      "all_classes",
+      "all_categories"
+    ],
+    "records_per_partition": {
+      "test": 1848,
+      "train": 8500,
+      "validation": 2052
+    },
+    "records_per_partition_and_class": {
+      "test/0": 924,
+      "test/1": 924,
+      "train/0": 4250,
+      "train/1": 4250,
+      "validation/0": 1026,
+      "validation/1": 1026
+    },
+    "records_per_partition_and_category": {
+      "test/SPLIT_CAT": 559,
+      "test/SPLIT_GRAY": 410,
+      "test/SPLIT_REAL": 879,
+      "train/SPLIT_CAT": 2666,
+      "train/SPLIT_GRAY": 1792,
+      "train/SPLIT_REAL": 4042,
+      "validation/SPLIT_CAT": 656,
+      "validation/SPLIT_GRAY": 420,
+      "validation/SPLIT_REAL": 976
+    },
+    "records_per_partition_category_and_class": {
+      "test/SPLIT_CAT/1": 559,
+      "test/SPLIT_GRAY/0": 45,
+      "test/SPLIT_GRAY/1": 365,
+      "test/SPLIT_REAL/0": 879,
+      "train/SPLIT_CAT/1": 2666,
+      "train/SPLIT_GRAY/0": 208,
+      "train/SPLIT_GRAY/1": 1584,
+      "train/SPLIT_REAL/0": 4042,
+      "validation/SPLIT_CAT/1": 656,
+      "validation/SPLIT_GRAY/0": 50,
+      "validation/SPLIT_GRAY/1": 370,
+      "validation/SPLIT_REAL/0": 976
+    },
+    "groups_per_partition_and_category": {
+      "test/SPLIT_CAT": 559,
+      "test/SPLIT_GRAY": 410,
+      "test/SPLIT_REAL": 6,
+      "train/SPLIT_CAT": 2666,
+      "train/SPLIT_GRAY": 1792,
+      "train/SPLIT_REAL": 27,
+      "validation/SPLIT_CAT": 656,
+      "validation/SPLIT_GRAY": 420,
+      "validation/SPLIT_REAL": 6
+    },
+    "anomaly_fraction_per_partition": {
+      "test": 0.5,
+      "train": 0.5,
+      "validation": 0.5
+    },
+    "feature_rows_shared_across_partitions": 0,
+    "derived_synthetic_relations": "not verifiable: synthetic records have no origin identifier"
+  },
+  "scenario_train_real_normal_counts": {
+    "iid": {
+      "client_1": 672,
+      "client_2": 754,
+      "client_3": 595,
+      "client_4": 752,
+      "client_5": 629,
+      "client_6": 640
+    },
+    "quantity_skew": {
+      "client_1": 312,
+      "client_2": 238,
+      "client_3": 579,
+      "client_4": 586,
+      "client_5": 1164,
+      "client_6": 1163
+    }
+  },
+  "test_assignment_sha256": "087ef23b2d4234e8ddfae936d143e93cc8d4143e4815220e9cc545b9e3e9c780"
+}

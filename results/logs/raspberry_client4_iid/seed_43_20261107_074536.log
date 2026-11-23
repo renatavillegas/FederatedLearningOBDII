@@ -1,0 +1,37 @@
+Flower App configuration warnings in '/home/renata/Documents/Estudo/MO809/project/federated-obd-seminar/pyproject.toml':
+- Recommended property "description" missing in [project]
+- Recommended property "license" missing in [project]
+Using SuperLink: local-deployment (127.0.0.1:8000)
+Successfully started run 6595112918273516450
+[92mINFO [0m:      Starting logstream for run_id `6595112918273516450`
+[92mINFO [0m:      Start `flwr-serverapp` process
+Successfully installed federated-obd-seminar to /home/renata/Documents/Estudo/MO809/project/federated-obd-seminar/.flwr_raspberry_client4_iid/apps/mo809.federated-obd-seminar.0.1.0.7b5f539a.
+[93mWARNING [0m:   fraction_evaluate is set to 0.0. Federated evaluation will be skipped.
+[92mINFO [0m:      configure_train: Sampled 6 nodes (out of 6)
+[91mERROR [0m:     ServerApp raised an exception
+Traceback (most recent call last):
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/superlink/runtime/run_serverapp.py", line 221, in run_serverapp
+    context = run_(
+        grid=grid,
+    ...<2 lines>...
+        context=context,
+    )
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/server/run_serverapp.py", line 60, in run
+    server_app(grid=grid, context=context)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/serverapp/server_app.py", line 176, in __call__
+    self._main(grid, context)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/federated-obd-seminar/.flwr_raspberry_client4_iid/apps/mo809.federated-obd-seminar.0.1.0.7b5f539a/src/federated/server.py", line 368, in main
+    FederatedServer(FederatedRunSettings.from_run_config(context.run_config)).run(grid)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/federated-obd-seminar/.flwr_raspberry_client4_iid/apps/mo809.federated-obd-seminar.0.1.0.7b5f539a/src/federated/server.py", line 247, in run
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Expected one reply with inference metrics from client_4 in round 1
+[91mERROR [0m:     Exit Code: 201
+
+An unhandled exception occurred in the ServerApp.
+
+For more information, visit: <https://flower.ai/docs/framework/1.42/en/ref-exit-codes/201.html>

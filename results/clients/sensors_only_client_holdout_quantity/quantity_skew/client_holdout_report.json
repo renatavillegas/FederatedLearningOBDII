@@ -1,0 +1,158 @@
+{
+  "scenario": "quantity_skew",
+  "client_train_summary": [
+    {
+      "client": "client_1",
+      "target_anomaly_fraction": 0.5,
+      "target_normal_count_weight": 1.0,
+      "n_records": 464,
+      "n_anomaly": 232,
+      "n_normal": 232,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 2,
+      "n_normal_real": 216,
+      "n_SPLIT_CAT_1": 145,
+      "n_SPLIT_GRAY_0": 16,
+      "n_SPLIT_GRAY_1": 87,
+      "n_SPLIT_REAL_0": 216
+    },
+    {
+      "client": "client_2",
+      "target_anomaly_fraction": 0.5,
+      "target_normal_count_weight": 1.0,
+      "n_records": 538,
+      "n_anomaly": 269,
+      "n_normal": 269,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 2,
+      "n_normal_real": 253,
+      "n_SPLIT_CAT_1": 168,
+      "n_SPLIT_GRAY_0": 16,
+      "n_SPLIT_GRAY_1": 101,
+      "n_SPLIT_REAL_0": 253
+    },
+    {
+      "client": "client_3",
+      "target_anomaly_fraction": 0.5,
+      "target_normal_count_weight": 2.0,
+      "n_records": 1346,
+      "n_anomaly": 673,
+      "n_normal": 673,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 4,
+      "n_normal_real": 643,
+      "n_SPLIT_CAT_1": 421,
+      "n_SPLIT_GRAY_0": 30,
+      "n_SPLIT_GRAY_1": 252,
+      "n_SPLIT_REAL_0": 643
+    },
+    {
+      "client": "client_4",
+      "target_anomaly_fraction": 0.5,
+      "target_normal_count_weight": 2.0,
+      "n_records": 1284,
+      "n_anomaly": 642,
+      "n_normal": 642,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 4,
+      "n_normal_real": 612,
+      "n_SPLIT_CAT_1": 402,
+      "n_SPLIT_GRAY_0": 30,
+      "n_SPLIT_GRAY_1": 240,
+      "n_SPLIT_REAL_0": 612
+    },
+    {
+      "client": "client_5",
+      "target_anomaly_fraction": 0.5,
+      "target_normal_count_weight": 4.0,
+      "n_records": 2064,
+      "n_anomaly": 1032,
+      "n_normal": 1032,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 6,
+      "n_normal_real": 971,
+      "n_SPLIT_CAT_1": 646,
+      "n_SPLIT_GRAY_0": 61,
+      "n_SPLIT_GRAY_1": 386,
+      "n_SPLIT_REAL_0": 971
+    },
+    {
+      "client": "client_6",
+      "target_anomaly_fraction": 0.5,
+      "target_normal_count_weight": 4.0,
+      "n_records": 2106,
+      "n_anomaly": 1053,
+      "n_normal": 1053,
+      "anomaly_fraction": 0.5,
+      "n_vehicles": 6,
+      "n_normal_real": 993,
+      "n_SPLIT_CAT_1": 659,
+      "n_SPLIT_GRAY_0": 60,
+      "n_SPLIT_GRAY_1": 394,
+      "n_SPLIT_REAL_0": 993
+    }
+  ],
+  "client_test_summary": [
+    {
+      "client": "client_1",
+      "n_normal": 165,
+      "n_anomaly": 165,
+      "n_test_vehicles": 1,
+      "n_test": 330
+    },
+    {
+      "client": "client_2",
+      "n_normal": 120,
+      "n_anomaly": 120,
+      "n_test_vehicles": 1,
+      "n_test": 240
+    },
+    {
+      "client": "client_3",
+      "n_normal": 130,
+      "n_anomaly": 130,
+      "n_test_vehicles": 1,
+      "n_test": 260
+    },
+    {
+      "client": "client_4",
+      "n_normal": 159,
+      "n_anomaly": 159,
+      "n_test_vehicles": 1,
+      "n_test": 318
+    },
+    {
+      "client": "client_5",
+      "n_normal": 365,
+      "n_anomaly": 365,
+      "n_test_vehicles": 2,
+      "n_test": 730
+    },
+    {
+      "client": "client_6",
+      "n_normal": 351,
+      "n_anomaly": 351,
+      "n_test_vehicles": 2,
+      "n_test": 702
+    }
+  ],
+  "test_source_groups_per_client": {
+    "client_1": 1,
+    "client_2": 1,
+    "client_3": 1,
+    "client_4": 1,
+    "client_5": 2,
+    "client_6": 2
+  },
+  "partition_checks": {
+    "every_row_assigned_once": true,
+    "groups_in_single_partition": true,
+    "all_classes": true,
+    "all_categories": true
+  },
+  "split_ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  }
+}

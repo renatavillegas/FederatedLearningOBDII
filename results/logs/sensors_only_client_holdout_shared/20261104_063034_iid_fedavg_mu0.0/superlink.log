@@ -1,0 +1,65 @@
+[93mWARNING [0m:   Option `--insecure` was set. Starting insecure HTTP server with unencrypted communication (TLS disabled). Proceed only if you understand the risks.
+[93mWARNING [0m:   SuperNode authentication is disabled. The SuperLink will accept connections from any SuperNode.
+[92mINFO [0m:      Starting Flower SuperLink
+[92mINFO [0m:      Starting the SuperLink Runtime HTTP API on 127.0.0.1:8000.
+[92mINFO [0m:      Starting the SuperLink Control HTTP API on 127.0.0.1:8000.
+[92mINFO [0m:      Starting the SuperLink Fleet HTTP API on 127.0.0.1:8000.
+2026-11-04T09:30:34.969Z INFO [uvicorn.error] Started server process [1649533]
+2026-11-04T09:30:34.969Z INFO [uvicorn.error] Waiting for application startup.
+[92mINFO [0m:      FastAPI lifespan: startup
+[92mINFO [0m:      SuperLinkLifespan: start
+2026-11-04T09:30:34.970Z INFO [uvicorn.error] Application startup complete.
+2026-11-04T09:30:34.971Z INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[92mINFO [0m:      Starting Flower SuperExec
+2026-11-04T09:30:37.856Z INFO [uvicorn.access] 127.0.0.1:47282 - "POST /v1/fleet/register-node HTTP/1.1" 200
+2026-11-04T09:30:37.860Z INFO [uvicorn.access] 127.0.0.1:47272 - "POST /v1/fleet/register-node HTTP/1.1" 200
+2026-11-04T09:30:37.861Z INFO [uvicorn.access] 127.0.0.1:47296 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=10907688715448328118
+2026-11-04T09:30:37.868Z INFO [uvicorn.access] 127.0.0.1:47282 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=3882340483095039669
+2026-11-04T09:30:37.870Z INFO [uvicorn.access] 127.0.0.1:47272 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=13035694495931812351
+2026-11-04T09:30:37.877Z INFO [uvicorn.access] 127.0.0.1:47296 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-04T09:30:37.895Z INFO [uvicorn.access] 127.0.0.1:47318 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=6390089208661427171
+2026-11-04T09:30:37.900Z INFO [uvicorn.access] 127.0.0.1:47318 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-04T09:30:37.982Z INFO [uvicorn.access] 127.0.0.1:47346 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=10669551174802139032
+2026-11-04T09:30:37.988Z INFO [uvicorn.access] 127.0.0.1:47346 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-04T09:30:38.132Z INFO [uvicorn.access] 127.0.0.1:47366 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=9503454213996528435
+2026-11-04T09:30:38.138Z INFO [uvicorn.access] 127.0.0.1:47366 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+[92mINFO [0m:      ControlServicer.StartRun
+[92mINFO [0m:      Created run 16899105428717091107 in federation @none/default
+2026-11-04T09:30:40.671Z INFO [uvicorn.access] 127.0.0.1:47372 - "POST /v1/control/start-run HTTP/1.1" 200
+[92mINFO [0m:      ControlServicer.StreamLogs
+2026-11-04T09:30:40.674Z INFO [uvicorn.access] 127.0.0.1:47372 - "POST /v1/control/stream-logs HTTP/1.1" 200
+[92mINFO [0m:      Started task 6193097459006329330 of run 16899105428717091107
+2026-11-04T09:30:42.068Z INFO [uvicorn.access] 127.0.0.1:47404 - "POST /v1/runtime/pull-task-input HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16899105428717091107
+2026-11-04T09:30:46.902Z INFO [uvicorn.access] 127.0.0.1:47282 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0de691dc55074b97e3eae5819583f9b2efd62304a7f803a63ff0c2a26dbb89ed
+2026-11-04T09:30:46.910Z INFO [uvicorn.access] 127.0.0.1:47282 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16899105428717091107
+2026-11-04T09:30:46.912Z INFO [uvicorn.access] 127.0.0.1:47272 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16899105428717091107
+2026-11-04T09:30:46.918Z INFO [uvicorn.access] 127.0.0.1:47296 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0de691dc55074b97e3eae5819583f9b2efd62304a7f803a63ff0c2a26dbb89ed
+2026-11-04T09:30:46.921Z INFO [uvicorn.access] 127.0.0.1:47272 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0de691dc55074b97e3eae5819583f9b2efd62304a7f803a63ff0c2a26dbb89ed
+2026-11-04T09:30:46.929Z INFO [uvicorn.access] 127.0.0.1:47296 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16899105428717091107
+2026-11-04T09:30:46.931Z INFO [uvicorn.access] 127.0.0.1:47318 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0de691dc55074b97e3eae5819583f9b2efd62304a7f803a63ff0c2a26dbb89ed
+2026-11-04T09:30:46.942Z INFO [uvicorn.access] 127.0.0.1:47318 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16899105428717091107
+2026-11-04T09:30:47.041Z INFO [uvicorn.access] 127.0.0.1:47346 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0de691dc55074b97e3eae5819583f9b2efd62304a7f803a63ff0c2a26dbb89ed
+2026-11-04T09:30:47.056Z INFO [uvicorn.access] 127.0.0.1:47346 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16899105428717091107
+2026-11-04T09:30:47.160Z INFO [uvicorn.access] 127.0.0.1:47366 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0de691dc55074b97e3eae5819583f9b2efd62304a7f803a63ff0c2a26dbb89ed
+2026-11-04T09:30:47.163Z INFO [uvicorn.access] 127.0.0.1:47366 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[93mWARNING [0m:   Connection attempt failed, retrying in 0.52 seconds
+[92mINFO [0m:      All logs for run ID `16899105428717091107` returned
+[93mWARNING [0m:   Connection attempt failed, retrying in 0.90 seconds

@@ -1,0 +1,154 @@
+Slide 256: 
+Slide 257: Complexidade Veicular: Veículos contêm múltiplos sensores monitorando constantemente a saúde do motor e sistemas essenciais.
+Padrão OBD-II: Padrão de acesso aos dados de telemetria e códigos de falha do veículo em tempo real.
+MOTIVAÇÃO
+Detectar falhas mecânicas é importante para prevenir acidentes, diminuir custos de manutenção e evitar paradas não planejadas.
+Problema de Aprendizado centralizado
+Muitos dados dados brutos dos veículos.
+Largura de banda.
+Sensibilidade dos dados. 
+
+PROBLEMA
+Dados brutos não podem ser enviados diretamente devido a problemas de privacidade e altos custos de transferência.
+
+Slide 258: 1. von Wahl et al. (2024) — Federated Learning para manutenção preditiva em frotas
+Título: Data Disparity and Temporal Unavailability Aware Asynchronous Federated Learning for Predictive Maintenance on Transportation Fleets.
+Como atacam o problema: propõem um método de aprendizado federado assíncrono que considera diferenças na distribuição dos dados entre os participantes e a indisponibilidade temporal dos clientes. Introduzem um mecanismo de agregação sensível à disparidade dos dados e uma estratégia de parada antecipada federada.
+A abordagem é avaliada em dois conjuntos reais: previsão de diluição de óleo em motores de combustão de automóveis e previsão de vida útil remanescente de motores turbofan de aeronaves.
+ojs.aaai.org
+Pontos fortes:
+Aplicação de FL em manutenção preditiva de frotas de transporte;
+Considera heterogeneidade na quantidade e disponibilidade dos dados;
+Avalia a abordagem contra métodos federados e centralizados.
+Limitações em relação ao seu projeto:
+O problema é manutenção preditiva, não detecção não supervisionada de anomalias;
+Utiliza tarefas de previsão com alvos específicos, em vez de um autoencoder treinado somente com dados normais;
+Não é um estudo específico de dados OBD-II.
+
+Slide 259: 
+Slide 260: Flower ServerApp
+inicializa modelo global e configura cada rodada
+(épocas locais, seed, rodada, μ opcional)
+Flower SuperLink
+coordena a execução e conecta os nósAgregação de parâmetros
+FedAvg: média ponderada por n de exemplos
+FedProx: mesma agregação + penalidade proximal no clienteValidação global no servidor
+loss de reconstrução → early stopping
+guarda o checkpoint global com menor lossCheckpoint global selecionado
+pesos do melhor round + configuraçãoAVALIAÇÃO FINAL (offline)
+checkpoint global + coortes de teste mantidas por cliente
+limiar p99/p95 calibrado na validação normal-real
+métricas por cliente; registros brutos não são enviados ao servidor FlowerNota do protocolo: implementação Flower executada em processos locais na mesma máquina. A separação por cliente representa partições lógicas do experimento; não é uma implantação em seis dispositivos físicos.
+Slide 261: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 262: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 263: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 264: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 265: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 266: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 267: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 268: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 269: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 270: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 271: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 272: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 273: 1. Separação do dataset (70/15/15)
+Treinamento: 70%
+Validação: 15%
+Teste: 15%
+A divisão é realizada separadamente por categoria:
+Dados reais (SPLIT_REAL): agrupamento por veículo (source), mantendo todos os registros de um mesmo veículo na mesma partição. Dos 39 veículos, 27 são destinados ao treinamento, 6 à validação e 6 ao teste.
+Dados sintéticos (SPLIT_CAT e SPLIT_GRAY): divisão por registro, estratificada pelo rótulo de anomalia, pois não há identificadores de origem que permitam agrupar registros relacionados.
+
+Slide 274: Desenvolver um modelo capaz de realizar a identificação de anomalias no dataset analizado partir de dados OBD-II.
+Distribuir os dados entre diferentes clientes, representando diferentes veículos, mantendo os dados de cada cliente localmente.
+Implementar FL utilizando um mecanismo de agregação, como o FedAvg ou FedProx.
+Comparar treinamento local; treinamento centralizado; treinamento federado.
+Avaliar o impacto da distribuição dos dados entre os veículos, considerando cenários IID e não-IID.
+Avaliar a execução do modelo em uma plataforma de borda, por exemplo em uma Raspberry Pi. 
+
+
+

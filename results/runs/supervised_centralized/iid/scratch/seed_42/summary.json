@@ -1,0 +1,26 @@
+{
+  "scenario": "iid",
+  "method": "supervised_mlp_centralized",
+  "architecture": "105-32-8-1",
+  "seed": 42,
+  "scaler": "normal_real_train_global",
+  "best_epoch": 71,
+  "best_val_bce": 0.1334989368915558,
+  "epochs_run": 101,
+  "stopped_early": true,
+  "total_seconds": 167.7167720971629,
+  "n_train": 8430,
+  "n_anomaly_train": 4215,
+  "n_features": 105,
+  "pretrained_ae": null,
+  "test": {
+    "bce_loss": 0.13675668835639954,
+    "accuracy": 0.9618279569892473,
+    "precision": 0.932527693856999,
+    "recall": 0.9956989247311828,
+    "f1": 0.9630785231409256,
+    "false_positive_rate": 0.07204301075268817,
+    "n_samples": 1860,
+    "n_anomaly": 930
+  }
+}

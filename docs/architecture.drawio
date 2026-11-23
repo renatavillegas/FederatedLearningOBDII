@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net" modified="2026-11-02T16:30:00.000Z" agent="Copilot" version="24.7.17" type="device">
+  <diagram id="federated-obd-overview" name="Arquitetura geral">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Aprendizado Federado para Detecção de Anomalias OBD-II&#xa;Arquitetura geral — 1 servidor Flower + 6 clientes" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1110" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Experimento sensors-only | FedAvg ou FedProx | autoencoder | dados particionados por veículo/cliente" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#52667A;" vertex="1" parent="1">
+          <mxGeometry x="42" y="82" width="1000" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="serverFrame" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F7FC;strokeColor=#5B9BD5;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="565" y="145" width="475" height="595" as="geometry"/>
+        </mxCell>
+        <mxCell id="serverTitle" value="SERVIDOR FLOWER" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="595" y="155" width="415" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="superlink" value="Flower SuperLink&#xa;coordena a execução e conecta os nós" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D9EAF7;strokeColor=#5B9BD5;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="625" y="202" width="355" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="serverApp" value="Flower ServerApp&#xa;inicializa modelo global e configura cada rodada&#xa;(épocas locais, seed, rodada, μ opcional)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B9BD5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="625" y="292" width="355" height="88" as="geometry"/>
+        </mxCell>
+        <mxCell id="aggregation" value="Agregação de parâmetros&#xa;FedAvg: média ponderada por n de exemplos&#xa;FedProx: mesma agregação + penalidade proximal no cliente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E2F0D9;strokeColor=#70AD47;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="625" y="410" width="355" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="validation" value="Validação global no servidor&#xa;loss de reconstrução → early stopping&#xa;guarda o checkpoint global com menor loss" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="625" y="536" width="355" height="84" as="geometry"/>
+        </mxCell>
+        <mxCell id="checkpoint" value="Checkpoint global selecionado&#xa;pesos do melhor round + configuração" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4D6;strokeColor=#ED7D31;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="625" y="650" width="355" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="client1" value="CLIENTE 1&#xa;partição local de treino&#xa;normalização + treino local&#xa;modelo local w₁ + métricas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2F8;strokeColor=#5B9BD5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="45" y="190" width="205" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="client2" value="CLIENTE 2&#xa;partição local de treino&#xa;normalização + treino local&#xa;modelo local w₂ + métricas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2F8;strokeColor=#5B9BD5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="45" y="335" width="205" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="client3" value="CLIENTE 3&#xa;partição local de treino&#xa;normalização + treino local&#xa;modelo local w₃ + métricas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2F8;strokeColor=#5B9BD5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="45" y="480" width="205" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="client4" value="CLIENTE 4&#xa;partição local de treino&#xa;normalização + treino local&#xa;modelo local w₄ + métricas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2F8;strokeColor=#5B9BD5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1355" y="190" width="205" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="client5" value="CLIENTE 5&#xa;partição local de treino&#xa;normalização + treino local&#xa;modelo local w₅ + métricas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2F8;strokeColor=#5B9BD5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1355" y="335" width="205" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="client6" value="CLIENTE 6&#xa;partição local de treino&#xa;normalização + treino local&#xa;modelo local w₆ + métricas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2F8;strokeColor=#5B9BD5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1355" y="480" width="205" height="105" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="dataPartition" value="Particionamento offline dos dados OBD-II&#xa;Veículos permanecem no mesmo cliente&#xa;Atribuição lógica — não é tráfego Flower" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#F2F2F2;strokeColor=#7F7F7F;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="285" y="325" width="225" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="preprocessing" value="Pré-processamento&#xa;features sensors-only + scaler&#xa;Normal-only: scaler ajustado nos normais reais de treino e compartilhado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4D6;strokeColor=#ED7D31;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="285" y="475" width="225" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="evaluation" value="AVALIAÇÃO FINAL (offline)&#xa;checkpoint global + coortes de teste mantidas por cliente&#xa;limiar p99/p95 calibrado na validação normal-real&#xa;métricas por cliente; registros brutos não são enviados ao servidor Flower" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECF7;strokeColor=#9673A6;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="380" y="790" width="840" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="note" value="Nota do protocolo: implementação Flower executada em processos locais na mesma máquina. A separação por cliente representa partições lógicas do experimento; não é uma implantação em seis dispositivos físicos." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="45" y="800" width="285" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend" value="LEGENDA&#xa;Azul → pesos globais + configuração&#xa;Verde ← pesos locais + métricas (n, loss, tempo)&#xa;Cinza → partição lógica offline (sem tráfego Flower)&#xa;Laranja → checkpoint para avaliação offline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BFBFBF;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="790" width="290" height="112" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="dataTo1" value="partição 1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7F7F7F;fontSize=11;" edge="1" parent="1" source="dataPartition" target="client1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dataTo2" value="partição 2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7F7F7F;fontSize=11;" edge="1" parent="1" source="dataPartition" target="client2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dataTo3" value="partição 3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7F7F7F;fontSize=11;" edge="1" parent="1" source="dataPartition" target="client3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dataTo4" value="partição 4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7F7F7F;fontSize=11;" edge="1" parent="1" source="dataPartition" target="client4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dataTo5" value="partição 5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7F7F7F;fontSize=11;" edge="1" parent="1" source="dataPartition" target="client5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dataTo6" value="partição 6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7F7F7F;fontSize=11;" edge="1" parent="1" source="dataPartition" target="client6"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="down1" value="pesos globais + config" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4472C4;fontSize=11;" edge="1" parent="1" source="serverApp" target="client1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="up1" value="pesos locais + métricas" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#70AD47;fontSize=11;" edge="1" parent="1" source="client1" target="aggregation"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="down2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4472C4;" edge="1" parent="1" source="serverApp" target="client2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="up2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#70AD47;" edge="1" parent="1" source="client2" target="aggregation"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="down3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4472C4;" edge="1" parent="1" source="serverApp" target="client3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="up3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#70AD47;" edge="1" parent="1" source="client3" target="aggregation"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="down4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4472C4;" edge="1" parent="1" source="serverApp" target="client4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="up4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#70AD47;" edge="1" parent="1" source="client4" target="aggregation"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="down5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4472C4;" edge="1" parent="1" source="serverApp" target="client5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="up5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#70AD47;" edge="1" parent="1" source="client5" target="aggregation"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="down6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4472C4;" edge="1" parent="1" source="serverApp" target="client6"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="up6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#70AD47;" edge="1" parent="1" source="client6" target="aggregation"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="rounds" value="parâmetros agregados&#xa;próxima rodada" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4472C4;fontSize=12;" edge="1" parent="1" source="aggregation" target="serverApp"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="modelToEval" value="melhor checkpoint" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#ED7D31;fontSize=12;fontStyle=1;" edge="1" parent="1" source="checkpoint" target="evaluation"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="validationToCheckpoint" value="seleciona melhor round" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#D6B656;fontSize=11;" edge="1" parent="1" source="validation" target="checkpoint"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

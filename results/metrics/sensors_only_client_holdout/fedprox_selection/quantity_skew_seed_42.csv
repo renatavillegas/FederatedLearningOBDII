@@ -1,0 +1,5 @@
+scenario,seed,mu,method,best_validation_loss,best_round,rounds_run,run_dir
+quantity_skew,42,0.1,fedprox_mu_0.1_normal_only,0.2077057957649231,195,200,results/runs/sensors_only_client_holdout/quantity_skew/fedprox_mu_0.1_normal_only/seed_42
+quantity_skew,42,0.001,fedprox_mu_0.001_normal_only,0.21778541803359985,162,172,results/runs/sensors_only_client_holdout/quantity_skew/fedprox_mu_0.001_normal_only/seed_42
+quantity_skew,42,0.01,fedprox_mu_0.01_normal_only,0.22989287972450256,99,109,results/runs/sensors_only_client_holdout/quantity_skew/fedprox_mu_0.01_normal_only/seed_42
+quantity_skew,42,1,fedprox_mu_1_normal_only,0.393746554851532,200,200,results/runs/sensors_only_client_holdout/quantity_skew/fedprox_mu_1_normal_only/seed_42

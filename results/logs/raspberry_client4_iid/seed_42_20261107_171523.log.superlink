@@ -1,0 +1,119 @@
+[93mWARNING [0m:   Option `--insecure` was set. Starting insecure HTTP server with unencrypted communication (TLS disabled). Proceed only if you understand the risks.
+[93mWARNING [0m:   SuperNode authentication is disabled. The SuperLink will accept connections from any SuperNode.
+[92mINFO [0m:      Starting Flower SuperLink
+[92mINFO [0m:      Starting the SuperLink Runtime HTTP API on 192.168.1.104:8000.
+[92mINFO [0m:      Starting the SuperLink Control HTTP API on 192.168.1.104:8000.
+[92mINFO [0m:      Starting the SuperLink Fleet HTTP API on 192.168.1.104:8000.
+2026-11-07T20:15:25.706Z INFO [uvicorn.error] Started server process [2245152]
+2026-11-07T20:15:25.706Z INFO [uvicorn.error] Waiting for application startup.
+[92mINFO [0m:      FastAPI lifespan: startup
+[92mINFO [0m:      SuperLinkLifespan: start
+2026-11-07T20:15:25.708Z INFO [uvicorn.error] Application startup complete.
+2026-11-07T20:15:25.709Z INFO [uvicorn.error] Uvicorn running on http://192.168.1.104:8000 (Press CTRL+C to quit)
+2026-11-07T20:15:25.849Z INFO [uvicorn.access] 192.168.1.102:48060 - "POST /v1/fleet/send-node-heartbeat HTTP/1.1" 401
+2026-11-07T20:15:26.665Z INFO [uvicorn.access] 192.168.1.102:48060 - "POST /v1/fleet/deactivate-node HTTP/1.1" 401
+2026-11-07T20:15:26.683Z INFO [uvicorn.access] 192.168.1.102:48060 - "POST /v1/fleet/unregister-node HTTP/1.1" 401
+[92mINFO [0m:      Starting Flower SuperExec
+2026-11-07T20:15:28.951Z INFO [uvicorn.access] 192.168.1.104:49142 - "POST /v1/fleet/register-node HTTP/1.1" 200
+2026-11-07T20:15:28.954Z INFO [uvicorn.access] 192.168.1.104:49128 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=2812430237293639084
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=2202642058562793102
+2026-11-07T20:15:28.979Z INFO [uvicorn.access] 192.168.1.104:49128 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-07T20:15:28.981Z INFO [uvicorn.access] 192.168.1.104:49142 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-07T20:15:29.033Z INFO [uvicorn.access] 192.168.1.104:49178 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=1862910792009942599
+2026-11-07T20:15:29.049Z INFO [uvicorn.access] 192.168.1.104:49178 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-07T20:15:29.092Z INFO [uvicorn.access] 192.168.1.104:49202 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=1151974265644049604
+2026-11-07T20:15:29.111Z INFO [uvicorn.access] 192.168.1.104:49202 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+2026-11-07T20:15:29.498Z INFO [uvicorn.access] 192.168.1.104:49218 - "POST /v1/fleet/register-node HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=1784520039513742251
+2026-11-07T20:15:29.515Z INFO [uvicorn.access] 192.168.1.104:49218 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+[92mINFO [0m:      ControlServicer.StartRun
+[92mINFO [0m:      Created run 16401643247168726989 in federation @none/default
+2026-11-07T20:15:32.007Z INFO [uvicorn.access] 192.168.1.102:40530 - "POST /v1/fleet/register-node HTTP/1.1" 200
+2026-11-07T20:15:32.009Z INFO [uvicorn.access] 192.168.1.104:49238 - "POST /v1/control/start-run HTTP/1.1" 200
+[92mINFO [0m:      ControlServicer.StreamLogs
+2026-11-07T20:15:32.022Z INFO [uvicorn.access] 192.168.1.104:49238 - "POST /v1/control/stream-logs HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.ActivateNode] Activated node_id=10044323209244444718
+2026-11-07T20:15:32.037Z INFO [uvicorn.access] 192.168.1.102:40530 - "POST /v1/fleet/activate-node HTTP/1.1" 200
+[92mINFO [0m:      Started task 14188773831727059483 of run 16401643247168726989
+2026-11-07T20:15:34.431Z INFO [uvicorn.access] 192.168.1.104:45442 - "POST /v1/runtime/pull-task-input HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16401643247168726989
+2026-11-07T20:15:41.080Z INFO [uvicorn.access] 192.168.1.104:49142 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0b245a7584ec45ef42c7a161df7f6543dd606ef2bf13b365cdb60bc02ffd3437
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16401643247168726989
+2026-11-07T20:15:41.103Z INFO [uvicorn.access] 192.168.1.104:49142 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+2026-11-07T20:15:41.104Z INFO [uvicorn.access] 192.168.1.104:49128 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0b245a7584ec45ef42c7a161df7f6543dd606ef2bf13b365cdb60bc02ffd3437
+2026-11-07T20:15:41.120Z INFO [uvicorn.access] 192.168.1.104:49128 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16401643247168726989
+2026-11-07T20:15:41.180Z INFO [uvicorn.access] 192.168.1.104:49178 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0b245a7584ec45ef42c7a161df7f6543dd606ef2bf13b365cdb60bc02ffd3437
+2026-11-07T20:15:41.220Z INFO [uvicorn.access] 192.168.1.104:49178 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16401643247168726989
+2026-11-07T20:15:41.247Z INFO [uvicorn.access] 192.168.1.104:49202 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0b245a7584ec45ef42c7a161df7f6543dd606ef2bf13b365cdb60bc02ffd3437
+2026-11-07T20:15:41.342Z INFO [uvicorn.access] 192.168.1.104:49202 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16401643247168726989
+2026-11-07T20:15:41.632Z INFO [uvicorn.access] 192.168.1.102:40530 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0b245a7584ec45ef42c7a161df7f6543dd606ef2bf13b365cdb60bc02ffd3437
+[92mINFO [0m:      [Fleet.GetRun] Requesting `Run` for run_id=16401643247168726989
+2026-11-07T20:15:41.745Z INFO [uvicorn.access] 192.168.1.102:40530 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+2026-11-07T20:15:41.765Z INFO [uvicorn.access] 192.168.1.104:49218 - "POST /v1/fleet/get-run HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.GetFab] Requesting FAB for fab_hash=0b245a7584ec45ef42c7a161df7f6543dd606ef2bf13b365cdb60bc02ffd3437
+2026-11-07T20:15:41.830Z INFO [uvicorn.access] 192.168.1.104:49218 - "POST /v1/fleet/get-fab HTTP/1.1" 200
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=10044323209244444718
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=2202642058562793102
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=2812430237293639084
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=1151974265644049604
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=1784520039513742251
+[92mINFO [0m:      [Fleet.PushMessages] Push replies from node_id=1862910792009942599
+[92mINFO [0m:      Finished task 14188773831727059483 of run 16401643247168726989
+2026-11-07T20:15:59.242Z INFO [uvicorn.access] 192.168.1.104:45450 - "POST /v1/runtime/push-task-output HTTP/1.1" 200
+[92mINFO [0m:      All logs for run ID `16401643247168726989` returned
+2026-11-07T20:16:00.152Z INFO [uvicorn.error] Shutting down
+2026-11-07T20:16:00.253Z INFO [uvicorn.error] Waiting for application shutdown.
+[92mINFO [0m:      SuperLinkLifespan: stop
+[92mINFO [0m:      SuperExec terminated gracefully.
+[93mWARNING [0m:   SuperExec subprocess did not terminate within 1 second.
+[92mINFO [0m:      FastAPI lifespan: shutdown
+2026-11-07T20:16:01.256Z INFO [uvicorn.error] Application shutdown complete.
+2026-11-07T20:16:01.256Z INFO [uvicorn.error] Finished server process [2245152]
+Traceback (most recent call last):
+  File "/home/renata/Documents/Estudo/MO809/project/venv/bin/flower-superexec", line 8, in <module>
+    sys.exit(flower_superexec())
+             ~~~~~~~~~~~~~~~~^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/cli/flower_superexec.py", line 106, in flower_superexec
+    run_superexec(
+    ~~~~~~~~~~~~~^
+        runtime_api_address=args.runtime_api_address,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        executor_config=executor_config,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/superexec/run_superexec.py", line 277, in run_superexec
+    time.sleep(task_poll_interval)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/signal_handler.py", line 103, in graceful_exit_handler
+    flwr_exit(
+    ~~~~~~~~~^
+        code=SIGNAL_TO_EXIT_CODE[signalnum],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message=exit_message,
+        ^^^^^^^^^^^^^^^^^^^^^
+        event_type=event_type,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/renata/Documents/Estudo/MO809/project/venv/lib/python3.14/site-packages/flwr/supercore/exit/exit.py", line 119, in flwr_exit
+    event_future.result(timeout=TELEMETRY_TIMEOUT_SECONDS)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 445, in result
+    self._condition.wait(timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 373, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

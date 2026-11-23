@@ -1,0 +1,65 @@
+raw_path: data/raw/Vehicle_Record.csv
+seed: 42
+
+columns:
+  source: source
+  label: anomaly_label
+  metadata:
+    - source
+    - anomaly_label
+    - failure_type
+    - severity_score
+    - severity_stage
+    - is_gray
+    - TTF_years
+    - TTF_km
+
+labels:
+  normal: 0
+  anomaly: 1
+
+# assignment_unit: "source" keeps every record of a source in one partition;
+# "record" allows records to be assigned individually (no origin identifier available).
+categories:
+  - name: SPLIT_REAL
+    family: live_real
+    source_pattern: "live\\d+"
+    assignment_unit: source
+  - name: SPLIT_CAT
+    family: synthetic_cat
+    source_pattern: "synthetic_cat"
+    assignment_unit: record
+  - name: SPLIT_GRAY
+    family: synthetic_gray
+    source_pattern: "synthetic_gray"
+    assignment_unit: record
+
+# Feature columns are fitted on the global training partition (constant columns removed).
+# Scalers are fitted per client on local training data; the centralized baseline uses the global training data.
+# Non-finite feature values are imputed with the fitted median.
+# scaler: zscore ((x - mean) / std, ddof = 0) or robust_zscore ((x - median) / IQR, uses quantile_range).
+# zero_scale replaces a zero spread (std or IQR).
+preprocessing:
+  feature_columns_path: data/processed/feature_columns.json
+  scaler: zscore
+  quantile_range: [25, 75]
+  zero_scale: 1.0
+  dtype: float32
+
+# Real vehicles are split by number of vehicles; synthetic records are split per record, stratified by label.
+split:
+  ratios:
+    train: 0.70
+    validation: 0.15
+    test: 0.15
+  required_conditions:
+    - all_classes
+    - all_categories
+
+outputs:
+  audit_dir: results/audit
+  splits_dir: data/splits
+  manifests_dir: data/manifests
+  split_report_dir: results/splits
+  client_report_dir: results/clients
+  scalers_dir: data/processed/scalers

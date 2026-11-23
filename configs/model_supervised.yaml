@@ -1,0 +1,20 @@
+# Supervised binary classifier — same encoder topology as the autoencoder.
+# Architecture: Input(105) → Dense(32, ReLU) → Dense(8, ReLU) → Dense(1)
+# Loss: BCEWithLogitsLoss (pos_weight computed from training label ratio).
+#
+# The encoder_dims and latent_dim fields are intentionally identical to model.yaml
+# so that build_classifier() can derive the classifier body from AutoencoderConfig,
+# enabling encoder weight transfer from a pretrained autoencoder.
+architecture:
+  encoder_dims: [32]
+  latent_dim: 8
+  activation: relu
+
+training:
+  optimizer: adam
+  learning_rate: 0.001
+  batch_size: 32
+  device: cpu
+
+outputs:
+  model_report_dir: results/model_supervised
