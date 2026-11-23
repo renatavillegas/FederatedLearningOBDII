@@ -46,3 +46,6 @@ Use the experiment configs under `configs/data_sensors_client_holdout_*.yaml` an
 `configs/experiments_sensors_client_holdout.yaml` for the current client-aware
 comparison. Earlier `iid`/`non_iid` experiments use a different assignment
 protocol; see the explicit distinction in the experiment documentation.
+=======
+# FederatedLearningOBDII
+ This project studies federated learning (FL) behavior for a sensors-only OBD-II anomaly-detection experiment. It is a research/seminar prototype, not a production fault detector.
