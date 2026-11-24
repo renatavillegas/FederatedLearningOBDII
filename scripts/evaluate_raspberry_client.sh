@@ -18,6 +18,7 @@ fi
 SCENARIO="${1:-iid}"
 SEED="${2:-42}"
 METHOD="${3:-fedavg_normal_only}"
+EDGE_CLIENT_ID="${4:-${EDGE_CLIENT_ID:-client_4}}"
 MODEL_CONFIG="${MODEL_CONFIG:-configs/model.yaml}"
 EXPERIMENTS_CONFIG="configs/experiments_sensors_client_holdout_raspberry_iid.yaml"
 
@@ -34,7 +35,7 @@ case "${SCENARIO}" in
         ;;
 esac
 
-RUN_DIR="results/runs/sensors_only_client_holdout_raspberry_client4/${SCENARIO}/${METHOD}/seed_${SEED}"
+RUN_DIR="results/runs/sensors_only_client_holdout_raspberry_${EDGE_CLIENT_ID}/${SCENARIO}/${METHOD}/seed_${SEED}"
 if [[ ! -f "${RUN_DIR}/summary.json" ]]; then
     echo "Run summary not found: ${RUN_DIR}/summary.json" >&2
     exit 1
@@ -55,4 +56,6 @@ done
 "${PYTHON}" -m src.evaluation.update_raspberry_summary \
     --scenario "${SCENARIO}" \
     --method "${METHOD}" \
-    --seed "${SEED}"
+    --seed "${SEED}" \
+    --metrics-dir "results/metrics/sensors_only_client_holdout_raspberry_${EDGE_CLIENT_ID}" \
+    --runs-dir "results/runs/sensors_only_client_holdout_raspberry_${EDGE_CLIENT_ID}"

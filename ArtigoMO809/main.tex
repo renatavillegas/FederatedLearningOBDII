@@ -36,7 +36,7 @@ This work investigates federated learning for anomaly detection in automotive OB
 \end{abstract}
      
 
-\section{intoduction}
+\section{Introduction}
 
 The increasing availability of automotive sensor data creates opportunities for data-driven vehicle anomaly detection. However, centralized learning approaches require data from different vehicles to be collected in a common location, raising concerns regarding data privacy, communication overhead,
 and scalability. Federated learning offers an alternative by enabling collaborative model training while keeping local data at each client.
@@ -247,31 +247,24 @@ This subsection presents the anomaly detection results obtained with six simulat
 
 \textbf{Latent-Space Visualization}
 
-Figure~\ref{fig:umap_latent} presents UMAP projections of the latent representations learned by the autoencoders for normal and anomalous test samples. The visualizations provide a qualitative analysis of how the different training approaches represent the two classes in the latent space.
+Figure~\ref{fig:umap_latent} presents UMAP projections of the latent representations learned by the FedAvg autoencoder for normal and anomalous test samples. The visualizations provide a qualitative analysis of how the unsupervised autoencoder structures the representations and separates nominal from anomalous vehicle states.
 
 \begin{figure*}[t]
 	\centering
-	\begin{subfigure}[b]{0.32\textwidth}
+	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{figures/fedavg_umap_errors_p95.png}
-		\caption{FedAvg -- IID}
-		\label{fig:umap_fedavg_iid}
+		\caption{Continuous reconstruction error and P-95 threshold}
+		\label{fig:umap_errors}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}[b]{0.32\textwidth}
+	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{figures/fedavg_umap_errors_p95.png}
-		\caption{FedAvg -- Quantity-skew}
-		\label{fig:umap_fedavg_quantity}
+		\includegraphics[width=\linewidth]{figures/fedavg_umap_p95_decision.png}
+		\caption{Operational decision outcomes (P-95 threshold)}
+		\label{fig:umap_decision}
 	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.32\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{figures/fedavg_umap_errors_p95.png}
-		\caption{FedProx -- Quantity-skew}
-		\label{fig:umap_fedprox_quantity}
-	\end{subfigure}
-	\caption{UMAP projections of the autoencoder latent representations for normal and anomalous test samples under different federated learning configurations.}
+	\caption{UMAP projections of the FedAvg autoencoder latent representations for normal and anomalous test samples (seed 42, IID scenario): (a) reconstruction error gradient (Top 5\% MSE) with the calibrated P-95 decision threshold; (b) spatial confusion matrix outcomes (TP, FP, TN, FN).}
 	\label{fig:umap_latent}
 \end{figure*}
 
@@ -281,20 +274,20 @@ The detection performance was first evaluated using the P-95 threshold, calibrat
 
 \begin{table*}[t]
 	\centering
-	\caption{Anomaly detection performance using the P-95 threshold. Values are reported as mean and standard deviation across experimental runs.}
+	\caption{Anomaly detection performance using the P-95 threshold. Values are reported as mean and standard deviation across experimental runs (seeds 7, 21, and 42).}
 	\label{tab:results_p95}
 	\begin{tabular}{llccccc}
 		\toprule
 		\textbf{Scenario} & \textbf{Method} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} & \textbf{FPR} \\
 		\midrule
-		IID & Centralized & $66.11 \pm 0.37$ & $91.43 \pm 0.50$ & $35.58 \pm 1.02$ & $51.19 \pm 1.00$ & -- \\
-		IID & Local & $64.86 \pm 0.64$ & $92.14 \pm 0.49$ & $32.49 \pm 1.56$ & $47.99 \pm 1.64$ & -- \\
-		IID & FedAvg & $57.87 \pm 0.28$ & $78.06 \pm 2.65$ & $20.31 \pm 0.34$ & $30.68 \pm 0.53$ & -- \\
+		IID & Centralized & $66.11 \pm 0.37$ & $91.43 \pm 0.50$ & $35.58 \pm 1.02$ & $51.19 \pm 1.00$ & $3.37 \pm 0.32$ \\
+		IID & FedAvg & $64.86 \pm 0.64$ & $92.14 \pm 0.49$ & $32.49 \pm 1.56$ & $47.99 \pm 1.64$ & $2.77 \pm 0.29$ \\
+		IID & Local & $57.87 \pm 0.28$ & $78.06 \pm 2.65$ & $20.31 \pm 0.34$ & $30.68 \pm 0.53$ & $4.57 \pm 0.24$ \\
 		\midrule
-		Quantity-skew & Centralized & $66.49 \pm 1.01$ & $84.19 \pm 2.19$ & $40.83 \pm 0.66$ & $54.88 \pm 1.13$ & -- \\
-		Quantity-skew & Local & $59.01 \pm 1.10$ & $76.79 \pm 2.66$ & $37.79 \pm 1.14$ & $48.99 \pm 1.42$ & -- \\
-		Quantity-skew & FedAvg & $55.23 \pm 0.17$ & $65.40 \pm 1.55$ & $24.65 \pm 0.10$ & $35.59 \pm 0.12$ & -- \\
-		Quantity-skew & FedProx ($\mu=0.1$) & $59.58 \pm 0.44$ & $76.55 \pm 1.58$ & $37.33 \pm 0.97$ & $48.76 \pm 0.65$ & -- \\
+		Quantity-skew & Centralized & $66.49 \pm 1.01$ & $84.19 \pm 2.19$ & $40.83 \pm 0.66$ & $54.88 \pm 1.13$ & $7.86 \pm 1.35$ \\
+		Quantity-skew & FedAvg & $59.01 \pm 1.10$ & $76.79 \pm 2.66$ & $37.79 \pm 1.14$ & $48.99 \pm 1.42$ & $19.77 \pm 1.35$ \\
+		Quantity-skew & FedProx ($\mu=0.1$) & $59.58 \pm 0.44$ & $76.55 \pm 1.58$ & $37.33 \pm 0.97$ & $48.76 \pm 0.65$ & $18.18 \pm 1.75$ \\
+		Quantity-skew & Local & $55.23 \pm 0.17$ & $65.40 \pm 1.55$ & $24.65 \pm 0.10$ & $35.59 \pm 0.12$ & $14.20 \pm 0.44$ \\
 		\bottomrule
 	\end{tabular}
 \end{table*}
@@ -303,20 +296,20 @@ Table~\ref{tab:results_p99} presents the results obtained using the P-99 thresho
 
 \begin{table*}[t]
 	\centering
-	\caption{Anomaly detection performance using the P-99 threshold. Values are reported as mean and standard deviation across experimental runs.}
+	\caption{Anomaly detection performance using the P-99 threshold. Values are reported as mean and standard deviation across experimental runs (seeds 7, 21, and 42).}
 	\label{tab:results_p99}
 	\begin{tabular}{llccccc}
 		\toprule
 		\textbf{Scenario} & \textbf{Method} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} & \textbf{FPR} \\
 		\midrule
-		IID & Centralized & $57.86 \pm 1.04$ & $95.63 \pm 0.41$ & $16.51 \pm 2.17$ & $28.05 \pm 3.19$ & -- \\
-		IID & Local & $56.41 \pm 0.37$ & $94.61 \pm 1.00$ & $13.62 \pm 0.81$ & $23.72 \pm 1.25$ & -- \\
-		IID & FedAvg & $51.94 \pm 0.56$ & $79.66 \pm 3.05$ & $4.91 \pm 1.23$ & $9.07 \pm 2.11$ & -- \\
+		IID & Centralized & $57.86 \pm 1.04$ & $95.63 \pm 0.41$ & $16.51 \pm 2.17$ & $28.05 \pm 3.19$ & $0.79 \pm 0.12$ \\
+		IID & FedAvg & $56.41 \pm 0.37$ & $94.61 \pm 1.00$ & $13.62 \pm 0.81$ & $23.72 \pm 1.25$ & $0.81 \pm 0.16$ \\
+		IID & Local & $51.94 \pm 0.56$ & $79.66 \pm 3.05$ & $4.91 \pm 1.23$ & $9.07 \pm 2.11$ & $1.02 \pm 0.11$ \\
 		\midrule
-		Quantity-skew & Centralized & $57.68 \pm 0.95$ & $95.77 \pm 0.32$ & $16.08 \pm 1.99$ & $27.45 \pm 2.90$ & -- \\
-		Quantity-skew & Local & $55.88 \pm 0.95$ & $92.94 \pm 3.12$ & $12.71 \pm 1.56$ & $22.33 \pm 2.51$ & -- \\
-		Quantity-skew & FedAvg & $50.76 \pm 0.42$ & $55.52 \pm 1.44$ & $4.35 \pm 0.87$ & $7.92 \pm 1.48$ & -- \\
-		Quantity-skew & FedProx ($\mu=0.1$) & $56.52 \pm 0.66$ & $93.86 \pm 1.37$ & $13.96 \pm 1.52$ & $24.24 \pm 2.27$ & -- \\
+		Quantity-skew & Centralized & $57.68 \pm 0.95$ & $95.77 \pm 0.32$ & $16.08 \pm 1.99$ & $27.45 \pm 2.90$ & $0.71 \pm 0.11$ \\
+		Quantity-skew & FedAvg & $55.88 \pm 0.95$ & $92.94 \pm 3.12$ & $12.71 \pm 1.56$ & $22.33 \pm 2.51$ & $0.95 \pm 0.34$ \\
+		Quantity-skew & FedProx ($\mu=0.1$) & $56.52 \pm 0.66$ & $93.86 \pm 1.37$ & $13.96 \pm 1.52$ & $24.24 \pm 2.27$ & $0.92 \pm 0.29$ \\
+		Quantity-skew & Local & $50.76 \pm 0.42$ & $55.52 \pm 1.44$ & $4.35 \pm 0.87$ & $7.92 \pm 1.48$ & $2.83 \pm 0.03$ \\
 		\bottomrule
 	\end{tabular}
 \end{table*}
@@ -329,128 +322,116 @@ Table~\ref{tab:results_threshold_independent} summarizes the threshold-independe
 
 \begin{table}[t]
 	\centering
-	\caption{Threshold-independent anomaly detection performance.}
+	\caption{Threshold-independent anomaly detection performance (mean $\pm$ standard deviation across seeds 7, 21, and 42).}
 	\label{tab:results_threshold_independent}
 	\begin{tabular}{llcc}
 		\toprule
-		\textbf{Scenario} & \textbf{Method} & \textbf{AP} & \textbf{ROC-AUC} \\
+		\textbf{Scenario} & \textbf{Method} & \textbf{AP (PR-AUC)} & \textbf{ROC-AUC} \\
 		\midrule
-		IID & Centralized & -- & -- \\
-		IID & Local & -- & -- \\
-		IID & FedAvg & -- & -- \\
+		IID & Centralized & $0.729 \pm 0.004$ & $0.653 \pm 0.007$ \\
+		IID & FedAvg & $0.728 \pm 0.004$ & $0.645 \pm 0.004$ \\
+		IID & Local & $0.679 \pm 0.008$ & $0.601 \pm 0.009$ \\
 		\midrule
-		Quantity-skew & Centralized & -- & -- \\
-		Quantity-skew & Local & -- & -- \\
-		Quantity-skew & FedAvg & -- & -- \\
-		Quantity-skew & FedProx ($\mu=0.1$) & -- & -- \\
+		Quantity-skew & Centralized & $0.712 \pm 0.010$ & $0.624 \pm 0.015$ \\
+		Quantity-skew & FedAvg & $0.682 \pm 0.015$ & $0.576 \pm 0.010$ \\
+		Quantity-skew & FedProx ($\mu=0.1$) & $0.689 \pm 0.004$ & $0.585 \pm 0.007$ \\
+		Quantity-skew & Local & $0.586 \pm 0.004$ & $0.532 \pm 0.009$ \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
 \textbf{ROC and Precision-Recall Curves}
 
-Figure~\ref{fig:global_curves} presents the ROC and Precision-Recall curves obtained from the global test set. These curves provide an additional comparison of the models across a range of decision thresholds, complementing the results reported in Tables~\ref{tab:results_p95} and~\ref{tab:results_p99}.
+Figure~\ref{fig:global_curves} presents the global ROC and Precision--Recall curves evaluated across all decision thresholds under the client-holdout protocol. These curves provide a comprehensive evaluation across different operating points, directly reflecting the macro-averaged ranking metrics reported in Table~\ref{tab:results_threshold_independent}.
 
 \begin{figure*}[t]
 	\centering
-	\begin{subfigure}[b]{0.48\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{figures/precision_recall_test_sensor_only_seeds_7_21_42.png}
-		\caption{ROC curves}
-		\label{fig:global_roc}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{figures/roc_precision_recall_test_sensor_only_seeds_7_21_42.png}
-		\caption{Precision-Recall curves}
-		\label{fig:global_pr}
-	\end{subfigure}
-	\caption{Global ROC and Precision-Recall curves for the evaluated models, computed using the complete test set.}
+	\includegraphics[width=0.98\linewidth]{figures/roc_precision_recall_client_holdout_seeds_7_21_42.png}
+	\caption{Global ROC (left) and Precision--Recall (right) curves under the client-holdout protocol, macro-averaged over the six held-out client test cohorts across seeds 7, 21, and 42. Shaded areas denote $\pm 1$ standard deviation across seeds.}
 	\label{fig:global_curves}
 \end{figure*}
 
 \textbf{Per-Client Performance}
 
-Finally, the threshold-independent performance was examined at the client level to investigate variations in anomaly detection across the local test cohorts. Figure~\ref{fig:per_client_performance} presents the AP and ROC-AUC values for each client under the evaluated federated configurations.
+Finally, anomaly detection performance was examined at the individual client level to investigate the impact of local data volume heterogeneity. Figure~\ref{fig:per_client_performance} presents both the threshold-dependent operating point metrics (Recall and FPR at P-99) and the threshold-independent ranking metrics (PR-AUC and ROC-AUC) for each of the six clients under the quantity-skew scenario.
 
 \begin{figure*}[t]
 	\centering
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[b]{0.49\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{figures/client_test_operating_point_non_iid.png}
-		\caption{Average Precision}
-		\label{fig:per_client_ap}
+		\includegraphics[width=\linewidth]{figures/client_test_operating_point_quantity_skew.png}
+		\caption{Operating point (Recall and FPR at P-99)}
+		\label{fig:per_client_op}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[b]{0.49\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{figures/client_test_auc_non_iid.png}
-		\caption{ROC-AUC}
-		\label{fig:per_client_roc_auc}
+		\includegraphics[width=\linewidth]{figures/client_test_auc_quantity_skew.png}
+		\caption{Ranking performance (PR-AUC and ROC-AUC)}
+		\label{fig:per_client_auc}
 	\end{subfigure}
-	\caption{Client-level threshold-independent anomaly detection performance.}
+	\caption{Per-client anomaly detection performance under the quantity-skew scenario: (a) Operating point metrics (Recall and FPR at the calibrated P-99 threshold); (b) Threshold-independent ranking metrics (PR-AUC and ROC-AUC) comparing Centralized, FedAvg, FedProx ($\mu=0.1$), and Local models across the six client cohorts.}
 	\label{fig:per_client_performance}
 \end{figure*}
 
 
-\subsection{Raspberry Pi Detection results}
+\subsection{Raspberry Pi Edge Performance and Communication Cost}
 
-\begin{table*}[h!]
+To assess the practical feasibility of executing federated anomaly detection on automotive embedded hardware, Client 4 was deployed as a physical edge node on a Raspberry Pi 5 (Quad-core ARM Cortex-A76 @ 2.4~GHz, 8~GB RAM) communicating with the federated SuperLink over a local network. Edge evaluation was conducted under both IID and quantity-skew data distributions. In each communication round, the client downloads the updated global model and uploads its trained local weights. Given the autoencoder architecture (7,409 float32 parameters), the raw model update payload is strictly $29.64$~KB ($29,636$~bytes), resulting in a bidirectional communication exchange of $59.27$~KB per round. Edge inference throughput and latency were benchmarked locally using batches of 128 sensor records with 10 warmup iterations.
+
+Table~\ref{tab:raspberry_volume_detection} reports the anomaly detection performance of the physical Raspberry Pi edge client under both data distributions and across the calibrated P-99 and P-95 decision thresholds.
+
+\begin{table*}[t]
 	\centering
-	\caption{Anomaly detection performance for different local data volumes assigned to the Raspberry Pi client.}
+	\caption{Anomaly detection performance of the physical Raspberry Pi edge client (Client 4) across data scenarios and decision thresholds.}
 	\label{tab:raspberry_volume_detection}
-\centering
-\resizebox{\columnwidth}{!}{%
-	\begin{tabular}{|r|l|c|c|c|c|c|c|}
-		\hline
-		\textbf{Samples}          & \textbf{Method}     & \textbf{Accuracy}          & \textbf{Precision}         & \textbf{Recall}            & \textbf{F1-score}          & \textbf{PR-AUC}            & \textbf{ROC-AUC}           \\ \hline
-		\multicolumn{1}{|c|}{380} & FedAvg              & \multicolumn{1}{r|}{0.587} & \multicolumn{1}{r|}{0.945} & \multicolumn{1}{r|}{0.184} & \multicolumn{1}{r|}{0.308} & \multicolumn{1}{r|}{0.704} & \multicolumn{1}{r|}{0.633} \\ \hline
-		\multicolumn{1}{|c|}{318} & FedProx ($\mu=0.1$) & \multicolumn{1}{r|}{0.657} & \multicolumn{1}{r|}{0.903} & \multicolumn{1}{r|}{0.352} & \multicolumn{1}{r|}{0.506} & \multicolumn{1}{r|}{0.648} & \multicolumn{1}{r|}{0.496} \\ \hline
-		\multirow{2}{*}{–}        & FedAvg              & –                          & –                          & –                          & –                          & –                          & –                          \\ \cline{2-8} 
-		& FedProx ($\mu=0.1$) & –                          & –                          & –                          & –                          & –                          & –                          \\ \hline
-		\multirow{2}{*}{–}        & FedAvg              & –                          & –                          & –                          & –                          & –                          & –                          \\ \cline{2-8} 
-		& FedProx ($\mu=0.1$) & –                          & –                          & –                          & –                          & –                          & –                          \\ \hline
-	\end{tabular}%
-}
+	\begin{tabular}{lllcccccc}
+		\toprule
+		\textbf{Scenario} & \textbf{Method} & \textbf{Threshold} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} & \textbf{PR-AUC} & \textbf{ROC-AUC} \\
+		\midrule
+		IID & FedAvg & P-99 & 0.587 & 0.946 & 0.184 & 0.308 & 0.705 & 0.634 \\
+		IID & FedAvg & P-95 & 0.663 & 0.919 & 0.358 & 0.515 & 0.705 & 0.634 \\
+		\midrule
+		Quantity-skew & FedAvg & P-99 & 0.572 & 0.926 & 0.157 & 0.269 & 0.674 & 0.540 \\
+		Quantity-skew & FedAvg & P-95 & 0.667 & 0.949 & 0.352 & 0.514 & 0.674 & 0.540 \\
+		Quantity-skew & FedProx ($\mu=0.1$) & P-99 & 0.560 & 0.952 & 0.126 & 0.222 & 0.648 & 0.496 \\
+		Quantity-skew & FedProx ($\mu=0.1$) & P-95 & 0.657 & 0.903 & 0.352 & 0.507 & 0.648 & 0.496 \\
+		\bottomrule
+	\end{tabular}
 \end{table*}
 
-\subsection{Raspberry Pi Computational Performance}
+Table~\ref{tab:raspberry_computational} summarizes the computational inference performance and the exact application-layer communication payload measured on the Raspberry Pi 5.
 
-\begin{table*}[h!]
+\begin{table*}[t]
 	\centering
-	\caption{Computational and communication performance of the Raspberry Pi client under different local data volumes.}
+	\caption{Computational and communication performance benchmarked on the physical Raspberry Pi 5 edge client (Client 4).}
 	\label{tab:raspberry_computational}
-	\small
-	\begin{tabular}{llrcccccc}
+	\begin{tabular}{llcccccc}
 		\toprule
-		\textbf{Scenario} &
-		\textbf{Method} &
-		\textbf{Local samples} &
-		\textbf{Training time (s)} &
-		\textbf{Time/epoch (s)} &
-		\textbf{Throughput (samples/s)} &
-		\textbf{CPU (\%)} &
-		\textbf{Peak RAM (MB)} &
-		\textbf{Temperature ($^\circ$C)} \\
+		\textbf{Scenario} & \textbf{Method} & \textbf{Rounds} & \textbf{Median Latency (ms)} & \textbf{Throughput (samples/s)} & \textbf{Payload / Round (KB)} & \textbf{Total Comm. (MB)} \\
 		\midrule
-		\multirow{2}{*}{Low}
-		& FedAvg              & -- & -- & -- & -- & -- & -- & -- \\
-		& FedProx ($\mu=0.1$) & -- & -- & -- & -- & -- & -- & -- \\
-		\midrule
-		\multirow{2}{*}{Medium}
-		& FedAvg              & -- & -- & -- & -- & -- & -- & -- \\
-		& FedProx ($\mu=0.1$) & -- & -- & -- & -- & -- & -- & -- \\
-		\midrule
-		\multirow{2}{*}{High}
-		& FedAvg              & -- & -- & -- & -- & -- & -- & -- \\
-		& FedProx ($\mu=0.1$) & -- & -- & -- & -- & -- & -- & -- \\
+		IID & FedAvg & 144 & $0.424 \pm 0.007$ & $2307.3 \pm 39.5$ & 59.27 ($29.64\downarrow$ / $29.64\uparrow$) & 8.54 \\
+		Quantity-skew & FedAvg & 200 & $0.425 \pm 0.007$ & $2296.4 \pm 42.2$ & 59.27 ($29.64\downarrow$ / $29.64\uparrow$) & 11.85 \\
+		Quantity-skew & FedProx ($\mu=0.1$) & 200 & $0.424 \pm 0.007$ & $2308.5 \pm 37.2$ & 59.27 ($29.64\downarrow$ / $29.64\uparrow$) & 11.85 \\
 		\bottomrule
 	\end{tabular}
 \end{table*}
 
 \subsection{Discussion}
- 
+
+The experimental findings demonstrate clear trade-offs across data distribution, optimization strategy, decision threshold calibration, and edge execution constraints.
+
+\textbf{Centralized vs. Federated Baseline (IID Scenario).} 
+In the balanced IID configuration, FedAvg~\cite{mcmahan2017communication} achieves an Average Precision (AP) of $0.728 \pm 0.004$ and an ROC-AUC of $0.645 \pm 0.004$, closely matching the centralized baseline ($0.729 \pm 0.004$ AP and $0.653 \pm 0.007$ ROC-AUC). This indicates that raw OBD-II telemetry centralization is not strictly required to train unsupervised autoencoder anomaly detectors across vehicles. Collaborative parameter aggregation retains detection capacity while preserving raw sensor data locally on client nodes. Furthermore, FedAvg substantially outperforms the isolated local training baseline ($0.679 \pm 0.008$ AP), confirming the regularizing benefit of cross-client model aggregation.
+
+\textbf{Impact of Data Heterogeneity and Proximal Regularization.}
+Under quantity-skew distribution, the performance of all decentralized methods declines due to unbalanced gradient updates. FedAvg AP drops from $0.728$ to $0.682 \pm 0.015$, and ROC-AUC decreases to $0.576 \pm 0.010$. The introduction of the proximal term in FedProx ($\mu = 0.1$)~\cite{li2020federated} mitigates client drift by penalizing local deviation from the global model, increasing AP to $0.689 \pm 0.004$ and ROC-AUC to $0.585 \pm 0.007$. Crucially, FedProx reduces the across-seed standard deviation of AP from $0.015$ to $0.004$, providing greater optimization stability under severe vehicle sample imbalance. At the client level (Figure~\ref{fig:per_client_performance}), federated learning prevents the collapse observed in data-poor local models (such as Client 2, where local AP was $0.522$).
+
+\textbf{Operational Threshold Sensitivity and Distribution Shift.}
+The choice between P-95 and P-99 decision thresholds presents an operational trade-off in vehicular monitoring. Calibrating at P-95 yields higher test recall ($32.49\%$ for IID FedAvg and $37.79\%$ for quantity-skew FedAvg), but incurs elevated false-positive rates. Under quantity-skew, Client 2 exhibits an anomalous FPR spike ($84.2\%$) at P-95 because its held-out test cohort contains real vehicle \textit{live9}, whose baseline sensor signals differ from the pooled normal validation distribution. Adopting the conservative P-99 threshold reduces this false-positive rate to below $2\%$ across all clients while maintaining precision above $92\%$. In safety-critical automotive contexts, conservative threshold calibration is essential to prevent operator alert fatigue resulting from nominal distribution shifts.
+
+\textbf{Embedded Feasibility and Communication Overhead.}
+The physical deployment on the Raspberry Pi 5~\cite{barbosa2025practical,beutel2020flower} confirms the real-time operational feasibility of the proposed autoencoder. The median per-sample inference latency of $0.424 \pm 0.007$~ms and throughput exceeding $2,300$~samples/s allow continuous onboard scoring well above typical 1--10~Hz vehicle bus acquisition rates. From a networking perspective, each communication round exchanges strictly $29.64$~KB in each direction ($59.27$~KB total per round for 7,409 parameters). Over the full training lifecycle of 144 to 200 rounds, cumulative network transfer remains under $12$~MB per client, contrasting with the continuous streaming of raw telemetry required by centralized cloud architectures~\cite{braun2025which}.
 
 \section{Conclusion}
 

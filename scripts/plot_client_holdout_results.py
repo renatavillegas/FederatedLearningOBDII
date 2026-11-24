@@ -170,9 +170,6 @@ def plot_data_distribution(
         axis.grid(axis="y", alpha=0.25)
         axis.set_axisbelow(True)
         axis.spines[["top", "right"]].set_visible(False)
-    fig.suptitle(
-        f"Client data quantity and label composition — {scenario.replace('_', ' ')}"
-    )
     figure_dir.mkdir(parents=True, exist_ok=True)
     path = figure_dir / "client_data_distribution.png"
     fig.savefig(path, dpi=180, bbox_inches="tight")
@@ -316,10 +313,6 @@ def plot_client_performance(
         handles, labels_found = axis.get_legend_handles_labels()
         if handles:
             axis.legend(handles, [labels[m] for m in methods], frameon=False, loc="best")
-    fig.suptitle(
-        f"Client test performance — {scenario.replace('_', ' ')}\n"
-        "Mean ± SD across available seeds; local model is evaluated on its own client's test cohort"
-    )
     pr_path = figure_dir / "client_test_auc.png"
     fig.savefig(pr_path, dpi=180, bbox_inches="tight")
     plt.close(fig)
@@ -346,17 +339,6 @@ def plot_client_performance(
     handles, _ = axes[1].get_legend_handles_labels()
     if handles:
         axes[1].legend(handles, [labels[m] for m in methods], frameon=False, loc="best")
-    quantiles = metrics["threshold_quantile"].dropna().unique()
-    threshold_description = (
-        f"p{round(float(quantiles[0]) * 100)}"
-        if len(quantiles) == 1
-        else "thresholds calibrated on normal-real validation data"
-    )
-    fig.suptitle(
-        f"Operating point by client — {scenario.replace('_', ' ')}\n"
-        f"Threshold calibrated on normal-real validation data ({threshold_description}); "
-        "zero labels mean no false positives observed in the test cohort"
-    )
     operating_path = figure_dir / "client_test_operating_point.png"
     fig.savefig(operating_path, dpi=180, bbox_inches="tight")
     plt.close(fig)
