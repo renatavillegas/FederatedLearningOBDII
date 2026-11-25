@@ -182,13 +182,16 @@ def main() -> None:
     parser.add_argument("--scenario", required=True, choices=("iid", "quantity_skew"))
     parser.add_argument("--method", required=True)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--edge-client-id", default=None, help="Edge client ID (e.g. client_2, client_4, client_6)")
     parser.add_argument(
         "--metrics-dir",
-        default="results/metrics/sensors_only_client_holdout_raspberry_client4",
+        default=None,
+        help="Path to edge client metrics directory",
     )
     parser.add_argument(
         "--runs-dir",
-        default="results/runs/sensors_only_client_holdout_raspberry_client4",
+        default=None,
+        help="Path to edge client runs directory",
     )
     parser.add_argument(
         "--global-summary",
@@ -196,8 +199,9 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    metrics_dir = resolve_path(args.metrics_dir)
-    runs_dir = resolve_path(args.runs_dir)
+    edge_id = args.edge_client_id or "client_4"
+    metrics_dir = resolve_path(args.metrics_dir or f"results/metrics/sensors_only_client_holdout_raspberry_{edge_id}")
+    runs_dir = resolve_path(args.runs_dir or f"results/runs/sensors_only_client_holdout_raspberry_{edge_id}")
     global_summary_path = resolve_path(args.global_summary)
     test_summary_path = resolve_path("results/metrics/raspberry_test_summary.csv")
     edge_perf_path = resolve_path("results/metrics/raspberry_edge_performance.csv")

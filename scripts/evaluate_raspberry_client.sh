@@ -49,6 +49,7 @@ for quantile in 0.99 0.95; do
         --scenario "${SCENARIO}" \
         --seed "${SEED}" \
         --method "${METHOD}" \
+        --edge-client-id "${EDGE_CLIENT_ID}" \
         --score-aggregation top_5_percent \
         --threshold-quantile "${quantile}"
 done

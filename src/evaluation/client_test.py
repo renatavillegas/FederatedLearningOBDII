@@ -31,6 +31,9 @@ def run_client_test_report(
     score_aggregation: str = "top_5_percent",
     threshold_quantile: float = 0.99,
     method: str | None = None,
+    runs_dir: str | None = None,
+    metrics_dir: str | None = None,
+    edge_client_id: str | None = None,
 ) -> pd.DataFrame:
     if not 0.0 < threshold_quantile < 1.0:
         raise ValueError("threshold_quantile must be between 0 and 1")
@@ -43,7 +46,15 @@ def run_client_test_report(
         score_aggregation=score_aggregation,
     )
     client_assignment = data.clients.load(f"{scenario}_test")
-    runs = discover_runs(experiments["outputs"]["runs_dir"])
+
+    raw_runs = runs_dir or experiments["outputs"]["runs_dir"]
+    edge_id = edge_client_id or "client_4"
+    if "{edge_client_id}" in str(raw_runs):
+        resolved_runs = str(raw_runs).format(edge_client_id=edge_id)
+    else:
+        resolved_runs = str(raw_runs)
+
+    runs = discover_runs(resolved_runs)
     latent_dim = int(model_config["architecture"]["latent_dim"])
     central_method = (
         f"centralized_normal_only_sensors105_client_{scenario}_latent{latent_dim}"
@@ -68,10 +79,16 @@ def run_client_test_report(
     if not selected_runs:
         raise ValueError(f"No trained runs found for client test evaluation of {scenario}")
 
-    metrics_dir = resolve_path(experiments["outputs"]["metrics_dir"]) / "client_test"
+    raw_metrics = metrics_dir or experiments["outputs"]["metrics_dir"]
+    if "{edge_client_id}" in str(raw_metrics):
+        resolved_metrics = str(raw_metrics).format(edge_client_id=edge_id)
+    else:
+        resolved_metrics = str(raw_metrics)
+
+    target_metrics_dir = resolve_path(resolved_metrics) / "client_test"
     if threshold_quantile != 0.99:
-        metrics_dir /= f"p{round(threshold_quantile * 100)}"
-    metrics_dir /= scenario
+        target_metrics_dir /= f"p{round(threshold_quantile * 100)}"
+    target_metrics_dir /= scenario
     result_rows = []
     for run in selected_runs:
         result = evaluator.evaluate_client_test(
@@ -83,16 +100,16 @@ def run_client_test_report(
         result.insert(1, "score_aggregation", score_aggregation)
         result.insert(2, "method", run.method)
         result.insert(3, "seed", run.seed)
-        destination = metrics_dir / run.method / f"seed_{run.seed}"
+        destination = target_metrics_dir / run.method / f"seed_{run.seed}"
         destination.mkdir(parents=True, exist_ok=True)
         result.to_csv(destination / "client_test_views.csv", index=False)
         result_rows.append(result)
     summary = pd.concat(result_rows, ignore_index=True)
-    metrics_dir.mkdir(parents=True, exist_ok=True)
+    target_metrics_dir.mkdir(parents=True, exist_ok=True)
     summary_path = (
-        metrics_dir / method / "summary.csv"
+        target_metrics_dir / method / "summary.csv"
         if method is not None
-        else metrics_dir / "summary.csv"
+        else target_metrics_dir / "summary.csv"
     )
     summary_path.parent.mkdir(parents=True, exist_ok=True)
     if method is not None and summary_path.is_file():
@@ -126,6 +143,9 @@ def main() -> None:
         default=0.99,
         help="Normal-real validation score quantile used as the threshold (for example 0.95)",
     )
+    parser.add_argument("--runs-dir", default=None, help="Override outputs runs_dir")
+    parser.add_argument("--metrics-dir", default=None, help="Override outputs metrics_dir")
+    parser.add_argument("--edge-client-id", default=None, help="Edge client ID (e.g. client_2, client_6)")
     args = parser.parse_args()
     run_client_test_report(
         args.data_config,
@@ -136,6 +156,9 @@ def main() -> None:
         score_aggregation=args.score_aggregation,
         threshold_quantile=args.threshold_quantile,
         method=args.method,
+        runs_dir=args.runs_dir,
+        metrics_dir=args.metrics_dir,
+        edge_client_id=args.edge_client_id,
     )
 
 

@@ -339,8 +339,15 @@ class FederatedServer:
         if self.settings.edge_client_id is not None:
             summary["edge_client_id"] = self.settings.edge_client_id
 
+        raw_runs_dir = str(self.experiments["outputs"]["runs_dir"])
+        edge_id = self.settings.edge_client_id or "client_4"
+        if "{edge_client_id}" in raw_runs_dir:
+            resolved_runs_dir = raw_runs_dir.format(edge_client_id=edge_id)
+        else:
+            resolved_runs_dir = raw_runs_dir
+
         recorder = RunRecorder(
-            run_directory(self.experiments["outputs"]["runs_dir"], self.settings.scenario, name, self.seed)
+            run_directory(resolved_runs_dir, self.settings.scenario, name, self.seed)
         )
         recorder.save_json("model_config.json", self.model_config)
         if self.settings.normal_only_real:

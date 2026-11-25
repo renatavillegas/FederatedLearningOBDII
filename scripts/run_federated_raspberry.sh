@@ -52,7 +52,7 @@ case "${METHOD}" in
         ;;
 esac
 
-RUN_DIR="results/runs/sensors_only_client_holdout_raspberry_client4/${SCENARIO}/${METHOD_DIR}/seed_${SEED}"
+RUN_DIR="results/runs/sensors_only_client_holdout_raspberry_${EDGE_CLIENT_ID}/${SCENARIO}/${METHOD_DIR}/seed_${SEED}"
 CLIENT_BUNDLE="results/raspberry_flower_client/${SCENARIO}/${EDGE_CLIENT_ID}"
 
 if [[ ! -f "${CLIENT_BUNDLE}/edge_client_data.npz" ]]; then

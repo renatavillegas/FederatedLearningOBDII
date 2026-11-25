@@ -26,8 +26,8 @@ FLEET_PORT="${FLOWER_FLEET_PORT:-8000}"
 DATA_CONFIG="configs/data_sensors_client_holdout_iid.yaml"
 MODEL_CONFIG="${MODEL_CONFIG:-configs/model.yaml}"
 EXPERIMENTS_CONFIG="configs/experiments_sensors_client_holdout_raspberry_iid.yaml"
-RUN_DIR="results/runs/sensors_only_client_holdout_raspberry_client4/iid/fedavg_normal_only/seed_${SEED}"
-CLIENT_BUNDLE="results/raspberry_flower_client/iid/client_4"
+RUN_DIR="results/runs/sensors_only_client_holdout_raspberry_${EDGE_CLIENT_ID}/iid/fedavg_normal_only/seed_${SEED}"
+CLIENT_BUNDLE="results/raspberry_flower_client/iid/${EDGE_CLIENT_ID}"
 
 if [[ ! -f "${CLIENT_BUNDLE}/edge_client_data.npz" ]]; then
     echo "Missing ${CLIENT_BUNDLE}/edge_client_data.npz." >&2
