@@ -1,0 +1,13 @@
+{
+  "scenario": "quantity_skew",
+  "client": "client_6",
+  "seed": 42,
+  "training_records": 993,
+  "inference_records": 128,
+  "n_features": 105,
+  "normal_only_training": true,
+  "inference_labels_included": false,
+  "scaler": "global normal-real training scaler",
+  "source_data_config": "configs/data_sensors_client_holdout_quantity.yaml",
+  "source_model_config": "configs/model.yaml"
+}

@@ -70,6 +70,7 @@ partitioning strategy under IID and non-IID scenarios, the autoencoder architect
 
 
 \subsection{Dataset and Preprocessing}
+\label{subsec:dataset_preprocessing}
 
 The dataset used in this work is available on Kaggle \cite{qasimghumman_obdii_dataset}. The dataset contains statistical features extracted from OBD-II sensor measurements collected from real and synthetic vehicles. It includes records from 39 real-vehicle sources as well as two synthetic data pools. Each sample represents a time window of vehicle operation, characterized by statistical descriptors of the monitored sensor signals. 
 
@@ -134,19 +135,20 @@ For the final anomaly detection evaluation, the complete test sets were used, re
 The supervised classifier was trained using all labeled training records, including normal and anomalous samples from real and synthetic sources. Its validation procedure also used the complete labeled validation set, while the final evaluation was performed on the complete test set. Therefore, the supervised classifier learned from both classes, whereas the autoencoder learned exclusively from normal real-vehicle records.
 
 \subsection{Autoencoder Architecture}
+\label{subsec:AutoencoderArchitecture}
 
 The anomaly detection model is an undercomplete dense autoencoder designed to learn a representation of normal OBD-II sensor data. The input layer receives the 105 sensor-derived features described in Section~\ref{subsec:dataset_preprocessing}. The network  has a symmetric architecture with an encoder and a decoder with dimentions: \(105 \rightarrow 32 \rightarrow 8 \rightarrow 32 \rightarrow 105\). 
 
-Rectified Linear Unit (ReLU) activation functions are used in the hidden layers, whereas the output layer uses a linear activation function to produce the reconstructed feature values. The resulting network has 7,409 trainable parameters.
+Rectified Linear Unit (ReLU) activation functions are used in the hidden layers, whereas the output layer uses a linear activation function to produce the reconstructed feature values. In total, the network has 7,409 parameters.
 
 The autoencoder is trained to minimize the mean squared reconstruction error between the input samples and their corresponding reconstructions. The Adam optimizer is used with a learning rate of 0.001 and a batch size of 32.
 
-Training proceeds one epoch at a time, and the reconstruction loss is evaluated after each epoch using only normal real-vehicle validation samples. Whenever a lower validation loss is obtained, the corresponding model weights are saved. Training is terminated when the validation loss fails to improve according to the early-stopping criterion.
+The reconstruction loss is evaluated after each epoch using only normal real-vehicle validation samples. Whenever a lower validation loss is obtained, the corresponding model weights are saved. Training finishes when the validation loss fails to improve according to the early-stopping criterion.
 
 It was defined the maximum of 1,000 epochs, with an early-stopping patience of 50 epochs. For federated experiments, each client performs 5 local epochs per communication round, and the training process is limited to 200 communication rounds, with a patience of 10 rounds.
 
 
-At inference time, the reconstruction error is used as an anomaly score: samples with larger reconstruction errors are considered more likely to deviate from the learned normal operating patterns. The classification threshold used to distinguish normal and anomalous samples is calibrated separately, as described in Section~\ref{subsec:evaluation_metrics}.
+At inference time, the reconstruction error is used as an anomaly score: samples with larger reconstruction rrors are considered more likely to be a damage. The classification threshold used to distinguish normal and anomalous samples is calibrated separately, as described in Section~\ref{subsec:evaluation_metrics}.
 
 
 \subsection{Supervised Reference Model}
@@ -173,26 +175,26 @@ The federated learning architecture was implemented using the Flower framework a
 
 The experiments use six logical clients, each associated with a separate partition of the training data. All clients execute on the same host through separate Flower processes. The server initializes the global model parameters and coordinates the communication rounds according to the selected aggregation strategy, either Federated Averaging (FedAvg) or Federated Proximal (FedProx).
 
-At the beginning of each communication round, the server distributes the current global model parameters and the round configuration to the participating clients. For this work, all clients participate of all rounds. Each client then performs five local training epochs using only its own normal samples collected from real vehicles. The same shared scaler is used on all clients, and raw training records remain local to each client. After local training, each client returns its updated model parameters and summary metrics, including the number of training examples, training loss, and training time.
+At the beginning of each communication round, the server distributes the current global model parameters and the round configuration to the participating clients. On this work, all clients participate of all rounds. Each client then performs five local training epochs using only its own normal samples collected from real vehicles. The same shared scaler is used on all clients, and raw training records remain local to each client. After local training, each client returns its updated model parameters and summary metrics, including the number of training examples, training loss, and training time.
 
 The server aggregates the received model parameters using a weighted aggregation procedure based on the number of local training examples. Both FedAvg and FedProx use this aggregation rule, but FedProx uses a proximal regularization term to limit deviations from the global model parameters during local training.
 
 After each aggregation round, the server checks the validation reconstruction loss and saves the weights whenever a lower validation loss is obtained. Training stops when the validation loss does not improve for 10 consecutive communication rounds or when the maximum of 200 rounds is reached. The best saved global checkpoint is subsequently evaluated offline using the test partition of each client.
 
-Notice that the centralized validation is adopted to provide a common reference for global checkpoint selection across the experimental scenarios. This choice is particularly relevant to the quantity-skew partition, in which some clients do not have enough vehicle groups to form independent training, validation, and test subsets. Thus, the validation procedure does not depend on the availability of local validation groups at every client. During federated optimization, raw training records are not exchanged between clients and the server. 
+Notice that the centralized validation is adopted to provide a common reference for global checkpoint selection across the experimental scenarios. This choice is particularly relevant to the non-iid partition, in which some clients do not have enough vehicle groups to form independent training, validation, and test subsets. Thus, the validation procedure does not depend on the availability of local validation groups at every client. During federated optimization, raw training data are not exchanged between clients and the server. 
 
 \subsection{Hardware and Software Environment}
 
-The experiments were conducted using a host machine and a Raspberry Pi 5 Model B. The host machine, which ran the Flower server and the simulated clients, was equipped with a 13th Gen Intel Core i5-13420H processor, featuring 8 physical cores and 12 logical processors, and 14 GiB of available system memory. The Raspberry Pi 5, used as a physical federated client, was equipped with a quad-core Cortex-A76 processor and 8 GB of RAM.
+The experiments were conducted using a host machine and a Raspberry Pi 5 Model B. The host machine, which ran the Flower server and the simulated clients has a 13th Gen Intel Core i5-13420H processor, featuring 8 physical cores and 12 logical processors, and 14 GiB of available system memory. The Raspberry Pi 5, used as a physical federated client has a quad-core Cortex-A76 processor and 8 GB of RAM.
 
-Both platforms used CPU-based model training. The host machine ran Ubuntu 26.04.1 LTS, while the Raspberry Pi ran Debian GNU/Linux 13 (Trixie). Python 3.14.4 was used on the host and Python 3.13.5 on the Raspberry Pi. Both environments used Flower 1.42.0 and PyTorch 2.14.1. Although the host environment used a CUDA-enabled PyTorch build, GPU acceleration was not used in the experiments; the Raspberry Pi used the CPU-only PyTorch build.
+Both platforms used CPU-based model training. The host machine ran Ubuntu 26.04.1 LTS, while the Raspberry Pi ran Debian GNU/Linux 13 (Trixie). Python 3.14.4 was used on the host and Python 3.13.5 on the Raspberry Pi. Both environments used Flower 1.42.0 and PyTorch 2.14.1. 
 
 \subsection{Experimental Scenarios}
 	
 
 Four experimental configurations were considered to evaluate the autoencoder under different data distributions and client execution environments. The first two configurations use six simulated clients and compare centralized, local, and federated training methods. The IID scenario considers an approximately balanced allocation of training samples across clients, whereas the non-IID scenario uses different local data volumes to investigate the effects of client data heterogeneity.
 
-The third and fourth configurations introduce a physical edge device into federated training. In these experiments, one of the six simulated clients is replaced by a Raspberry Pi 5, while the other five clients retain their original data partitions. Different clients are selected for replacement across experimental configurations to investigate the different local training-set sizes on the Raspberry Pi. FedAvg is evaluated in both configurations, while FedProx (($\mu=0.1$)) is additionally considered in the non-IID configuration.
+It was also included an edge device into federated training. In these experiments, one of the six simulated clients is replaced by a Raspberry Pi 5, while the other five clients retain their original data partitions. Different clients are selected for replacement across experimental configurations to investigate the different local training-set sizes on the Raspberry Pi. FedAvg and FedProx (($\mu=0.1$)) are considered in the non-IID configuration.
 
 Table~\ref{tab:experimental_scenarios} summarizes the experimental configurations and their respective objectives.
 

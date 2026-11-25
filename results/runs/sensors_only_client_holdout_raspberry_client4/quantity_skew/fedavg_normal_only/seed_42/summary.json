@@ -17,14 +17,14 @@
   "validation_weights": {
     "global": 1.0
   },
-  "best_round": 194,
-  "best_validation_loss": 0.21397601068019867,
-  "rounds_run": 200,
-  "stopped_early": false,
-  "total_seconds": 3518.1018140160013,
+  "best_round": 139,
+  "best_validation_loss": 0.2187686562538147,
+  "rounds_run": 149,
+  "stopped_early": true,
+  "total_seconds": 1417.388460279908,
   "communication": {
-    "parameter_bytes_down": 35563200,
-    "parameter_bytes_up": 35563200,
+    "parameter_bytes_down": 26494584,
+    "parameter_bytes_up": 26494584,
     "scaler_bytes_up": 0
   },
   "n_parameters": 7409,
@@ -56,5 +56,5 @@
       "n_vehicles": 6
     }
   },
-  "edge_client_id": "client_4"
+  "edge_client_id": "client_2"
 }
