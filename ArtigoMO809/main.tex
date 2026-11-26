@@ -163,14 +163,14 @@ The classifier is initialized with the pretrained weights of the autoencoder enc
 
 \subsection{Federated Learning Architecture}
 
-The federated learning architecture was implemented using the Flower framework and is described on  Fig \ref{fig:ArquiteturaGeral}. The SuperLink coordinates the execution, connects the nodes, and execute the agreggation. Each superNode hosts a client application identified by a unique client ID. 
+The federated learning architecture was implemented using the Flower framework~\cite{beutel2020flower} and is illustrated in Figure~\ref{fig:ArquiteturaGeral}. The SuperLink coordinates execution, connects participating nodes, and orchestrates parameter aggregation. Each SuperNode hosts a client application identified by a unique client ID, supporting both simulated nodes on the workstation and physical embedded edge deployment on the Raspberry Pi 5.
 
-\begin{figure}[h!]
+\begin{figure*}[t]
 	\centering
-	\includegraphics[width=.8\textwidth]{figures/Arquitetura geral.png}
-	\caption{Federated Learning Architecture}
+	\includegraphics[width=0.95\linewidth]{figures/federated_architecture.png}
+	\caption{Federated learning system architecture: Flower server orchestration with global validation and checkpointing, five simulated client nodes, and one physical Raspberry Pi 5 edge device (Client 4), highlighting bidirectional parameter exchange ($29.64$~KB per payload).}
 	\label{fig:ArquiteturaGeral}
-\end{figure}
+\end{figure*}
 
 
 The experiments use six logical clients, each associated with a separate partition of the training data. All clients execute on the same host through separate Flower processes. The server initializes the global model parameters and coordinates the communication rounds according to the selected aggregation strategy, either Federated Averaging (FedAvg) or Federated Proximal (FedProx).
@@ -243,8 +243,6 @@ The throughput is calculated as the number of local training samples processed t
 
 \subsection{Six simulated clients}
 
-\textbf{Six Simulated Clients}
-
 This subsection presents the anomaly detection results obtained with six simulated clients under approximately balanced (IID) and quantity-skew data distributions. The centralized, local, and federated approaches are compared in terms of their detection performance. For the quantity-skew scenario, FedProx is additionally evaluated against FedAvg.
 
 \textbf{Latent-Space Visualization}
@@ -276,12 +274,16 @@ The detection performance was first evaluated using the P-95 threshold, calibrat
 
 \begin{table*}[t]
 	\centering
-	\caption{Anomaly detection performance using the P-95 threshold. Values are reported as mean and standard deviation across experimental runs (seeds 7, 21, and 42).}
+	\caption{Anomaly detection performance using the P-95 threshold (and $p \ge 0.5$ for the supervised reference). Values are reported as mean and standard deviation across experimental runs (seeds 7, 21, and 42).}
 	\label{tab:results_p95}
 	\begin{tabular}{llccccc}
 		\toprule
 		\textbf{Scenario} & \textbf{Method} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} & \textbf{FPR} \\
 		\midrule
+		\multicolumn{7}{l}{\textit{Supervised Upper-Bound Reference (Centralized Binary MLP, decision threshold $p \ge 0.5$):}} \\
+		IID & Supervised MLP & 95.91 & 94.48 & 97.53 & 95.98 & 5.70 \\
+		\midrule
+		\multicolumn{7}{l}{\textit{Unsupervised Autoencoders (Normal-only, P-95 reconstruction error threshold):}} \\
 		IID & Centralized & $66.11 \pm 0.37$ & $91.43 \pm 0.50$ & $35.58 \pm 1.02$ & $51.19 \pm 1.00$ & $3.37 \pm 0.32$ \\
 		IID & FedAvg & $64.86 \pm 0.64$ & $92.14 \pm 0.49$ & $32.49 \pm 1.56$ & $47.99 \pm 1.64$ & $2.77 \pm 0.29$ \\
 		IID & Local & $57.87 \pm 0.28$ & $78.06 \pm 2.65$ & $20.31 \pm 0.34$ & $30.68 \pm 0.53$ & $4.57 \pm 0.24$ \\
@@ -320,7 +322,7 @@ Table~\ref{tab:results_p99} presents the results obtained using the P-99 thresho
 
 In addition to the threshold-dependent metrics, the models were evaluated using Average Precision (AP) and ROC-AUC, which are calculated from continuous anomaly scores. Unlike the previous metrics, these measures do not depend on the P-95 or P-99 decision thresholds.
 
-Table~\ref{tab:results_threshold_independent} summarizes the threshold-independent results for each training approach and data distribution.
+Table~\ref{tab:results_threshold_independent} summarizes the threshold-independent results for each training approach and data distribution, including the centralized supervised reference model.
 
 \begin{table}[t]
 	\centering
@@ -330,6 +332,10 @@ Table~\ref{tab:results_threshold_independent} summarizes the threshold-independe
 		\toprule
 		\textbf{Scenario} & \textbf{Method} & \textbf{AP (PR-AUC)} & \textbf{ROC-AUC} \\
 		\midrule
+		\multicolumn{4}{l}{\textit{Supervised Reference Benchmark:}} \\
+		IID & Supervised MLP & 0.987 & 0.989 \\
+		\midrule
+		\multicolumn{4}{l}{\textit{Unsupervised Autoencoders (Normal-only):}} \\
 		IID & Centralized & $0.729 \pm 0.004$ & $0.653 \pm 0.007$ \\
 		IID & FedAvg & $0.728 \pm 0.004$ & $0.645 \pm 0.004$ \\
 		IID & Local & $0.679 \pm 0.008$ & $0.601 \pm 0.009$ \\
@@ -379,42 +385,55 @@ Finally, anomaly detection performance was examined at the individual client lev
 
 \subsection{Raspberry Pi Edge Performance and Communication Cost}
 
-To assess the practical feasibility of executing federated anomaly detection on automotive embedded hardware, Client 4 was deployed as a physical edge node on a Raspberry Pi 5 (Quad-core ARM Cortex-A76 @ 2.4~GHz, 8~GB RAM) communicating with the federated SuperLink over a local network. Edge evaluation was conducted under both IID and quantity-skew data distributions. In each communication round, the client downloads the updated global model and uploads its trained local weights. Given the autoencoder architecture (7,409 float32 parameters), the raw model update payload is strictly $29.64$~KB ($29,636$~bytes), resulting in a bidirectional communication exchange of $59.27$~KB per round. Edge inference throughput and latency were benchmarked locally using batches of 128 sensor records with 10 warmup iterations.
+To assess the practical feasibility of executing federated anomaly detection on automotive embedded hardware across diverse local data volumes, the Raspberry Pi 5 (Quad-core ARM Cortex-A76 @ 2.4~GHz, 8~GB RAM) was deployed as a physical edge node for Client 2 (Low volume: 253 training samples), Client 4 (Medium volume: 612 samples), and Client 6 (High volume: 993 samples) under the quantity-skew distribution. In each communication round, the client downloads the global model weights and uploads its locally trained update. Given the autoencoder architecture (7,409 float32 parameters), the raw model update payload is strictly $29.64$~KB ($29,636$~bytes), resulting in a bidirectional communication exchange of $59.27$~KB per round and an accumulated network footprint of $11.85$~MB across the 200 communication rounds.
 
-Table~\ref{tab:raspberry_volume_detection} reports the anomaly detection performance of the physical Raspberry Pi edge client under both data distributions and across the calibrated P-99 and P-95 decision thresholds.
+Table~\ref{tab:raspberry_volume_detection} reports the anomaly detection performance evaluated on the held-out test cohort of each edge client at the conservative P-99 decision threshold.
 
 \begin{table*}[t]
 	\centering
-	\caption{Anomaly detection performance of the physical Raspberry Pi edge client (Client 4) across data scenarios and decision thresholds.}
+	\caption{Anomaly detection performance evaluated on the physical Raspberry Pi 5 edge client across local data volumes (P-99 threshold).}
 	\label{tab:raspberry_volume_detection}
-	\begin{tabular}{lllcccccc}
+	\begin{tabular}{llccccccc}
 		\toprule
-		\textbf{Scenario} & \textbf{Method} & \textbf{Threshold} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} & \textbf{PR-AUC} & \textbf{ROC-AUC} \\
+		\textbf{Volume Tier} & \textbf{Method} & \textbf{Test Samples} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} & \textbf{PR-AUC} & \textbf{ROC-AUC} \\
 		\midrule
-		IID & FedAvg & P-99 & 0.587 & 0.946 & 0.184 & 0.308 & 0.705 & 0.634 \\
-		IID & FedAvg & P-95 & 0.663 & 0.919 & 0.358 & 0.515 & 0.705 & 0.634 \\
+		\multirow{2}{*}{Low (\textit{client\_2})}
+		& FedAvg              & 240 & 0.571 & 0.947 & 0.150 & 0.259 & 0.621 & 0.408 \\
+		& FedProx ($\mu=0.1$) & 240 & 0.567 & 0.944 & 0.142 & 0.246 & 0.622 & 0.418 \\
 		\midrule
-		Quantity-skew & FedAvg & P-99 & 0.572 & 0.926 & 0.157 & 0.269 & 0.674 & 0.540 \\
-		Quantity-skew & FedAvg & P-95 & 0.667 & 0.949 & 0.352 & 0.514 & 0.674 & 0.540 \\
-		Quantity-skew & FedProx ($\mu=0.1$) & P-99 & 0.560 & 0.952 & 0.126 & 0.222 & 0.648 & 0.496 \\
-		Quantity-skew & FedProx ($\mu=0.1$) & P-95 & 0.657 & 0.903 & 0.352 & 0.507 & 0.648 & 0.496 \\
+		\multirow{2}{*}{Medium (\textit{client\_4})}
+		& FedAvg              & 318 & 0.579 & 0.931 & 0.170 & 0.287 & 0.673 & 0.539 \\
+		& FedProx ($\mu=0.1$) & 318 & 0.560 & 0.952 & 0.126 & 0.222 & 0.648 & 0.495 \\
+		\midrule
+		\multirow{2}{*}{High (\textit{client\_6})}
+		& FedAvg              & 702 & 0.557 & 0.935 & 0.123 & 0.217 & 0.673 & 0.602 \\
+		& FedProx ($\mu=0.1$) & 702 & 0.558 & 0.936 & 0.125 & 0.221 & 0.692 & 0.628 \\
 		\bottomrule
 	\end{tabular}
 \end{table*}
 
-Table~\ref{tab:raspberry_computational} summarizes the computational inference performance and the exact application-layer communication payload measured on the Raspberry Pi 5.
+Table~\ref{tab:raspberry_computational} summarizes the local training computation time, inference latency, throughput, and communication volume benchmarked on the physical edge device.
 
 \begin{table*}[t]
 	\centering
-	\caption{Computational and communication performance benchmarked on the physical Raspberry Pi 5 edge client (Client 4).}
+	\caption{Computational and communication performance benchmarked on the physical Raspberry Pi 5 edge client across local data volumes.}
 	\label{tab:raspberry_computational}
-	\begin{tabular}{llcccccc}
+	\small
+	\begin{tabular}{llccccccc}
 		\toprule
-		\textbf{Scenario} & \textbf{Method} & \textbf{Rounds} & \textbf{Median Latency (ms)} & \textbf{Throughput (samples/s)} & \textbf{Payload / Round (KB)} & \textbf{Total Comm. (MB)} \\
+		\textbf{Volume Tier} & \textbf{Method} & \textbf{Train Samples} & \textbf{Train / Round (s)} & \textbf{Time / Epoch (s)} & \textbf{Latency (ms)} & \textbf{Throughput (samples/s)} & \textbf{Payload / Rnd (KB)} & \textbf{Total Comm. (MB)} \\
 		\midrule
-		IID & FedAvg & 144 & $0.424 \pm 0.007$ & $2307.3 \pm 39.5$ & 59.27 ($29.64\downarrow$ / $29.64\uparrow$) & 8.54 \\
-		Quantity-skew & FedAvg & 200 & $0.425 \pm 0.007$ & $2296.4 \pm 42.2$ & 59.27 ($29.64\downarrow$ / $29.64\uparrow$) & 11.85 \\
-		Quantity-skew & FedProx ($\mu=0.1$) & 200 & $0.424 \pm 0.007$ & $2308.5 \pm 37.2$ & 59.27 ($29.64\downarrow$ / $29.64\uparrow$) & 11.85 \\
+		\multirow{2}{*}{Low (\textit{client\_2})}
+		& FedAvg              & 253 & 0.314 & 0.063 & $0.425 \pm 0.007$ & $2297.5 \pm 39.1$ & 59.27 & 11.85 \\
+		& FedProx ($\mu=0.1$) & 253 & 0.358 & 0.072 & $0.426 \pm 0.008$ & $2292.7 \pm 41.8$ & 59.27 & 11.85 \\
+		\midrule
+		\multirow{2}{*}{Medium (\textit{client\_4})}
+		& FedAvg              & 612 & 0.443 & 0.089 & $0.425 \pm 0.007$ & $2296.1 \pm 40.2$ & 59.27 & 11.85 \\
+		& FedProx ($\mu=0.1$) & 612 & 0.523 & 0.105 & $0.425 \pm 0.007$ & $2296.4 \pm 38.9$ & 59.27 & 11.85 \\
+		\midrule
+		\multirow{2}{*}{High (\textit{client\_6})}
+		& FedAvg              & 993 & 0.555 & 0.111 & $0.426 \pm 0.008$ & $2294.4 \pm 41.5$ & 59.27 & 11.85 \\
+		& FedProx ($\mu=0.1$) & 993 & 0.688 & 0.138 & $0.426 \pm 0.008$ & $2292.3 \pm 42.1$ & 59.27 & 11.85 \\
 		\bottomrule
 	\end{tabular}
 \end{table*}
