@@ -1,0 +1,28 @@
+[92mINFO [0m:      Starting Flower SuperNode
+[93mWARNING [0m:   Option `--insecure` was set. Starting insecure channel to 192.168.1.103:8000.
+INFO:     Started server process [2940620]
+INFO:     Waiting for application startup.
+[92mINFO [0m:      FastAPI lifespan: startup
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:9106 (Press CTRL+C to quit)
+[92mINFO [0m:      SuperNode ID: 16679720622849884536
+[92mINFO [0m:      Starting Flower SuperExec
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 5871757192781652465]
+[92mINFO [0m:      Receiving: train message (ID: 8d142195cce72ba20a489a43672b5cfb37a7a690ee64a5f99a950250b9e2990e)
+[92mINFO [0m:      Received successfully
+[92mINFO [0m:      Start `flwr-clientapp` process
+[92mINFO [0m:      
+[92mINFO [0m:      
+[92mINFO [0m:      [RUN 5871757192781652465]
+[92mINFO [0m:      Sending: train message (ID: 7f96717e512b3160a3d1fbfc07819f93f0f63dcea41dd02b76ffbf0e75f0da94)
+[92mINFO [0m:      Sent successfully
+[92mINFO [0m:      SuperNode terminated gracefully.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+[92mINFO [0m:      FastAPI lifespan: shutdown
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2940620]
+[93mWARNING [0m:   Connection attempt failed, retrying in 0.26 seconds
+[93mWARNING [0m:   Connection attempt failed, retrying in 0.53 seconds
+[92mINFO [0m:      SuperExec terminated gracefully.
