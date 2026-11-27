@@ -92,6 +92,7 @@ For the Federated Learning experiments, the data was partioned to cover the  Ind
 
 \begin{table}[h!]
 	\centering
+	\caption{IID Data distribution.}
 	\label{tab:IID-distribution}
 	\resizebox{\columnwidth}{!}{%
 \begin{tabular}{|c|c|c|c|}
@@ -111,6 +112,7 @@ The non-IID scenario was designed to introduce differences in the amount of loca
 
 \begin{table}[h!]
 	\centering
+	\caption{non-IID Data distribution.}
 	\label{tab:non-IID-Distribution}
 	\resizebox{\columnwidth}{!}{%
 		\begin{tabular}{|c|c|c|c|c|}
@@ -137,18 +139,16 @@ The supervised classifier was trained using all labeled training records, includ
 \subsection{Autoencoder Architecture}
 \label{subsec:AutoencoderArchitecture}
 
-The anomaly detection model is an undercomplete dense autoencoder designed to learn a representation of normal OBD-II sensor data. The input layer receives the 105 sensor-derived features described in Section~\ref{subsec:dataset_preprocessing}. The network  has a symmetric architecture with an encoder and a decoder with dimentions: \(105 \rightarrow 32 \rightarrow 8 \rightarrow 32 \rightarrow 105\). 
+The anomaly detection model is an undercomplete dense autoencoder designed to learn a representation of normal OBD-II sensor data. The input layer receives the 105 sensor data. The architecture is symmetric with an encoder and a decoder with dimensions: \(105 \rightarrow 32 \rightarrow 8 \rightarrow 32 \rightarrow 105\). 
 
-Rectified Linear Unit (ReLU) activation functions are used in the hidden layers, whereas the output layer uses a linear activation function to produce the reconstructed feature values. In total, the network has 7,409 parameters.
+Rectified Linear Unit (ReLU) activation functions are used in the hidden layers, and the output layer uses a linear activation function to produce the reconstructed feature values. In total, the network has 7,409 parameters.
 
 The autoencoder is trained to minimize the mean squared reconstruction error between the input samples and their corresponding reconstructions. The Adam optimizer is used with a learning rate of 0.001 and a batch size of 32.
-
-The reconstruction loss is evaluated after each epoch using only normal real-vehicle validation samples. Whenever a lower validation loss is obtained, the corresponding model weights are saved. Training finishes when the validation loss fails to improve according to the early-stopping criterion.
 
 It was defined the maximum of 1,000 epochs, with an early-stopping patience of 50 epochs. For federated experiments, each client performs 5 local epochs per communication round, and the training process is limited to 200 communication rounds, with a patience of 10 rounds.
 
 
-At inference time, the reconstruction error is used as an anomaly score: samples with larger reconstruction rrors are considered more likely to be a damage. The classification threshold used to distinguish normal and anomalous samples is calibrated separately, as described in Section~\ref{subsec:evaluation_metrics}.
+The reconstruction error is used as an anomaly score: samples with larger reconstruction errors are considered more likely to be a damage. The classification threshold used to distinguish normal and anomalous samples is calibrated separately, as described in Section~\ref{subsec:evaluation_metrics}.
 
 
 \subsection{Supervised Reference Model}
@@ -215,7 +215,7 @@ Table~\ref{tab:experimental_scenarios} summarizes the experimental configuration
 
 \subsection{Evaluation Metrics}
 
-
+\label{subsec:evaluation_metrics}
 The reconstruction error was used as the anomaly score, with higher values indicating a greater deviation from the learned normal operating patterns. A sample was classified as anomalous when its reconstruction error exceeded a predefined threshold ($\tau$). To calibrate this threshold without using labeled anomalous samples, the 95th and 99th percentiles of the reconstruction errors obtained from normal real-vehicle validation samples were considered. These configurations are referred to as the p95 and p99 thresholds, respectively. These thresholds were calibrated using the validation data and applied unchanged to the corresponding test sets.
 
 The predicted class was compared with the ground-truth label, considering anomalous samples as the positive class. Accuracy, precision, recall, F1-score, and false positive rate (FPR) were used on evaluation. Accuracy measures the proportion of correctly classified samples, while precision describes the proportion of samples classified as anomalous that are actually anomalous. Recall measures the proportion of actual anomalies correctly identified by the model. The F1-score is the harmonic mean of precision and recall. The FPR quantifies the proportion of normal samples incorrectly classified as anomalous. These metrics were computed as follows:
@@ -234,7 +234,7 @@ where (TP), (TN), (FP), and (FN) are true positives, true negatives, false posit
 
 The Average Precision (AP) and the area under the Receiver Operating Characteristic curve (ROC-AUC) were also measured. AP calculates the weighted mean of precisions achieved at each recall threshold, with the weight corresponding to the incremental change in the recall. ROC-AUC measures the trade-off between the true positive rate and the false positive rate. The corresponding Precision-Recall and ROC curves were generated using the global test set.
 
-For the Raspberry Pi experiments, computational performance was considered using local training time, average time per epoch, processing throughput, CPU utilization, peak memory consumption, and device temperature.
+For the Raspberry Pi experiments, computational performance was considered using local training computation time, inference latency, throughput, and communication volume.
 
 The throughput is calculated as the number of local training samples processed to the corresponding training time. These measurements were used to characterize the computational cost of executing local model updates on the physical edge device under different local data-volume conditions.
 
@@ -245,11 +245,9 @@ The throughput is calculated as the number of local training samples processed t
 
 This subsection presents the anomaly detection results obtained with six simulated clients under approximately balanced (IID) and quantity-skew data distributions. The centralized, local, and federated approaches are compared in terms of their detection performance. For the quantity-skew scenario, FedProx is additionally evaluated against FedAvg.
 
-\textbf{Latent-Space Visualization}
-
 Figure~\ref{fig:umap_latent} presents UMAP projections of the latent representations learned by the FedAvg autoencoder for normal and anomalous test samples. The visualizations provide a qualitative analysis of how the unsupervised autoencoder structures the representations and separates nominal from anomalous vehicle states.
 
-\begin{figure*}[t]
+\begin{figure*}[h!]
 	\centering
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
@@ -264,26 +262,24 @@ Figure~\ref{fig:umap_latent} presents UMAP projections of the latent representat
 		\caption{Operational decision outcomes (P-95 threshold)}
 		\label{fig:umap_decision}
 	\end{subfigure}
-	\caption{UMAP projections of the FedAvg autoencoder latent representations for normal and anomalous test samples (seed 42, IID scenario): (a) reconstruction error gradient (Top 5\% MSE) with the calibrated P-95 decision threshold; (b) spatial confusion matrix outcomes (TP, FP, TN, FN).}
+	\caption{UMAP projections of the FedAvg autoencoder latent representations for normal and anomalous test samples on IID scenario: (a) reconstruction error gradient (Top 5\% MSE) with the calibrated P-95 decision threshold; (b) spatial confusion matrix outcomes (TP, FP, TN, FN).}
 	\label{fig:umap_latent}
 \end{figure*}
 
-\textbf{Detection Performance at Different Thresholds}
 
-The detection performance was first evaluated using the P-95 threshold, calibrated from the reconstruction errors of normal real-vehicle validation samples. Table~\ref{tab:results_p95} reports the threshold-dependent metrics for the centralized, local, and federated approaches under both data distributions.
+The detection performance was first evaluated using the P-95 threshold, calibrated from the reconstruction errors of normal real-vehicle validation samples. Table~\ref{tab:results_p95} shows the threshold-dependent metrics for the centralized, local, and federated approaches under both data distributions. The values are reported as mean and standard deviation across experimental runs on seeds 7, 21, and 42.
 
-\begin{table*}[t]
+\begin{table*}[h!]
 	\centering
-	\caption{Anomaly detection performance using the P-95 threshold (and $p \ge 0.5$ for the supervised reference). Values are reported as mean and standard deviation across experimental runs (seeds 7, 21, and 42).}
+	\caption{Anomaly detection performance using P-95  and $p \ge 0.5$ for the supervised reference.}
 	\label{tab:results_p95}
 	\begin{tabular}{llccccc}
 		\toprule
 		\textbf{Scenario} & \textbf{Method} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} & \textbf{FPR} \\
 		\midrule
-		\multicolumn{7}{l}{\textit{Supervised Upper-Bound Reference (Centralized Binary MLP, decision threshold $p \ge 0.5$):}} \\
+
 		IID & Supervised MLP & 95.91 & 94.48 & 97.53 & 95.98 & 5.70 \\
 		\midrule
-		\multicolumn{7}{l}{\textit{Unsupervised Autoencoders (Normal-only, P-95 reconstruction error threshold):}} \\
 		IID & Centralized & $66.11 \pm 0.37$ & $91.43 \pm 0.50$ & $35.58 \pm 1.02$ & $51.19 \pm 1.00$ & $3.37 \pm 0.32$ \\
 		IID & FedAvg & $64.86 \pm 0.64$ & $92.14 \pm 0.49$ & $32.49 \pm 1.56$ & $47.99 \pm 1.64$ & $2.77 \pm 0.29$ \\
 		IID & Local & $57.87 \pm 0.28$ & $78.06 \pm 2.65$ & $20.31 \pm 0.34$ & $30.68 \pm 0.53$ & $4.57 \pm 0.24$ \\
@@ -296,11 +292,11 @@ The detection performance was first evaluated using the P-95 threshold, calibrat
 	\end{tabular}
 \end{table*}
 
-Table~\ref{tab:results_p99} presents the results obtained using the P-99 threshold. This more conservative threshold allows the effect of a stricter anomaly decision criterion on the detection metrics to be examined.
+Table~\ref{tab:results_p99} presents the results obtained using the P-99 threshold. This more conservative threshold allows the effect of a stricter anomaly decision criterion on the detection metrics to be examined.  The values are reported as mean and standard deviation across experimental runs on seeds 7, 21, and 42
 
 \begin{table*}[t]
 	\centering
-	\caption{Anomaly detection performance using the P-99 threshold. Values are reported as mean and standard deviation across experimental runs (seeds 7, 21, and 42).}
+	\caption{Anomaly detection performance using the P-99 threshold.}
 	\label{tab:results_p99}
 	\begin{tabular}{llccccc}
 		\toprule
