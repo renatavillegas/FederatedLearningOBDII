@@ -7,7 +7,7 @@
 % -------------------------------------------------------------------------
 
 % Sugestão de inserção: \subsection{Automotive OBD-II Anomaly Detection}
-% Justificativa: Artigo seminal sobre o uso de telemetria de barramento veicular para detecção de anomalias.
+% Justificativa: Artigo seminal sobre o uso de telemetria de barramento veicular para detecção de anomalias. - Essa referencia não existe! Retire 
 @inproceedings{taylor2016anomaly,
   author    = {Adrian Taylor and Nathalie Leblanc and Nathalie Japkowicz},
   title     = {Anomaly Detection in Automobile Control Network, Data Bus: A First Step Toward Securing Vehicle Software},
@@ -17,7 +17,7 @@
 }
 
 % Sugestão de inserção: \subsection{Automotive OBD-II Anomaly Detection} e \section{Related Work}
-% Justificativa: Referência de ponta (IEEE TIFS) para IDS e detecção não supervisionada de falhas em barramentos CAN/OBD. - Tá errada
+% Justificativa: Referência de ponta (IEEE TIFS) para IDS e detecção não supervisionada de falhas em barramentos CAN/OBD. - ela é mais para segurança, não tem muito a ver, mas serve para falar do unsupervised 
 @article{hanselmann2020canet,
   author    = {Michael Hanselmann and Thilo Strauss and Katharina Dormann and Holger Ulmer},
   title     = {{CANet}: An Unsupervised Intrusion Detection System for Controller Area Networks},
@@ -29,7 +29,7 @@
 }
 
 % Sugestão de inserção: \subsection{Automotive OBD-II Anomaly Detection}, \section{Related Work} e \subsection{Discussion}
-% Justificativa: Artigo recente do JISA/SBC (IC-UNICAMP) sobre IA distribuída em frotas veiculares urbanas.
+% Justificativa: Artigo recente do JISA/SBC (IC-UNICAMP) sobre IA distribuída em frotas veiculares urbanas. - Serve para falar do federated learning nos dados veiculares. 
 @article{braun2025which,
   author    = {Christian Braun and Renan O. Jarczewski and Allan M. de Souza},
   title     = {Which One is Better? Distributed Artificial Intelligence Strategies for Accurate Vehicular Emissions Forecasting},
@@ -46,7 +46,7 @@
 % -------------------------------------------------------------------------
 
 % Sugestão de inserção: \subsection{Unsupervised Learning and Autoencoders}
-% Justificativa: Artigo fundador da técnica de treinar autoencoders normal-only e usar o erro de reconstrução como índice de anomalia.
+% Justificativa: Artigo fundador da técnica de treinar autoencoders normal-only e usar o erro de reconstrução como índice de anomalia. - Pode usar. Foi o primeiro mesmo? Só use se sim. 
 @inproceedings{sakurada2014anomaly,
   author    = {Mayu Sakurada and Takehisa Yairi},
   title     = {Anomaly Detection Using Autoencoders with Nonlinear Dimensionality Reduction},
@@ -58,7 +58,7 @@
 }
 
 % Sugestão de inserção: \subsection{Unsupervised Learning and Autoencoders}
-% Justificativa: Livro-texto clássico que formaliza autoencoders undercomplete, projeção latente e funções de perda MSE.
+% Justificativa: Livro-texto clássico que formaliza autoencoders undercomplete, projeção latente e funções de perda MSE. - Pode usar 
 @book{goodfellow2016deep,
   author    = {Ian Goodfellow and Yoshua Bengio and Aaron Courville},
   title     = {Deep Learning},
@@ -68,7 +68,7 @@
 }
 
 % Sugestão de inserção: \subsection{Unsupervised Learning and Autoencoders} e \subsection{Six simulated clients} (Figura 2)
-% Justificativa: Artigo seminal do algoritmo UMAP para visualização de agrupamento no espaço latente de autoencoders.
+% Justificativa: Artigo seminal do algoritmo UMAP para visualização de agrupamento no espaço latente de autoencoders. Pode usar, mas cite no texto e não na figura. 
 @article{mcinnes2018umap,
   author    = {Leland McInnes and John Healy and James Melville},
   title     = {{UMAP}: Uniform Manifold Approximation and Projection for Dimension Reduction},
@@ -81,7 +81,7 @@
 % -------------------------------------------------------------------------
 
 % Sugestão de inserção: \subsection{Federated Learning}, \subsection{Discussion} e \section{Introduction}
-% Justificativa: Artigo fundador do Aprendizado Federado e do algoritmo FedAvg (AISTATS 2017).
+% Justificativa: Artigo fundador do Aprendizado Federado e do algoritmo FedAvg (AISTATS 2017). - Pode usar 
 @inproceedings{mcmahan2017communication,
   author    = {H. Brendan McMahan and Eider Moore and Daniel Ramage and Seth Hampson and Blaise Ag{\"{u}}era y Arcas},
   title     = {Communication-Efficient Learning of Deep Networks from Decentralized Data},
@@ -91,7 +91,7 @@
 }
 
 % Sugestão de inserção: \subsection{Federated Learning}, \subsection{Federated Learning Architecture} e \subsection{Discussion}
-% Justificativa: Framework Flower utilizado para coordenar SuperLink, ServerApp e os nós clientes.
+% Justificativa: Framework Flower utilizado para coordenar SuperLink, ServerApp e os nós clientes. - Pode usar 
 @article{beutel2020flower,
   author    = {Daniel J. Beutel and Taner Topal and Akhil Mathur and Xinchi Qiu and Titouan Parcollet and Pedro P. B. de Gusm{\~{a}}o and Nicholas D. Lane},
   title     = {Flower: A Friendly Federated Learning Research Framework},
@@ -100,7 +100,7 @@
 }
 
 % Sugestão de inserção: \subsection{Federated Learning} e \section{Related Work}
-% Justificativa: Minicurso do SBRC/SBC que é a principal referência metodológica brasileira de Aprendizado Federado Veicular (VFL).
+% Justificativa: Minicurso do SBRC/SBC que é a principal referência metodológica brasileira de Aprendizado Federado Veicular (VFL). - Pode usar.
 @inproceedings{souza2024aprendizado,
   author    = {Lucas A. C. Souza and Fabr{\'i}cio A. Silva and Allan M. de Souza and Leandro A. Villas},
   title     = {Aprendizado Federado Veicular: da Teoria {\`a} Pr{\'a}tica},
@@ -112,7 +112,7 @@
 }
 
 % Sugestão de inserção: \subsection{Federated Learning}, \section{Related Work} e \subsection{Discussion}
-% Justificativa: Artigo do JBCS/SBC que faz benchmark empírico de FL em nós IoT de baixo custo (ARM 2 GB RAM).
+% Justificativa: Artigo do JBCS/SBC que faz benchmark empírico de FL em nós IoT de baixo custo (ARM 2 GB RAM). - Pode usar 
 @article{barbosa2025practical,
   author    = {Gabriel N. N. Barbosa and Diogo M. F. Mattos},
   title     = {A Practical Evaluation of a Federated Learning Application in {IoT} Device and Cloud Environment},
@@ -129,7 +129,7 @@
 % -------------------------------------------------------------------------
 
 % Sugestão de inserção: \subsection{Federated Optimization under Data Heterogeneity} e \subsection{Discussion}
-% Justificativa: Artigo seminal do FedProx que introduz a regularização proximal para dados não-IID (MLSys 2020).
+% Justificativa: Artigo seminal do FedProx que introduz a regularização proximal para dados não-IID (MLSys 2020). - Pode usar 
 @inproceedings{li2020federated,
   author    = {Tian Li and Anit Kumar Sahu and Manzil Zaheer and Maziar Sanjabi and Ameet Talwalkar and Virginia Smith},
   title     = {Federated Optimization in Heterogeneous Networks},
@@ -140,7 +140,7 @@
 }
 
 % Sugestão de inserção: \subsection{Federated Optimization under Data Heterogeneity}
-% Justificativa: Survey fundamental que formaliza a taxonomia de heterogeneidade estatística (incluindo quantity skew).
+% Justificativa: Survey fundamental que formaliza a taxonomia de heterogeneidade estatística (incluindo quantity skew). - ok 
 @article{kairouz2021advances,
   author    = {Peter Kairouz and H. Brendan McMahan and Brendan Avent and Aur{\'e}lien Bellet and Mehdi Bennis and Arjun Nitin Bhagoji and Kallista Bonawitz and Zachary Charles and Graham Cormode and Rachel Cummings and others},
   title     = {Advances and Open Problems in Federated Learning},
@@ -153,7 +153,7 @@
 }
 
 % Sugestão de inserção: \subsection{Federated Optimization under Data Heterogeneity} e \section{Related Work}
-% Justificativa: Artigo do WPerformance/SBC sobre seleção de clientes e impacto de não-IID em redes veiculares.
+% Justificativa: Artigo do WPerformance/SBC sobre seleção de clientes e impacto de não-IID em redes veiculares. - Pode colcar 
 @inproceedings{sousa2023entropy,
   author    = {Jo{\~a}o L. R. Sousa and Waldir Lobato and Denis Ros{\'a}rio and Eduardo Cerqueira and Leandro A. Villas},
   title     = {Entropy-based Client Selection Mechanism for Vehicular Federated Environments},
@@ -169,7 +169,7 @@
 % -------------------------------------------------------------------------
 
 % Sugestão de inserção: \section{Related Work}
-% Justificativa: Artigo recente do JBCS/SBC que estuda o trade-off de dados não-IID em nós de borda usando Flower.
+% Justificativa: Artigo recente do JBCS/SBC que estuda o trade-off de dados não-IID em nós de borda usando Flower. - Pode colocar 
 @article{oliveira2025data,
   author    = {Renan R. de Oliveira and Leandro A. Freitas and Waldir Moreira and Maria Ribeiro},
   title     = {Data sharing-based approach for Federated Learning tasks on Edge Devices},
@@ -186,7 +186,7 @@
 % -------------------------------------------------------------------------
 
 % Sugestão de inserção: \subsection{Dataset}
-% Justificativa: Dataset público de sensores automotivos OBD-II e injeção sintética de falhas utilizado no estudo.
+% Justificativa: Dataset público de sensores automotivos OBD-II e injeção sintética de falhas utilizado no estudo. - ok
 @misc{qasimghumman_obdii_dataset,
   author       = {{qasimghumman}},
   title        = {{OBD-II} Sensor Anomaly and Failure Prediction Dataset},
@@ -197,7 +197,7 @@
 }
 
 % Sugestão de inserção: \subsection{Dataset}
-% Justificativa: Notebook de referência pública de pré-processamento dos dados de telemetria OBD-II.
+% Justificativa: Notebook de referência pública de pré-processamento dos dados de telemetria OBD-II. -ok
 @misc{badrnezhad_obdii_notebook,
   author       = {Hossein Badrnezhad},
   title        = {{OBD-II} Sensor Anomaly and Failure Prediction Dataset},
