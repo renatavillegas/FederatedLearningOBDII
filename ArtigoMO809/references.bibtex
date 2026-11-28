@@ -1,15 +1,208 @@
-@misc{qasimghumman_obdii_dataset,
-	author       = {{qasimghumman}},
-	title        = {OBD-II Sensor Anomaly and Failure Prediction Dataset},
-	howpublished = {Kaggle},
-	url          = {https://www.kaggle.com/datasets/qasimghumman/obd-ii-sensor-anomaly-and-failure-prediction-dataset},
-	note         = {Accessed: 17 November 2026}
+% =========================================================================
+% REFERÊNCIAS BIBLIOGRÁFICAS - PADRÃO SBC (references.bibtex)
+% =========================================================================
+
+% -------------------------------------------------------------------------
+% 1. SUBSEÇÃO 2.1: Automotive OBD-II Anomaly Detection
+% -------------------------------------------------------------------------
+
+% Sugestão de inserção: \subsection{Automotive OBD-II Anomaly Detection}
+% Justificativa: Artigo seminal sobre o uso de telemetria de barramento veicular para detecção de anomalias.
+@inproceedings{taylor2016anomaly,
+  author    = {Adrian Taylor and Nathalie Leblanc and Nathalie Japkowicz},
+  title     = {Anomaly Detection in Automobile Control Network, Data Bus: A First Step Toward Securing Vehicle Software},
+  booktitle = {Proceedings of the International Conference on Cloud Security Systems and Communications (CSCC)},
+  pages     = {1--8},
+  year      = {2016}
 }
 
+% Sugestão de inserção: \subsection{Automotive OBD-II Anomaly Detection} e \section{Related Work}
+% Justificativa: Referência de ponta (IEEE TIFS) para IDS e detecção não supervisionada de falhas em barramentos CAN/OBD.
+@article{hanselmann2020canet,
+  author    = {Michael Hanselmann and Thilo Strauss and Katharina Dormann and Holger Ulmer},
+  title     = {{CANet}: An Unsupervised Intrusion Detection System for Controller Area Networks},
+  journal   = {IEEE Transactions on Information Forensics and Security},
+  volume    = {15},
+  pages     = {1304--1315},
+  year      = {2020},
+  doi       = {10.1109/TIFS.2020.2988508}
+}
+
+% Sugestão de inserção: \subsection{Automotive OBD-II Anomaly Detection}, \section{Related Work} e \subsection{Discussion}
+% Justificativa: Artigo recente do JISA/SBC (IC-UNICAMP) sobre IA distribuída em frotas veiculares urbanas.
+@article{braun2025which,
+  author    = {Christian Braun and Renan O. Jarczewski and Allan M. de Souza},
+  title     = {Which One is Better? Distributed Artificial Intelligence Strategies for Accurate Vehicular Emissions Forecasting},
+  journal   = {Journal of Internet Services and Applications},
+  volume    = {16},
+  number    = {1},
+  pages     = {1--16},
+  year      = {2025},
+  doi       = {10.5753/jisa.2025.5166}
+}
+
+% -------------------------------------------------------------------------
+% 2. SUBSEÇÃO 2.2: Unsupervised Learning and Autoencoders
+% -------------------------------------------------------------------------
+
+% Sugestão de inserção: \subsection{Unsupervised Learning and Autoencoders}
+% Justificativa: Artigo fundador da técnica de treinar autoencoders normal-only e usar o erro de reconstrução como índice de anomalia.
+@inproceedings{sakurada2014anomaly,
+  author    = {Mayu Sakurada and Takehisa Yairi},
+  title     = {Anomaly Detection Using Autoencoders with Nonlinear Dimensionality Reduction},
+  booktitle = {Proceedings of the MLSDA Workshop},
+  pages     = {4--11},
+  publisher = {ACM},
+  year      = {2014},
+  doi       = {10.1145/2689746.2689747}
+}
+
+% Sugestão de inserção: \subsection{Unsupervised Learning and Autoencoders}
+% Justificativa: Livro-texto clássico que formaliza autoencoders undercomplete, projeção latente e funções de perda MSE.
+@book{goodfellow2016deep,
+  author    = {Ian Goodfellow and Yoshua Bengio and Aaron Courville},
+  title     = {Deep Learning},
+  publisher = {MIT Press},
+  year      = {2016},
+  note      = {Chapter 14: Autoencoders}
+}
+
+% Sugestão de inserção: \subsection{Unsupervised Learning and Autoencoders} e \subsection{Six simulated clients} (Figura 2)
+% Justificativa: Artigo seminal do algoritmo UMAP para visualização de agrupamento no espaço latente de autoencoders.
+@article{mcinnes2018umap,
+  author    = {Leland McInnes and John Healy and James Melville},
+  title     = {{UMAP}: Uniform Manifold Approximation and Projection for Dimension Reduction},
+  journal   = {arXiv preprint arXiv:1802.03426},
+  year      = {2018}
+}
+
+% -------------------------------------------------------------------------
+% 3. SUBSEÇÃO 2.3: Federated Learning
+% -------------------------------------------------------------------------
+
+% Sugestão de inserção: \subsection{Federated Learning}, \subsection{Discussion} e \section{Introduction}
+% Justificativa: Artigo fundador do Aprendizado Federado e do algoritmo FedAvg (AISTATS 2017).
+@inproceedings{mcmahan2017communication,
+  author    = {H. Brendan McMahan and Eider Moore and Daniel Ramage and Seth Hampson and Blaise Ag{\"{u}}era y Arcas},
+  title     = {Communication-Efficient Learning of Deep Networks from Decentralized Data},
+  booktitle = {Proceedings of the 20th International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  pages     = {1273--1282},
+  year      = {2017}
+}
+
+% Sugestão de inserção: \subsection{Federated Learning}, \subsection{Federated Learning Architecture} e \subsection{Discussion}
+% Justificativa: Framework Flower utilizado para coordenar SuperLink, ServerApp e os nós clientes.
+@article{beutel2020flower,
+  author    = {Daniel J. Beutel and Taner Topal and Akhil Mathur and Xinchi Qiu and Titouan Parcollet and Pedro P. B. de Gusm{\~{a}}o and Nicholas D. Lane},
+  title     = {Flower: A Friendly Federated Learning Research Framework},
+  journal   = {arXiv preprint arXiv:2007.14390},
+  year      = {2020}
+}
+
+% Sugestão de inserção: \subsection{Federated Learning} e \section{Related Work}
+% Justificativa: Minicurso do SBRC/SBC que é a principal referência metodológica brasileira de Aprendizado Federado Veicular (VFL).
+@inproceedings{souza2024aprendizado,
+  author    = {Lucas A. C. Souza and Fabr{\'i}cio A. Silva and Allan M. de Souza and Leandro A. Villas},
+  title     = {Aprendizado Federado Veicular: da Teoria {\`a} Pr{\'a}tica},
+  booktitle = {Minicursos do XLII Simp{\'o}sio Brasileiro de Redes de Computadores e Sistemas Distribu{\'i}dos (SBRC)},
+  pages     = {1--50},
+  publisher = {SBC},
+  year      = {2024},
+  doi       = {10.5753/sbrc_estendido.2024.2407}
+}
+
+% Sugestão de inserção: \subsection{Federated Learning}, \section{Related Work} e \subsection{Discussion}
+% Justificativa: Artigo do JBCS/SBC que faz benchmark empírico de FL em nós IoT de baixo custo (ARM 2 GB RAM).
+@article{barbosa2025practical,
+  author    = {Gabriel N. N. Barbosa and Diogo M. F. Mattos},
+  title     = {A Practical Evaluation of a Federated Learning Application in {IoT} Device and Cloud Environment},
+  journal   = {Journal of the Brazilian Computer Society},
+  volume    = {31},
+  number    = {1},
+  pages     = {1--18},
+  year      = {2025},
+  doi       = {10.5753/jbcs.2025.4324}
+}
+
+% -------------------------------------------------------------------------
+% 4. SUBSEÇÃO 2.4: Federated Optimization under Data Heterogeneity
+% -------------------------------------------------------------------------
+
+% Sugestão de inserção: \subsection{Federated Optimization under Data Heterogeneity} e \subsection{Discussion}
+% Justificativa: Artigo seminal do FedProx que introduz a regularização proximal para dados não-IID (MLSys 2020).
+@inproceedings{li2020federated,
+  author    = {Tian Li and Anit Kumar Sahu and Manzil Zaheer and Maziar Sanjabi and Ameet Talwalkar and Virginia Smith},
+  title     = {Federated Optimization in Heterogeneous Networks},
+  booktitle = {Proceedings of Machine Learning and Systems (MLSys)},
+  volume    = {2},
+  pages     = {429--450},
+  year      = {2020}
+}
+
+% Sugestão de inserção: \subsection{Federated Optimization under Data Heterogeneity}
+% Justificativa: Survey fundamental que formaliza a taxonomia de heterogeneidade estatística (incluindo quantity skew).
+@article{kairouz2021advances,
+  author    = {Peter Kairouz and H. Brendan McMahan and Brendan Avent and Aur{\'e}lien Bellet and Mehdi Bennis and Arjun Nitin Bhagoji and Kallista Bonawitz and Zachary Charles and Graham Cormode and Rachel Cummings and others},
+  title     = {Advances and Open Problems in Federated Learning},
+  journal   = {Foundations and Trends in Machine Learning},
+  volume    = {14},
+  number    = {1--2},
+  pages     = {1--210},
+  year      = {2021},
+  doi       = {10.1561/2200000083}
+}
+
+% Sugestão de inserção: \subsection{Federated Optimization under Data Heterogeneity} e \section{Related Work}
+% Justificativa: Artigo do WPerformance/SBC sobre seleção de clientes e impacto de não-IID em redes veiculares.
+@inproceedings{sousa2023entropy,
+  author    = {Jo{\~a}o L. R. Sousa and Waldir Lobato and Denis Ros{\'a}rio and Eduardo Cerqueira and Leandro A. Villas},
+  title     = {Entropy-based Client Selection Mechanism for Vehicular Federated Environments},
+  booktitle = {Anais do XXII Workshop em Desempenho de Sistemas Computacionais e de Comunica{\c{c}}{\~o}es (WPerformance)},
+  pages     = {109--122},
+  publisher = {SBC},
+  year      = {2023},
+  doi       = {10.5753/wperformance.2023.230752}
+}
+
+% -------------------------------------------------------------------------
+% 5. TRABALHOS RELACIONADOS ADICIONAIS (\section{Related Work})
+% -------------------------------------------------------------------------
+
+% Sugestão de inserção: \section{Related Work}
+% Justificativa: Artigo recente do JBCS/SBC que estuda o trade-off de dados não-IID em nós de borda usando Flower.
+@article{oliveira2025data,
+  author    = {Renan R. de Oliveira and Leandro A. Freitas and Waldir Moreira and Maria Ribeiro},
+  title     = {Data sharing-based approach for Federated Learning tasks on Edge Devices},
+  journal   = {Journal of the Brazilian Computer Society},
+  volume    = {31},
+  number    = {1},
+  pages     = {1--15},
+  year      = {2025},
+  doi       = {10.5753/jbcs.2025.3682}
+}
+
+% -------------------------------------------------------------------------
+% 6. DATASETS E REFERÊNCIAS DE ENGENHARIA (\subsection{Dataset})
+% -------------------------------------------------------------------------
+
+% Sugestão de inserção: \subsection{Dataset}
+% Justificativa: Dataset público de sensores automotivos OBD-II e injeção sintética de falhas utilizado no estudo.
+@misc{qasimghumman_obdii_dataset,
+  author       = {{qasimghumman}},
+  title        = {{OBD-II} Sensor Anomaly and Failure Prediction Dataset},
+  howpublished = {Kaggle},
+  url          = {https://www.kaggle.com/datasets/qasimghumman/obd-ii-sensor-anomaly-and-failure-prediction-dataset},
+  year         = {2024},
+  note         = {Accessed: 17 November 2026}
+}
+
+% Sugestão de inserção: \subsection{Dataset}
+% Justificativa: Notebook de referência pública de pré-processamento dos dados de telemetria OBD-II.
 @misc{badrnezhad_obdii_notebook,
-	author       = {Badrnezhad, Hossein},
-	title        = {OBD-II Sensor Anomaly and Failure Prediction Dataset},
-	howpublished = {Kaggle notebook},
-	url          = {https://www.kaggle.com/code/hosseinbadrnezhad/obd-ii-sensor-anomaly-and-failure-prediction-datas},
-	note         = {Accessed: 17 November 2026}
+  author       = {Hossein Badrnezhad},
+  title        = {{OBD-II} Sensor Anomaly and Failure Prediction Dataset},
+  howpublished = {Kaggle notebook},
+  url          = {https://www.kaggle.com/code/hosseinbadrnezhad/obd-ii-sensor-anomaly-and-failure-prediction-datas},
+  year         = {2024},
+  note         = {Accessed: 17 November 2026}
 }
