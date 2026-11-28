@@ -30,6 +30,10 @@
 
 \maketitle
 
+\begin{resumo}
+Este trabalho investiga o aprendizado federado para detecção de anomalias em dados de sensores automotivos OBD-II utilizando autoencoders treinados exclusivamente em dados de operação normal (\textit{normal-only}). O desempenho do modelo é comparado entre as abordagens local, centralizada e FedAvg sob distribuições de dados balanceadas (IID), enquanto FedAvg e FedProx são avaliados sob heterogeneidade estatística (não-IID por quantidade). O ambiente experimental compreende seis clientes, sendo cinco nós simulados e um nó físico de borda executado em um Raspberry Pi 5. Além da capacidade de detecção de anomalias, o estudo quantifica o custo computacional e de comunicação no dispositivo embarcado, demonstrando como diferentes volumes locais afetam o tempo de treinamento e a estabilidade da inferência. Um classificador supervisionado centralizado é incluído como referência de limite superior. Os resultados fornecem diretrizes sobre os \textit{trade-offs} entre detecção de anomalias, sensibilidade de limiares operacionais e viabilidade de execução em tempo real na computação de borda automotiva.
+\end{resumo}
+
 \begin{abstract}
 This work investigates federated learning for anomaly detection in automotive OBD-II data using a normal-only autoencoder. Model performance is compared with local, centralized, and FedAvg training under IID data distributions, while FedAvg and FedProx are evaluated under non-IID distribution. The experimental setup has six clients, including five simulated on a computer and one running on a Raspberry Pi as a physical federated client. Beyond anomaly-detection performance, the study evaluates the computational and communication costs of the edge device participation, and shows how different local data volumes affect training time and resource utilization. A centralized supervised model is also included as a complementary reference. The results provide insights into the trade-offs between detection performance, data distribution, and computational constraints in federated automotive anomaly detection.
 
@@ -97,27 +101,27 @@ For the Federated Learning experiments, the data was partioned to cover the  Ind
 	\resizebox{\columnwidth}{!}{%
 \begin{tabular}{|c|c|c|c|}
 	\hline
-	\textbf{Cliente} & \textbf{Vehicles in training} & \textbf{Training Samples} & \textbf{Test Samples}                 \\ \hline
-	client\_1        & 5                             & 602                       & 178 normal / 178 anomally (356 total) \\ \hline
-	client\_2        & 5                             & 765                       & 100 normal / 10 anommaly (200 total)  \\ \hline
-	client\_3        & 5                             & 746                       & 168 normal / 168 anommaly (336 total) \\ \hline
-	client\_4        & 4                             & 616                       & 190 normal / 190 anommaly (380 total) \\ \hline
-	client\_5        & 4                             & 631                       & 137 normal / 137 anommaly (274 total) \\ \hline
-	client\_6        & 4                             & 642                       & 157 normal / 157 anommaly (314 total) \\ \hline
+	\textbf{Client} & \textbf{Vehicles in training} & \textbf{Training Samples} & \textbf{Test Samples}                 \\ \hline
+	client\_1        & 5                             & 602                       & 178 normal / 178 anomaly (356 total) \\ \hline
+	client\_2        & 5                             & 765                       & 100 normal / 100 anomaly (200 total)  \\ \hline
+	client\_3        & 5                             & 746                       & 168 normal / 168 anomaly (336 total) \\ \hline
+	client\_4        & 4                             & 616                       & 190 normal / 190 anomaly (380 total) \\ \hline
+	client\_5        & 4                             & 631                       & 137 normal / 137 anomaly (274 total) \\ \hline
+	client\_6        & 4                             & 642                       & 157 normal / 157 anomaly (314 total) \\ \hline
 \end{tabular}%
 }
 \end{table}
 
-The non-IID scenario was designed to introduce differences in the amount of local training data available to each client. The data was splited using weights of ([1,1,2,2,4,4]), defining proportional targets of (1/14), (1/14), (2/14), (2/14), (4/14), and (4/14) of the total training samples for each client, respectively.  Table \ref{tab:non-IID-Distribution} shows the data distribution on non-IID scenario.
+The non-IID scenario was designed to introduce differences in the amount of local training data available to each client. The data was split using weights of ([1,1,2,2,4,4]), defining proportional targets of (1/14), (1/14), (2/14), (2/14), (4/14), and (4/14) of the total training samples for each client, respectively. Table \ref{tab:non-IID-Distribution} shows the data distribution on non-IID scenario.
 
 \begin{table}[h!]
 	\centering
-	\caption{non-IID Data distribution.}
+	\caption{Non-IID Data distribution.}
 	\label{tab:non-IID-Distribution}
 	\resizebox{\columnwidth}{!}{%
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
-			\textbf{Client} & \textbf{Weigth} & \textbf{Vehicles in training} & \textbf{Trainig samples} & \textbf{Test Samples}                \\ \hline
+			\textbf{Client} & \textbf{Weight} & \textbf{Vehicles in training} & \textbf{Training samples} & \textbf{Test Samples}                \\ \hline
 			client\_1       & 1.0             & 2                             & 216                      & 165 normal / 165 anomaly (330 total) \\ \hline
 			client\_2       & 1.0             & 2                             & 253                      & 120 normal / 120 anomaly (240 total) \\ \hline
 			client\_3       & 2.0             & 4                             & 643                      & 130 normal / 130 anomaly (260 total) \\ \hline
@@ -167,8 +171,8 @@ The federated learning architecture was implemented using the Flower framework~\
 
 \begin{figure*}[t]
 	\centering
-	\includegraphics[width=0.95\linewidth]{figures/federated_architecture.png}
-	\caption{Federated learning system architecture: Flower server orchestration with global validation and checkpointing, five simulated client nodes, and one physical Raspberry Pi 5 edge device (Client 4), highlighting bidirectional parameter exchange ($29.64$~KB per payload).}
+	\includegraphics[width=0.75\linewidth]{figures/federated_architecture.png}
+	\caption{Federated learning system architecture: Flower server orchestration with global validation and checkpointing across decentralized client nodes.}
 	\label{fig:ArquiteturaGeral}
 \end{figure*}
 
