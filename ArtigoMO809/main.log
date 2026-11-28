@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.11.14)  28 NOV 2026 06:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.11.14)  28 NOV 2026 07:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -414,120 +414,112 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-[2]
+Underfull \vbox (badness 2538) has occurred while \output is active []
+
+ [2]
+[3]
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 1
-05.
+10.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
-)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3] [4]
-Underfull \hbox (badness 3492) in paragraph at lines 176--177
+) [4] [5]
+Underfull \hbox (badness 3492) in paragraph at lines 181--182
 \OT1/ptm/m/n/12 The fed-er-ated learn-ing ar-chi-tec-ture was im-ple-mented us-
 ing the Flower frame-
  []
 
-<figures/federated_architecture.png, id=22, 823.58891pt x 440.847pt>
+<figures/federated_architecture.png, id=27, 823.58891pt x 440.847pt>
 File: figures/federated_architecture.png Graphic file (type png)
 <use figures/federated_architecture.png>
 Package pdftex.def Info: figures/federated_architecture.png  used on input line
- 180.
+ 185.
 (pdftex.def)             Requested size: 320.0935pt x 171.33768pt.
-[5] [6 <./figures/federated_architecture.png>]
+[6 <./figures/federated_architecture.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
+[7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
-[8]
+ [8]
 <figures/fedavg_umap_errors_p95.png, id=41, 537.6888pt x 426.393pt>
 File: figures/fedavg_umap_errors_p95.png Graphic file (type png)
 <use figures/fedavg_umap_errors_p95.png>
 Package pdftex.def Info: figures/fedavg_umap_errors_p95.png  used on input line
- 264.
+ 270.
 (pdftex.def)             Requested size: 204.85802pt x 162.45392pt.
 <figures/fedavg_umap_p95_decision.png, id=42, 534.798pt x 426.393pt>
 File: figures/fedavg_umap_p95_decision.png Graphic file (type png)
 <use figures/fedavg_umap_p95_decision.png>
 Package pdftex.def Info: figures/fedavg_umap_p95_decision.png  used on input li
-ne 271.
+ne 277.
 (pdftex.def)             Requested size: 204.85802pt x 163.33226pt.
-
-Overfull \hbox (128.58658pt too wide) in paragraph at lines 286--303
- [][] 
- []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9 <./figures/fedavg_umap_errors_p95.png> <./figures/fedavg_umap_p95_decision.p
-ng>]
-Overfull \hbox (122.71164pt too wide) in paragraph at lines 311--325
+
+Overfull \hbox (128.58658pt too wide) in paragraph at lines 292--309
  [][] 
  []
 
-<figures/roc_precision_recall_client_holdout_seeds_7_21_42.png, id=48, 1004.553
+[9]
+Overfull \hbox (122.71164pt too wide) in paragraph at lines 317--331
+ [][] 
+ []
+
+[10 <./figures/fedavg_umap_errors_p95.png> <./figures/fedavg_umap_p95_decision.
+png>]
+<figures/roc_precision_recall_client_holdout_seeds_7_21_42.png, id=53, 1004.553
 pt x 426.393pt>
 File: figures/roc_precision_recall_client_holdout_seeds_7_21_42.png Graphic fil
 e (type png)
 <use figures/roc_precision_recall_client_holdout_seeds_7_21_42.png>
 Package pdftex.def Info: figures/roc_precision_recall_client_holdout_seeds_7_21
-_42.png  used on input line 363.
+_42.png  used on input line 369.
 (pdftex.def)             Requested size: 418.2537pt x 177.53535pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
 <figures/client_test_operating_point_quantity_skew.png, id=54, 875.27pt x 354.9
 26pt>
 File: figures/client_test_operating_point_quantity_skew.png Graphic file (type 
 png)
 <use figures/client_test_operating_point_quantity_skew.png>
 Package pdftex.def Info: figures/client_test_operating_point_quantity_skew.png 
- used on input line 376.
+ used on input line 382.
 (pdftex.def)             Requested size: 209.1301pt x 84.79945pt.
 <figures/client_test_auc_quantity_skew.png, id=55, 875.27pt x 354.926pt>
 File: figures/client_test_auc_quantity_skew.png Graphic file (type png)
 <use figures/client_test_auc_quantity_skew.png>
 Package pdftex.def Info: figures/client_test_auc_quantity_skew.png  used on inp
-ut line 383.
+ut line 389.
 (pdftex.def)             Requested size: 209.1301pt x 84.79945pt.
 
-Underfull \hbox (badness 3302) in paragraph at lines 384--384
+Underfull \hbox (badness 3302) in paragraph at lines 390--390
 [] \OT1/phv/b/n/8 (b) |Rank-ing per-for-mance (PR-AUC and
  []
 
-
-Overfull \hbox (198.55273pt too wide) in paragraph at lines 402--419
+[11]
+Overfull \hbox (198.55273pt too wide) in paragraph at lines 408--425
  [][] 
  []
 
 
-Overfull \hbox (425.3791pt too wide) in paragraph at lines 428--445
+Overfull \hbox (425.3791pt too wide) in paragraph at lines 434--451
  [][] 
  []
 
-[11] [12 <./figures/roc_precision_recall_client_holdout_seeds_7_21_42.png> <./f
-igures/client_test_operating_point_quantity_skew.png> <./figures/client_test_au
-c_quantity_skew.png>] (./main.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13])
-[14] (./main.aux)
+[12 <./figures/roc_precision_recall_client_holdout_seeds_7_21_42.png> <./figure
+s/client_test_operating_point_quantity_skew.png> <./figures/client_test_auc_qua
+ntity_skew.png>] [13] (./main.bbl) [14] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6990 strings out of 469421
- 117800 string characters out of 5467708
- 546268 words of memory out of 5000000
- 35544 multiletter control sequences out of 15000+600000
+ 6993 strings out of 469421
+ 117852 string characters out of 5467708
+ 544378 words of memory out of 5000000
+ 35547 multiletter control sequences out of 15000+600000
  654224 words of font info for 88 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  72i,11n,79p,1114b,557s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -542,7 +534,7 @@ etic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (14 pages, 1263834 bytes).
+Output written on main.pdf (14 pages, 1264702 bytes).
 PDF statistics:
  124 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream
