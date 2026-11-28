@@ -93,13 +93,56 @@ This work investigates the use an autoencoder structure for unsupervised anomaly
 %Aqui só falar uma breve introdução de quais sensores são medidos com OBD-II, como é o protocolo e estudos de ML que usam ele. 2 - 3 parágrafos
 % Dá pra citar esse no OBD-II https://www.mdpi.com/1424-8220/25/13/4057 (inclua nas referencias) além dos outros 
 
+% =========================================================================
+% SUGESTÃO PARA: 2.1 Automotive OBD-II Anomaly Detection (2-3 parágrafos)
+% =========================================================================
+% Modern vehicles integrate dozens of Electronic Control Units (ECUs) interconnected through internal communication buses, most notably the Controller Area Network (CAN). To standardize vehicle diagnostics, emissions compliance, and powertrain monitoring, regulatory frameworks established the On-Board Diagnostics II (OBD-II) protocol (SAE J1979 / ISO 15031). Accessible through a standardized Data Link Connector (DLC), the OBD-II interface exposes Parameter IDs (PIDs) that provide real-time readings from engine and chassis sensors, including engine rotational speed (RPM), vehicle speed, intake manifold pressure, coolant temperature, mass air flow (MAF), throttle position, and short/long-term fuel trims.
+% 
+% Traditionally, vehicular fault detection has relied on predefined threshold rules that trigger Diagnostic Trouble Codes (DTCs) when a sensor reading falls outside strict operational tolerances. However, static DTCs typically trigger only after severe or persistent physical degradation has occurred, failing to capture subtle, early-stage component wear or intermittent anomalies caused by sensor drift. To address this limitation, machine learning techniques have been increasingly applied to continuous OBD-II telemetry streams~\cite{michailidis2025review}. By analyzing multivariate correlations across powertrain signals, data-driven approaches enable predictive maintenance, driver behavior analysis, and early anomaly detection before catastrophic component failure occurs~\cite{braun2025which}.
+% 
+% Despite its effectiveness, anomaly detection in automotive OBD-II streams poses distinct technical challenges. Sensor signals are inherently noisy, highly non-linear, and strongly dependent on ambient conditions, engine operating temperature, and dynamic driving patterns. Furthermore, physical fault data in production vehicle fleets are exceedingly scarce and hazardous to produce intentionally, rendering continuous unsupervised anomaly detection on nominal sensor streams the primary practical pathway for onboard vehicle health monitoring.
+
 \subsection{Unsupervised Learning and Autoencoders}
 \label{subsec:Autoencoder}
 %Falar da principal vantagem de usar unsupervised - quando é difícil prever as labels, por exemplo. Explicar brevemente os tipos (clustering, redução da dimensionalidade e as técnicas de encoder-decoder - aqui falar do autoencoder) - 3 a 4 parágrafos. - Citar esse https://link.springer.com/chapter/10.1007/978-3-540-28650-9_5 além dos outros  - Aqui tem informações uteis (não precisa citar) https://en.wikipedia.org/wiki/On-board_diagnostics 
 
+% =========================================================================
+% SUGESTÃO PARA: 2.2 Unsupervised Learning and Autoencoders (3-4 parágrafos)
+% =========================================================================
+% Supervised machine learning algorithms rely heavily on the availability of balanced, exhaustively labeled training datasets. In vehicular monitoring, however, obtaining labeled anomaly data presents severe practical bottlenecks: physical failures are rare, highly diverse in manifestation, and dangerous or cost-prohibitive to induce in operating vehicles. Consequently, collecting representative labeled fault signatures across diverse vehicle models and driving regimes is unfeasible in production fleets. Unsupervised learning overcomes these constraints by modeling the underlying statistical structure of nominal operating conditions without requiring fault labels or prior assumptions about anomaly signatures~\cite{ghahramani2004unsupervised}.
+% 
+% Unsupervised learning paradigms encompass several distinct methodologies, including clustering algorithms, density estimation models, and dimensionality reduction techniques. Clustering methods (such as k-means or DBSCAN) group data points based on geometric proximity, while probabilistic density estimators (such as Gaussian Mixture Models) assign low probabilities to outliers. In high-dimensional sensor settings, dimensionality reduction techniques—ranging from linear Principal Component Analysis (PCA) to non-linear manifold learning such as UMAP~\cite{mcinnes2018umap}—project high-dimensional sensor spaces into lower-dimensional representations that capture the dominant manifold of normal vehicle operation.
+% 
+% Within neural network architectures, autoencoders represent a powerful non-linear encoder-decoder framework for unsupervised representation learning~\cite{goodfellow2016deep}. An undercomplete autoencoder consists of two complementary components: an encoder network $f_\theta: \mathbb{R}^D \rightarrow \mathbb{R}^d$ that compresses the high-dimensional input vector $x$ into a lower-dimensional latent bottleneck representation $z = f_\theta(x)$, and a decoder network $g_\phi: \mathbb{R}^d \rightarrow \mathbb{R}^D$ that reconstructs an approximation of the original input $\hat{x} = g_\phi(z) = g_\phi(f_\theta(x))$. The network parameters are optimized by minimizing the Mean Squared Error (MSE) reconstruction loss across nominal training samples:
+% \begin{equation}
+% \mathcal{L}(x, \hat{x}) = \frac{1}{D} \sum_{j=1}^D (x_j - \hat{x}_j)^2
+% \end{equation}
+% 
+% For anomaly detection, the autoencoder is trained strictly on normal operating data, allowing it to learn the low-dimensional manifold and correlations that characterize nominal vehicle states~\cite{sakurada2014anomaly}. When an anomalous sample $x'$ containing component deviations or sensor faults is presented during inference, the constrained latent bottleneck cannot accurately reconstruct the unseen patterns. The resulting reconstruction error $\|x' - \hat{x}'\|^2$ is significantly elevated compared to nominal records, serving as a continuous anomaly score that can be thresholded to trigger diagnostic warnings~\cite{hanselmann2020canet}.
+
 \subsection{Federated Learning}
 \label{subsec:FederatedLearning}
 %Falar brevemente da estrutura cliente-servidor e das principais técnicas de agregação (com mais foco nas que são usadas.). Apresente as fórmulas usnado align, mas não precisa aprofundar muito. - 3 a 4 parágrafos com as fórmulas. Falar brevemente sobre IID e non IID. 
+
+% =========================================================================
+% SUGESTÃO PARA: 2.3 Federated Learning (3-4 parágrafos com fórmulas align)
+% =========================================================================
+% Federated Learning (FL) is a distributed machine learning paradigm that enables multiple decentralized clients to collaboratively optimize a shared global model while retaining all training data locally~\cite{mcmahan2017communication}. Under a client-server architecture, a central orchestrator—such as the Flower SuperLink~\cite{beutel2020flower}—coordinates the communication rounds, synchronizes client participation, and aggregates model parameters, eliminating the requirement to stream massive or sensitive raw telemetry over wide-area networks.
+% 
+% In the canonical Federated Averaging (FedAvg) algorithm~\cite{mcmahan2017communication}, a federation of $K$ clients seeks to minimize a global objective function defined as the weighted average of local empirical losses:
+% \begin{align}
+% \min_{w \in \mathbb{R}^P} f(w) &= \sum_{k=1}^K \frac{n_k}{n} F_k(w), \quad \text{where} \quad F_k(w) = \frac{1}{n_k} \sum_{i=1}^{n_k} \ell(w; x_i)
+% \end{align}
+% where $n_k$ is the number of local training samples at client $k$, $n = \sum_k n_k$ is the total number of samples across all clients, and $\ell(w; x_i)$ is the local loss. In each communication round $t$, the central server broadcasts the current global parameters $w^t$ to participating clients. Each client $k$ performs $E$ epochs of local Stochastic Gradient Descent (SGD), updating its local model to $w_k^{t+1}$. The server then collects the local parameter updates and computes the aggregated global model:
+% \begin{align}
+% w^{t+1} &= \sum_{k=1}^K \frac{n_k}{n} w_k^{t+1}
+% \end{align}
+% 
+% While FedAvg converges efficiently when client data distributions are Independent and Identically Distributed (IID), vehicular fleets inherently exhibit severe statistical heterogeneity (non-IID data), including quantity skew (unequal sample volumes) and feature distribution skew across vehicles~\cite{kairouz2021advances,sousa2023entropy}. Under non-IID conditions, local client updates drift toward individual local minima rather than the global optimum (\textit{client drift}). To mitigate this divergence, the Federated Proximal (FedProx) algorithm~\cite{li2020federated} introduces a proximal regularization term to each client's local optimization objective:
+% \begin{align}
+% \min_{w} h_k(w; w^t) &= F_k(w) + \frac{\mu}{2} \|w - w^t\|^2
+% \end{align}
+% where $\mu \ge 0$ is a proximal penalty parameter. The quadratic term penalizes large deviations between the local model parameters $w$ and the global parameters $w^t$ broadcasted by the server in that round, stabilizing convergence under heterogeneous local sample volumes and irregular client compute capacities~\cite{barbosa2025practical,oliveira2025data}. 
 
 \section{Experimental Setup}
 \label{sec:ExperimentalSetup}
