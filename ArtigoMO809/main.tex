@@ -31,17 +31,16 @@
 \maketitle
 
 \begin{resumo}
-Este trabalho investiga o aprendizado federado para detecção de anomalias em dados de sensores automotivos OBD-II utilizando autoencoders treinados exclusivamente em dados de operação normal (\textit{normal-only}). O desempenho do modelo é comparado entre as abordagens local, centralizada e FedAvg sob distribuições de dados balanceadas (IID), enquanto FedAvg e FedProx são avaliados sob heterogeneidade estatística (não-IID por quantidade). O ambiente experimental compreende seis clientes, sendo cinco nós simulados e um nó físico de borda executado em um Raspberry Pi 5. Além da capacidade de detecção de anomalias, o estudo quantifica o custo computacional e de comunicação no dispositivo embarcado, demonstrando como diferentes volumes locais afetam o tempo de treinamento e a estabilidade da inferência. Um classificador supervisionado centralizado é incluído como referência de limite superior. Os resultados fornecem diretrizes sobre os \textit{trade-offs} entre detecção de anomalias, sensibilidade de limiares operacionais e viabilidade de execução em tempo real na computação de borda automotiva.
+Este trabalho estuda o uso de aprendizado federado para detecção de anomalias em dados de sensores OBD-II automotivos. Ele usa um autocodificador para treinar os dados normais. O desempenho do modelo é comparado entre um treinamento local do cliente, um treinamento centralizado e o FedAvg sob distribuição balanceada de dados (IID), enquanto o FedAvg e o FedProx são avaliados em um cenário não-IID. O ambiente experimental tem seis clientes, nos quais cinco são nós simulados e um é um nó de borda físico executado em um Raspberry Pi 5. A capacidade de detecção de anomalias e os custos computacionais e de comunicação no dispositivo embarcado são comparados para demonstrar como diferentes volumes locais afetam o tempo de treinamento e a estabilidade da inferência. Um classificador supervisionado centralizado também está incluído como referência. Os resultados fornecem diretrizes sobre as \textit{trade-offs} entre detecção de anomalias, sensibilidade do limite operacional e viabilidade de execução em tempo real na computação de ponta automotiva.
 \end{resumo}
 
 \begin{abstract}
-This work investigates federated learning for anomaly detection in automotive OBD-II data using a normal-only autoencoder. Model performance is compared with local, centralized, and FedAvg training under IID data distributions, while FedAvg and FedProx are evaluated under non-IID distribution. The experimental setup has six clients, including five simulated on a computer and one running on a Raspberry Pi as a physical federated client. Beyond anomaly-detection performance, the study evaluates the computational and communication costs of the edge device participation, and shows how different local data volumes affect training time and resource utilization. A centralized supervised model is also included as a complementary reference. The results provide insights into the trade-offs between detection performance, data distribution, and computational constraints in federated automotive anomaly detection.
-
+This work studies the use of federated learning for anomaly detection in automotive OBD-II sensor data. It uses an autoencoder to train the normal data. The model performance is compared between a client local training, a centralized training, and FedAvg under balanced data distribution (IID), while FedAvg and FedProx are evaluated under a non-IID scenario. The experimental environment has six clients, in which five are simulated nodes and one is physical edge node running on a Raspberry Pi 5. The anomaly detection capability, computational and communication costs on the embedded device are compared to demonstrate how different local volumes affect training time and inference stability. A centralized supervised classifier is also included as a reference. The results provide guidelines on the \textit{trade-offs} between anomaly detection, operational threshold sensitivity, and real-time execution feasibility in automotive edge computing.
 \end{abstract}
      
 
 \section{Introduction}
-
+\label{sec:introduction}
 The increasing availability of automotive sensor data creates opportunities for data-driven vehicle anomaly detection. However, centralized learning approaches require data from different vehicles to be collected in a common location, raising concerns regarding data privacy, communication overhead,
 and scalability. Federated learning offers an alternative by enabling collaborative model training while keeping local data at each client.
 
@@ -49,23 +48,31 @@ The integration of Internet of Things (IoT) technologies has enabled the collect
 
 This work develops a model for anomaly detection using unsupervised learning and evaluates the performance of this model under both Independent and Identically Distributed (IID) and non-IID data distributions. We compare the performance of the federated learning models (FedAvg and FedProx) with local and centralized approaches. Additionally, we explore the deployment of these models on a Raspberry Pi, to evaluate the computational and communication costs.
 
-The major contributions of this work are: providing insights into the trade-offs between performance, data distribution, and computational constraints in automotive FL. Specifically, we address the following questions:
+The major contributions of this work are:
+\begin{itemize}
+	\item A comparative evaluation of centralized, local, and federated learning approaches for automotive OBD-II anomaly detection, and the detection performance under IID and non-IID data distributions.
+	\item An experimental evaluation of a physical Raspberry Pi 5 as a federated edge client to compare the perfomance on the IID and non-IID scenarios without transferring raw sensor data.
+	\item An analysis of the computational costs of local training on the Raspberry Pi under different local data-volume conditions.
+\end{itemize}
 
-1. Can federated learning achieve performance comparable to centralized training without transferring raw sensor data?
 
-2. How do different data distributions (IID and non-IID) impact the performance and efficiency of federated learning models?
-
-3. What are the computational and communication costs associated with training models on edge devices like the Raspberry Pi?
-
-By addressing these questions, our study aims to provide a comprehensive evaluation of federated learning for anomaly detection in vehicular networks, highlighting its potential benefits and challenges.
 
 \section{Related Work}
-
+\label{sec:RelatedWork}
+ 
+ The increasing number of sensors in modern vehicles has expanded the availability of data that can be used to monitor vehicle components and identify potential faults. The use of machine learning have attracted growing interest in the analysis of vehicular data, they can be used to detect faults, improve vehicle safety, and reduce maintenance costs.
+ 
+ 
+ However, these data can share sensible information, such as the location and the track of the vehicle, so the data transfer to a centralized model is not feasible on real world. For this reason, the study of Federated Learning techiques are getting attention as the models can be trained without sharing the raw sensor data. 
+ 
 \section{Background}
+\label{sec:Background}
 \subsection{Automotive OBD-II Anomaly Detection}
+\label{subsec:Obd2}
 \subsection{Unsupervised Learning and Autoencoders}
+\label{subsec:Autoencoder}
 \subsection{Federated Learning}
-\subsection{Federated Optimization under Data Heterogeneity}
+\label{subsec:FederatedLearning}
 
 \section{Experimental Setup}
 
